@@ -1,14 +1,15 @@
-// src/SoloQuiz.jsx
-import { useEffect, useMemo, useRef, useState } from 'react';
+// frontend/src/SoloQuiz.jsx
+import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { useNavigate, useSearchParams }      from 'react-router-dom';
-import { API }                              from './api';
-import QuizLayout                           from './QuizLayout';
-import Card                                 from './components/Card';
-import Input                                from './components/Input';
-import Button                               from './components/Button';
-import CustomAudioPlayer                    from './components/CustomAudioPlayer';
-import useStopwatch                         from './hooks/useStopwatch';
-import Modal                                from './components/Modal';
+import { API }                              from './api'; // Annahme: API ist korrekt exportiert
+import QuizLayout                           from './QuizLayout'; // Pfad prüfen
+import Card                                 from './components/Card'; // Pfad prüfen
+import Input                                from './components/Input'; // Pfad prüfen
+import Button                               from './components/Button'; // Pfad prüfen
+import CustomAudioPlayer                    from './components/CustomAudioPlayer'; // Pfad prüfen
+import useStopwatch                         from './hooks/useStopwatch'; // Pfad prüfen
+import Modal                                from './components/Modal'; // Pfad prüfen
+import { SCORE_CONFIG, metadataFieldsConfig } from './config/quizConfig'; // Score-Konfig und metadataFieldsConfig importieren
 
 /* ---------- Konstanten ---------- */
 const FREEMODE_ATTEMPTS = 6;
@@ -22,11 +23,12 @@ const tipOrder = {
   Filme: ['Erscheinungsjahr', 'Genre', 'Regie', 'Darsteller', 'Zitat'],
   Serien: ['Startjahr', 'Endjahr', 'Genre', 'Staffelanzahl', 'Handlungsort', 'Nebencharakter'],
   Games: ['Erscheinungsjahr', 'Genre', 'Plattform', 'Entwickler', 'Nebenfigur'],
-  Musik: ['Album', 'Genre (Musik)', 'Künstler'],
+  Musik: ['Album', 'Genre'], // Stelle sicher, dass 'Genre' der korrekte Key in metadataFieldsConfig.Musik ist
   Sonstiges: ['Quelle', 'Jahr', 'Notizen']
 };
 
 const msToString = ms => {
+  if (typeof ms !== 'number' || isNaN(ms)) return '00:00.0';
   const t  = Math.round(ms/100)/10;
   const mm = String(Math.floor(t/60)).padStart(2,'0');
   const ss = String((t%60).toFixed(1)).padStart(4,'0');
@@ -45,9 +47,8 @@ export default function SoloQuiz() {
   const nav          = useNavigate();
   const [params]     = useSearchParams();
 
-  const mode         = params.get('mode') || 'freemode';
-  const isTimeTrial  = mode.startsWith('timetrial');
-  const isFreeMode   = !isTimeTrial;
+  const modeParam    = params.get('mode') || 'freemode';
+  const effectiveMode = modeParam.includes('timetrial') ? 'TimeTrial' : 'Freemode';
 
   const questionCnt  = +params.get('count') || 10;
   const cats         = useMemo(() => params.getAll('categories'), [params]);
@@ -64,35 +65,33 @@ export default function SoloQuiz() {
   const [sug, setSug]         = useState([]);
   const [hist, setHist]       = useState([]);
   const [info, setInfo]       = useState('');
-  const [end, setEnd]         = useState(false); // Ob die aktuelle Frage beendet ist
-  const [solved, setSol]      = useState(false);
-  const [done, setDone]       = useState(false); // Ob das gesamte Quiz beendet ist
-  const [results, setResults] = useState([]);
+  const [end, setEnd]         = useState(false); // Frage beendet
+  const [solved, setSol]      = useState(false); // Frage richtig gelöst
+  const [done, setDone]       = useState(false); // Quiz beendet
   const [playing, setPlaying] = useState(false);
   const [maxSeek, setMaxSeek] = useState(0);
   const playerPauseRef        = useRef(()=>{});
-  // States für Highscore Speicherung (später)
-  // const [name, setName]       = useState('');
-  // const [saved, setSaved]     = useState(false);
+
+  const [songScores, setSongScores] = useState([]);
+  const [totalScore, setTotalScore] = useState(0);
 
   const [showReportModal, setShowReportModal] = useState(false);
   const [currentReportProblemType, setCurrentReportProblemType] = useState('');
   const [currentReportComment, setCurrentReportComment] = useState('');
   const [reportStatus, setReportStatus] = useState('');
 
-  // Stopwatch Logik
-  const stopwatchActive = isTimeTrial && playing && !end;
-  const [elapsed, resetSw]    = useStopwatch(stopwatchActive);
+  const stopwatchActive = effectiveMode === 'TimeTrial' && playing && !end && !done;
+  const [elapsed, resetSw, startSwInternal, pauseSwInternal] = useStopwatch(stopwatchActive);
+  const songStartTimeRef = useRef(0);
 
-  // Log für Stopwatch-Bedingung bei Änderung
   useEffect(() => {
-    console.log(`[SoloQuiz] Stopwatch Check - active: ${stopwatchActive}, isTimeTrial: ${isTimeTrial}, playing: ${playing}, end: ${end}`);
-  }, [stopwatchActive, isTimeTrial, playing, end]);
+    console.log(`[SoloQuiz] Stopwatch Check - active: ${stopwatchActive}, effectiveMode: ${effectiveMode}, playing: ${playing}, end: ${end}, done: ${done}`);
+  }, [stopwatchActive, effectiveMode, playing, end, done]);
 
 
   /* ---------- Songs laden ---------- */
   useEffect(() => {
-    console.log("[SoloQuiz] useEffect[loadSongs]: Init. Modus:", mode, "Kategorien:", cats.join(', ') || "Alle", "Anzahl:", questionCnt);
+    console.log("[SoloQuiz] useEffect[loadSongs]: Init. Modus Param:", modeParam, "Effektiver Modus:", effectiveMode, "Kategorien:", cats.join(', ') || "Alle", "Anzahl:", questionCnt);
     fetch(`${API}/songs`)
     .then(r => { if (!r.ok) throw new Error(`HTTP Fehler ${r.status}`); return r.json(); })
     .then(all => {
@@ -100,20 +99,35 @@ export default function SoloQuiz() {
       const filtered = cats.length===0 || cats.includes('Alle') ? all : all.filter(s => cats.includes(s.category));
       const songsWithReportField = filtered.map(s => ({ ...s, reportedIssues: s.reportedIssues || [] }));
       const finalQuizSongs = songsWithReportField.sort(()=>Math.random()-0.5).slice(0, questionCnt);
+
+      if (finalQuizSongs.length === 0) {
+        console.warn("[SoloQuiz] Keine Songs nach Filterung gefunden. Zeige Meldung.");
+        setSongs([]);
+        setDb(all); // db trotzdem setzen für Autocomplete, falls Suche über alle Titel geht
+        setInfo("Keine Songs für diese Auswahl gefunden. Bitte ändere die Konfiguration.");
+        setDone(true); // Quiz kann nicht gestartet werden
+        return;
+      }
+
       setDb(all);
       setSongs(finalQuizSongs);
       console.log("[SoloQuiz] useEffect[loadSongs]: Quiz-Songs ausgewählt:", finalQuizSongs.length);
 
-      // Reset States
       setIdx(0); setAttemptCount(1); setFails(0); setShownTips([]);
       setGuess(''); setSug([]); setHist([]); setInfo('');
-      setEnd(false); setSol(false); setDone(false); setResults([]);
-      resetSw(); setMaxSeek(0); setPlaying(false); // Wichtig: playing hier auf false
+      setEnd(false); setSol(false); setDone(false);
+      resetSw();
+      if (effectiveMode === 'TimeTrial') {
+        songStartTimeRef.current = 0;
+        startSwInternal();
+      }
+      setMaxSeek(0); setPlaying(false);
       setShowReportModal(false); setCurrentReportProblemType(''); setCurrentReportComment(''); setReportStatus('');
+      setSongScores([]); setTotalScore(0);
       console.log("[SoloQuiz] useEffect[loadSongs]: Alle relevanten States für Quizstart zurückgesetzt.");
     })
-    .catch(err => { console.error("[SoloQuiz] Fehler beim Laden der Songs:", err); setInfo(`❌ Fehler Songs: ${err.message}`); setSongs([]); setDb([]); });
-  }, [cats, questionCnt, mode]); // resetSw ist stabil, aber ESLint mag es hier
+    .catch(err => { console.error("[SoloQuiz] Fehler beim Laden der Songs:", err); setInfo(`❌ Fehler Songs: ${err.message}`); setSongs([]); setDb([]); setDone(true); });
+  }, [cats, questionCnt, modeParam, effectiveMode, resetSw, startSwInternal]);
 
   /* ---------- Auto-Complete ---------- */
   useEffect(() => {
@@ -127,36 +141,96 @@ export default function SoloQuiz() {
       }
     });
     const list = Array.from(suggestions).slice(0, 5);
-    // Zeige Suggestion nur, wenn die Eingabe nicht schon exakt einer Suggestion entspricht (case-insensitive)
     const exactMatchInSuggestions = list.some(item => normalizeText(item) === normalizedGuess);
     setSug(guess && list.length > 0 && !exactMatchInSuggestions ? list : []);
   }, [guess, db]);
 
   const cur = songs[idx] ?? {};
 
+  useEffect(() => {
+    if (idx > 0 && effectiveMode === 'TimeTrial' && !done && !end) {
+      songStartTimeRef.current = elapsed;
+      console.log(`[SoloQuiz] Neuer Song (idx ${idx}), setze songStartTimeRef auf ${elapsed}`);
+    }
+  }, [idx, effectiveMode, done, end, elapsed]);
+
+
   const addHist = line => setHist(h => [line, ...h.slice(0, 4)]);
 
-  const finishTimeTrialSong = (dnf = false, skipped = false) => {
-    console.log(`[SoloQuiz] finishTimeTrialSong: song='${cur.title}', dnf=${dnf}, skipped=${skipped}, solved=${solved}, fails=${fails}, elapsed=${elapsed}`);
-    const currentFailsForCalc = solved ? fails : fails + 1;
-    const finalFails = dnf || skipped ? 10 : currentFailsForCalc;
-    const finalTime = dnf || skipped ? (maxSeek * 1000 + 30000) : elapsed;
-    setResults(r => [...r, { title: cur.title, time: finalTime, fails: finalFails, dnf: dnf || skipped }]);
-    setEnd(true);
-    setPlaying(false); // Wichtig
-  };
+  const calculateFreemodeScore = useCallback((numIncorrectAttempts) => {
+    if (numIncorrectAttempts >= FREEMODE_ATTEMPTS) {
+      return 0;
+    }
+    const score = SCORE_CONFIG.Freemode.MAX_POINTS_PER_SONG -
+    (numIncorrectAttempts * SCORE_CONFIG.Freemode.DEDUCTION_PER_WRONG_ATTEMPT);
+    return Math.max(0, score);
+  }, []);
 
-  const revealNextTip = (currentFailsCount) => { // currentFailsCount ist der Wert von 'fails' *bevor* er für diesen Versuch inkrementiert wurde
-    if (!cur.metadata || !cur.category) return;
+  const calculateTimeTrialScore = useCallback((timeTakenMs, numIncorrectAttempts) => {
+    const timeTakenSeconds = Math.round(timeTakenMs / 1000);
+    const score = SCORE_CONFIG.TimeTrial.BASE_POINTS_PER_SONG -
+    (timeTakenSeconds * SCORE_CONFIG.TimeTrial.TIME_DEDUCTION_PER_SECOND) -
+    (numIncorrectAttempts * SCORE_CONFIG.TimeTrial.WRONG_ATTEMPT_DEDUCTION);
+    return Math.max(0, score);
+  }, []);
+
+  const recordSongResult = useCallback((songData, guessed, numIncorrectAttemptsForSong, skippedOrDnf = false) => {
+    if (!songData || !songData._id) {
+      console.warn("[SoloQuiz] recordSongResult: Ungültige songData oder songData._id fehlt.");
+      return;
+    }
+    console.log(`[SoloQuiz] recordSongResult für Song "${songData.title}": guessed=${guessed}, fails=${numIncorrectAttemptsForSong}, skippedOrDnf=${skippedOrDnf}, mode=${effectiveMode}`);
+
+    let score = 0;
+    let timeTakenForSongMs;
+
+    if (effectiveMode === 'Freemode') {
+      if (guessed) {
+        score = calculateFreemodeScore(numIncorrectAttemptsForSong);
+      } else {
+        score = 0;
+      }
+    } else if (effectiveMode === 'TimeTrial') {
+      timeTakenForSongMs = Math.max(0, elapsed - songStartTimeRef.current);
+      // Im TimeTrial wird die Formel immer angewendet, auch bei Skip/DNF,
+      // es sei denn, es gibt eine spezielle Regel (z.B. Skip = 0 Punkte immer).
+      // Für DNF oder Skip könnten wir die `numIncorrectAttemptsForSong` anpassen oder eine Zeitstrafe hinzufügen.
+      // Aktuell verwenden wir die direkten Werte.
+      score = calculateTimeTrialScore(timeTakenForSongMs, numIncorrectAttemptsForSong);
+    }
+
+    const newSongScoreEntry = {
+      songId: songData._id,
+      title: songData.title,
+      score: score,
+      guessed: guessed,
+      attemptsMade: numIncorrectAttemptsForSong + (guessed ? 1 : 0),
+                                       skippedOrDnf: skippedOrDnf,
+                                       ...(effectiveMode === 'TimeTrial' && { timeTakenSeconds: Math.round((timeTakenForSongMs || 0) / 1000) })
+    };
+
+    console.log("[SoloQuiz] Neues Song-Ergebnis:", newSongScoreEntry);
+    setSongScores(prev => [...prev, newSongScoreEntry]);
+    setTotalScore(prev => prev + score);
+    setEnd(true);
+    if (playing && playerPauseRef.current) {
+      playerPauseRef.current(); // Player pausieren, da Frage vorbei
+    }
+    setPlaying(false); // Sicherstellen, dass playing State aktuell ist
+  }, [effectiveMode, elapsed, calculateFreemodeScore, calculateTimeTrialScore, playing]);
+
+
+  const revealNextTip = (currentFailsCount) => {
+    if (!cur.metadata || !cur.category || !metadataFieldsConfig) return;
     const categoryTipsOrder = tipOrder[cur.category];
     if (!categoryTipsOrder) return;
 
-    // currentFailsCount ist 0-basiert für den Index der Tipps
     if (currentFailsCount < categoryTipsOrder.length) {
       const tipKey = categoryTipsOrder[currentFailsCount];
       const tipValue = cur.metadata[tipKey];
       if (tipValue) {
-        const readableTipKey = tipKey.replace(/([A-Z])/g, ' $1').trim(); // Macht aus "Erscheinungsjahr" -> "Erscheinungsjahr"
+        const fieldConfig = metadataFieldsConfig[cur.category]?.find(f => f.key === tipKey);
+        const readableTipKey = fieldConfig ? fieldConfig.label : tipKey.replace(/([A-Z])/g, ' $1').trim();
         const newTip = `${readableTipKey}: ${tipValue}`;
         console.log(`[SoloQuiz] Zeige Tipp (Fail #${currentFailsCount + 1}): ${newTip}`);
         setShownTips(prevTips => {
@@ -171,24 +245,17 @@ export default function SoloQuiz() {
     }
   };
 
-  /* ---------- Submit-Logik ---------- */
   const handleSubmitAttempt = (isSkipped = false) => {
-    console.log(`[SoloQuiz] handleSubmitAttempt aufgerufen - skipped: ${isSkipped}, guess: "${guess}", end: ${end}, solved (TimeTrial): ${isTimeTrial && solved}`);
-    if (end || !cur._id ) { // Wenn Frage beendet oder kein aktueller Song, nichts tun
-      console.log("[SoloQuiz] handleSubmitAttempt: Aktion blockiert (end oder kein cur._id).");
+    console.log(`[SoloQuiz] handleSubmitAttempt - skipped: ${isSkipped}, guess: "${guess}", song-end: ${end}, quiz-done: ${done}, song-solved: ${solved}, current-fails: ${fails}`);
+    if (end || !cur._id ) {
+      console.log("[SoloQuiz] handleSubmitAttempt: Aktion blockiert (Frage beendet oder kein aktueller Song).");
       return;
     }
-    // Im TimeTrial, wenn bereits gelöst, keine weiteren Aktionen erlauben (außer nextSong)
-    if (isTimeTrial && solved && !isSkipped) {
-      console.log("[SoloQuiz] handleSubmitAttempt: TimeTrial bereits gelöst, keine erneute Bewertung.");
-      return;
-    }
-
 
     if (isSkipped) {
       addHist('⏭️ Übersprungen');
       setInfo(`Lösung war: ${cur.title}`);
-      if (isTimeTrial) finishTimeTrialSong(false, true); else setEnd(true);
+      recordSongResult(cur, false, fails, true);
       return;
     }
 
@@ -197,87 +264,101 @@ export default function SoloQuiz() {
       return;
     }
 
-    const normalizedGuess = normalizeText(guess);
-    const normalizedTitle = normalizeText(cur.title);
-    const normalizedAlts = Array.isArray(cur.alternativeTitles) ? cur.alternativeTitles.map(alt => normalizeText(alt)) : [];
-    const isCorrect = normalizedTitle === normalizedGuess || normalizedAlts.includes(normalizedGuess);
+    const normalizedPlayerAnswer = normalizeText(guess);
+    const mainTitleNormalized = normalizeText(cur.title);
+    const altTitlesNormalized = Array.isArray(cur.alternativeTitles) ? cur.alternativeTitles.map(alt => normalizeText(alt)) : [];
+    const isCorrect = mainTitleNormalized === normalizedPlayerAnswer || altTitlesNormalized.includes(normalizedPlayerAnswer);
 
     addHist(isCorrect ? `✅ ${guess}` : `❌ ${guess}`);
 
     if (isCorrect) {
       setInfo('🎉 Richtig!');
       setSol(true);
-      if (isTimeTrial) finishTimeTrialSong(false, false); else setEnd(true);
+      recordSongResult(cur, true, fails, false);
     } else {
-      revealNextTip(fails); // Tipp basierend auf der Anzahl der *bisherigen* Fehlversuche anzeigen
-      const nextFails = fails + 1;
-      setFails(nextFails);
-      setGuess(''); // Eingabefeld leeren
-      setSug([]);   // Vorschläge leeren
+      revealNextTip(fails);
+      const newFails = fails + 1;
+      setFails(newFails);
+      setGuess('');
+      setSug([]);
 
-      if (isFreeMode) {
+      if (effectiveMode === 'Freemode') {
         const nextAttemptCount = attemptCount + 1;
         setAttemptCount(nextAttemptCount);
         if (nextAttemptCount > FREEMODE_ATTEMPTS) {
           setInfo(`Lösung war: ${cur.title}`);
-          setEnd(true);
+          recordSongResult(cur, false, newFails, false);
         } else {
           setInfo('Leider falsch...');
         }
       } else { // TimeTrial
         setInfo('Leider falsch...');
-        // Im TimeTrial geht das Spiel für diesen Song weiter, 'fails' wird inkrementiert.
-        // Der Song wird erst mit finishTimeTrialSong als beendet markiert (durch Raten, Skip oder DNF)
       }
     }
   };
 
-  /* ---------- Nächster Song ---------- */
   const handleNextSong = () => {
-    console.log("[SoloQuiz] handleNextSong aufgerufen. Aktueller Song idx:", idx, "end:", end);
-    if (isTimeTrial && !end && cur._id) { // Wenn TimeTrial und aktueller Song nicht explizit beendet wurde
-      console.log("[SoloQuiz] handleNextSong: TimeTrial Song nicht beendet, werte als DNF.");
-      finishTimeTrialSong(true, false); // true für DNF
+    console.log("[SoloQuiz] handleNextSong. Aktueller idx:", idx, "Frage beendet (end):", end);
+
+    if (effectiveMode === 'TimeTrial' && !end && cur._id) {
+      console.log("[SoloQuiz] handleNextSong: TimeTrial Song nicht explizit beendet (z.B. durch Klick auf Next), werte als DNF.");
+      recordSongResult(cur, false, fails, true); // DNF
     }
 
     if (idx + 1 < songs.length) {
       setIdx(i => i + 1);
-      // Reset für nächsten Song
       setAttemptCount(1); setFails(0); setShownTips([]);
       setGuess(''); setSug([]); setHist([]); setInfo('');
-      setEnd(false); setSol(false); setPlaying(false); // Wichtig: playing hier auf false für neuen Song
-      resetSw(); setMaxSeek(0);
+      setEnd(false); setSol(false);
+      setPlaying(false); // Player sollte für neuen Song gestoppt sein, Autoplay wird durch Player/useEffect gesteuert
+      if (effectiveMode === 'TimeTrial') {
+        // songStartTimeRef wird im useEffect auf idx gesetzt
+        // Stoppuhr läuft weiter, aber player sollte pausiert sein und neu starten
+      }
+      setMaxSeek(0);
       setCurrentReportProblemType(''); setCurrentReportComment(''); setReportStatus('');
       console.log("[SoloQuiz] handleNextSong: Nächster Song (Index", idx + 1, ") vorbereitet.");
     } else {
       console.log("[SoloQuiz] handleNextSong: Quiz beendet (done=true).");
       setDone(true);
-      setPlaying(false); // Sicherstellen, dass Player am Ende aus ist
+      setPlaying(false);
+      // Stoppuhr wird im useEffect auf `done` pausiert
     }
   };
 
-  /* ---------- Bug Report Funktionen ---------- */
+  useEffect(() => {
+    if (done) {
+      if (effectiveMode === 'TimeTrial' && stopwatchActive) {
+        pauseSwInternal();
+      }
+      const quizResults = {
+        modeParam: modeParam,
+        effectiveMode: effectiveMode,
+        totalScore: totalScore,
+        songDetails: songScores,
+        questionCount: songs.length,
+        quizTimestamp: new Date().toISOString(),
+            ...(effectiveMode === 'TimeTrial' && { totalTimeMs: elapsed, totalTimeFormatted: msToString(elapsed) })
+      };
+      console.log("FINALE QUIZ ERGEBNISSE:", quizResults);
+      // Hier Logik für Highscore-Speicherung, wenn modeParam auf 'HS' hindeutet.
+      // Z.B. if (modeParam.includes('HS')) { nav('/submit-highscore', { state: { quizResults } }); }
+    }
+  }, [done, modeParam, effectiveMode, totalScore, songScores, songs.length, elapsed, pauseSwInternal, stopwatchActive, nav]);
+
+
   const openReportModal = () => {
     if (!cur._id) return;
-    console.log("[SoloQuiz] openReportModal für Song:", cur.title);
     setReportStatus(''); setCurrentReportProblemType(PROBLEM_TYPES[0].value); setCurrentReportComment('');
     setShowReportModal(true);
     if(playing && playerPauseRef.current) {
-      console.log("[SoloQuiz] Pausiere Player für Bug Report Modal.");
-      playerPauseRef.current(); // Pausiert den CustomAudioPlayer
-      // setPlaying(false); // Setze playing manuell, falls der Player das nicht schnell genug macht
+      playerPauseRef.current();
     }
   };
-  const closeReportModal = () => {
-    console.log("[SoloQuiz] closeReportModal.");
-    setShowReportModal(false);
-    // Hier könnte man überlegen, den Player wieder zu starten, wenn er vorher lief und nicht 'end' ist.
-    // Fürs Erste bleibt er pausiert, Nutzer muss manuell starten.
-  };
+  const closeReportModal = () => setShowReportModal(false);
 
   const handleReportSubmit = async () => {
     if (!cur._id || !currentReportProblemType) { setReportStatus('Fehler: Problemtyp auswählen.'); return; }
-    console.log(`[SoloQuiz] Sende Bug Report: Typ='${currentReportProblemType}', Kommentar='${currentReportComment}'`);
     setReportStatus('Sende Meldung...');
     try {
       const response = await fetch(`${API}/songs/${cur._id}/report`, {
@@ -297,51 +378,107 @@ export default function SoloQuiz() {
     }
   };
 
-  /* ---------- Render Ende Screen ---------- */
-  if (done) {
-    console.log("[SoloQuiz] Render End Screen. TimeTrial Results:", results);
+  if (done && songs.length === 0 && info.startsWith("Keine Songs")) { // Spezialfall: Keine Songs gefunden
     return (
       <QuizLayout>
       <Card className="space-y-6 text-center">
-      <h2 className="text-2xl font-bold text-green-400">🎉 Quiz beendet!</h2>
-      <p>Du hast {songs.length} Fragen gespielt.</p>
-      {isTimeTrial && results.length > 0 && (
-        <p className="text-sm text-gray-400">
-        Zeitrennen abgeschlossen. Gesamtzeit: {msToString(results.reduce((sum, r) => sum + r.time, 0))}
-        </p>
-      )}
-      {isFreeMode && (
-        <p className="text-sm text-gray-400">6-Versuche-Modus abgeschlossen.</p>
-      )}
-      <Button onClick={() => nav('/solo-config')} className="mt-4 w-full">Neues Solo-Quiz starten</Button>
-      <Button onClick={() => nav('/')} variant="secondary" className="mt-2 w-full">Zurück zur Hauptseite</Button>
+      <h2 className="text-2xl font-bold text-orange-400">Keine Songs</h2>
+      <p>{info}</p>
+      <Button onClick={() => nav('/solo-config')} className="mt-4 w-full">Zurück zur Konfiguration</Button>
       </Card>
       </QuizLayout>
     );
   }
 
-  /* ---------- Versuchsbalken (Freemode) ---------- */
+  if (done) {
+    const gesamtZeitFormatiert = effectiveMode === 'TimeTrial' ? msToString(elapsed) : null;
+    return (
+      <QuizLayout>
+      <Card className="space-y-6 text-center">
+      <h2 className="text-2xl font-bold text-green-400">🎉 Quiz beendet!</h2>
+      <p>Modus: <span className="font-semibold">{
+        modeParam === 'timetrial' ? 'Zeittrennen' :
+        modeParam === 'freemode' ? '6 Versuche' :
+        modeParam === 'timetrialHS' ? 'Zeit-High-Score' :
+        modeParam === 'highscore' ? '6 Versuche-High-Score' : modeParam
+      }</span></p>
+      <p>Du hast <span className="font-semibold">{songs.length}</span> Fragen gespielt.</p>
+      {effectiveMode === 'TimeTrial' && gesamtZeitFormatiert && (
+        <p className="text-lg">Gesamtzeit: <span className="font-bold text-yellow-300">{gesamtZeitFormatiert}</span></p>
+      )}
+      <p className="text-2xl font-bold my-3">Dein Gesamtscore: <span className="text-yellow-400">{totalScore}</span></p>
+
+      {songScores.length > 0 && (
+        <div className="my-4 max-h-80 overflow-y-auto bg-gray-800 p-3 rounded-md shadow">
+        <h3 className="text-lg font-semibold mb-2 text-blue-300">Detailauswertung:</h3>
+        <ul className="space-y-2">
+        {songScores.map((result, sIdx) => (
+          <li key={result.songId || sIdx} className={`p-2 rounded-md text-left text-sm ${result.guessed ? 'bg-green-700 hover:bg-green-600' : (result.skippedOrDnf ? 'bg-yellow-700 hover:bg-yellow-600' : 'bg-red-700 hover:bg-red-600')}`}>
+          <div className="flex justify-between items-center">
+          <span className="font-medium truncate w-3/4" title={result.title}>{sIdx + 1}. {result.title}</span>
+          <span className="font-bold">{result.score} Pkt.</span>
+          </div>
+          <div className="text-xs text-gray-300 mt-1">
+          {result.guessed ? "Richtig!" : (result.skippedOrDnf ? "Übersprungen/DNF" : "Nicht geraten")}
+          <span> (Versuche: {result.attemptsMade})</span>
+          {result.timeTakenSeconds !== undefined && <span>, Zeit: {result.timeTakenSeconds}s</span>}
+          </div>
+          </li>
+        ))}
+        </ul>
+        </div>
+      )}
+      {/* Nächster Schritt: Highscore-Speicherung implementieren.
+        Wenn modeParam.includes('HS'), dann hier Button/Formular anzeigen.
+        Beispiel: if (modeParam.includes('HS')) { <HighscoreSubmitForm results={quizResults} /> }
+        */}
+        <Button onClick={() => nav('/solo-config')} className="mt-4 w-full">Neues Solo-Quiz starten</Button>
+        <Button onClick={() => nav('/')} variant="secondary" className="mt-2 w-full">Zurück zur Hauptseite</Button>
+        </Card>
+        </QuizLayout>
+    );
+  }
+
   const indColor = n => {
-    if (solved && n === attemptCount) return 'bg-green-500 text-black';
-    if (!solved && end && n <= fails) return 'bg-red-600 text-black'; // Alle Versuche aufgebraucht und falsch
-    if (n <= fails && !end) return 'bg-red-600 text-black'; // Bisherige Fehlversuche
-    if (n === attemptCount && !end) return 'bg-blue-500 text-black'; // Aktueller Versuch
+    if (solved && n === fails + 1) return 'bg-green-500 text-black';
+    if (!solved && end && n <= fails +1 && attemptCount > FREEMODE_ATTEMPTS) return 'bg-red-600 text-black';
+    if (n <= fails) return 'bg-red-600 text-black';
+    if (n === attemptCount && !end && !solved) return 'bg-blue-500 text-black';
     return 'bg-gray-700 text-white';
   };
 
-  const handleInputFocus = () => { if (isTimeTrial && playing && playerPauseRef.current) { console.log("[SoloQuiz] Input focus, pausiere TimeTrial Player"); playerPauseRef.current(); }};
+  const handleInputFocus = () => {
+    if (effectiveMode === 'TimeTrial' && playing && !end && playerPauseRef.current) {
+      playerPauseRef.current();
+    }
+  };
 
-  // Konsolen-Log vor dem Haupt-Return, um wichtige States zu sehen
-  // console.log(`[SoloQuiz] Render Main UI - idx: ${idx}, songId: ${cur._id}, playing: ${playing}, end: ${end}, done: ${done}`);
+  if (!songs.length && !done) { // Ladezustand oder Fehler beim initialen Laden
+    return (
+      <QuizLayout>
+      <Card className="text-center p-8">
+      <p className="text-xl text-gray-400">{info || "Lade Quizdaten..."}</p>
+      {info.startsWith("❌ Fehler Songs") && (
+        <Button onClick={() => nav('/solo-config')} className="mt-6">Zurück zur Konfiguration</Button>
+      )}
+      </Card>
+      </QuizLayout>
+    );
+  }
 
   return (
     <QuizLayout>
     <Card className="space-y-4 sm:space-y-6">
     <p className="text-center text-xs sm:text-sm text-gray-400">
-    Kategorie: {catLabel} | Frage {idx + 1}/{songs.length} | Modus: {mode}
+    Kategorie: {catLabel} | Frage {idx + 1}/{songs.length} | Modus: {
+      modeParam === 'timetrial' ? 'Zeittrennen' :
+      modeParam === 'freemode' ? '6 Versuche' :
+      modeParam === 'timetrialHS' ? 'Zeit-High-Score' :
+      modeParam === 'highscore' ? '6 Versuche-High-Score' : modeParam
+    } | Punkte: <span className="font-bold">{totalScore}</span>
     </p>
 
-    {isFreeMode && (
+    {effectiveMode === 'Freemode' && (
       <div className="flex justify-center gap-1">
       {Array.from({ length: FREEMODE_ATTEMPTS }, (_, i) => i + 1).map(n => (
         <div key={n} className={`w-6 h-6 sm:w-7 sm:h-7 rounded flex items-center justify-center text-xs font-bold ${indColor(n)}`} title={`Versuch ${n}`}>{n}</div>
@@ -349,37 +486,48 @@ export default function SoloQuiz() {
       </div>
     )}
 
-    {songs.length > 0 && cur._id ? (
+    {cur._id ? ( // Stelle sicher, dass cur und cur._id existieren
       <>
       <CustomAudioPlayer
       key={cur._id}
-      src={cur.audio || ''}
+      src={`/audio/${cur.audioFile || ''}`}
       offset={cur.startTime ?? 0}
-      maxSeek={isTimeTrial ? maxSeek : undefined}
+      maxSeek={effectiveMode === 'TimeTrial' ? maxSeek : undefined}
       onPlay={() => { console.log("[SoloQuiz] CustomAudioPlayer Event: onPlay"); setPlaying(true); }}
       onPause={() => { console.log("[SoloQuiz] CustomAudioPlayer Event: onPause"); setPlaying(false); }}
       onEnded={() => {
-        console.log("[SoloQuiz] CustomAudioPlayer Event: onEnded");
+        console.log("[SoloQuiz] CustomAudioPlayer Event: onEnded - Song:", cur.title, "Frage beendet (end):", end, "Song gelöst (solved):", solved);
         setPlaying(false);
-        if (isTimeTrial && !end && !solved) { // Wenn im TT Song zu Ende und noch nicht gelöst/beendet
-          console.log("[SoloQuiz] TimeTrial Song zu Ende, nicht gelöst -> werte als DNF");
-          finishTimeTrialSong(true, false); // DNF
-        } else if (isFreeMode && !end && !solved && attemptCount > FREEMODE_ATTEMPTS) { // Freemode, alle Versuche aufgebraucht
-          setInfo(`Lösung war: ${cur.title}`);
-          setEnd(true);
+        if (!end) { // Nur handeln, wenn Frage nicht schon durch Raten/Skip beendet
+          if (effectiveMode === 'TimeTrial' && !solved) {
+            console.log("[SoloQuiz] TimeTrial Song zu Ende (onEnded), nicht gelöst -> werte als DNF");
+            recordSongResult(cur, false, fails, true); // DNF
+          } else if (effectiveMode === 'Freemode' && !solved && attemptCount >= FREEMODE_ATTEMPTS) {
+            setInfo(`Lösung war: ${cur.title}`);
+            recordSongResult(cur, false, FREEMODE_ATTEMPTS, false); // Max Versuche, nicht geraten
+          }
         }
       }}
-      onPosition={sec => { if (isTimeTrial && !end) setMaxSeek(p => Math.max(p, sec)); }}
+      onPosition={sec => { if (effectiveMode === 'TimeTrial' && !end && playing) setMaxSeek(p => Math.max(p, sec)); }}
       onExposePause={fn => playerPauseRef.current = fn}
+      // Autoplay Logik:
+      // Dein CustomAudioPlayer muss Autoplay unterstützen oder du musst .play() manuell aufrufen
+      // z.B. in einem useEffect, wenn `playing` true ist und der Song sich ändert
+      // useEffect(() => {
+      //   if (playing && audioPlayerRef.current && cur._id && audioPlayerRef.current.src !== `/audio/${cur.audioFile}`) {
+      //      // Ggf. muss der Player erst laden, bevor play() gerufen wird.
+      //      // audioPlayerRef.current.play().catch(e => console.warn("Autoplay failed", e));
+      //   }
+      // }, [playing, cur._id, cur.audioFile]);
       />
 
-      {isTimeTrial && ( <p className="text-center text-xs sm:text-sm text-gray-400">⏱ {msToString(elapsed)} | Fehlversuche: {fails}</p> )}
+      {effectiveMode === 'TimeTrial' && ( <p className="text-center text-xs sm:text-sm text-gray-400">⏱ {msToString(elapsed)} | Fehlversuche: {fails}</p> )}
 
       {shownTips.length > 0 && (
         <div className="mt-2 p-3 bg-gray-800 rounded border border-gray-700 space-y-1 text-xs sm:text-sm">
         <h4 className="font-semibold text-blue-300 mb-1">Tipps:</h4>
         <ul className="list-disc list-inside text-gray-300">
-        {shownTips.map((tip, index) => ( <li key={index} className="break-words">{tip}</li> ))}
+        {shownTips.map((tip, tipIdx) => ( <li key={tipIdx} className="break-words">{tip}</li> ))}
         </ul>
         </div>
       )}
@@ -390,11 +538,11 @@ export default function SoloQuiz() {
         <Input
         value={guess}
         onChange={e => setGuess(e.target.value)}
-        onKeyDown={e => { if (e.key === 'Enter' && guess.trim()) { handleSubmitAttempt(false); } }}
+        onKeyDown={e => { if (e.key === 'Enter' && guess.trim()) { e.preventDefault(); handleSubmitAttempt(false); } }}
         onFocus={handleInputFocus}
         placeholder="Songtitel eingeben"
         className="text-sm sm:text-base"
-        disabled={end || (isTimeTrial && solved)} // Deaktiviere Input, wenn Frage vorbei oder im TT gelöst
+        disabled={end || (effectiveMode === 'TimeTrial' && solved)}
         />
         {sug.length > 0 && (
           <ul className="absolute w-full bg-gray-800 border border-gray-700 rounded-b max-h-32 sm:max-h-40 overflow-y-auto z-10 mt-1 text-xs sm:text-sm">
@@ -404,25 +552,24 @@ export default function SoloQuiz() {
           </ul>
         )}
         </div>
-        {/* BUTTON LAYOUT GEMÄSS SKIZZE */}
         <div className="flex gap-2 mt-2">
         <Button
         onClick={() => handleSubmitAttempt(false)}
-        disabled={!guess.trim() || end || (isTimeTrial && solved)}
-        className="flex-1 text-sm sm:text-base" // flex-1 (oder flex-grow)
-      >
-      Raten
-      </Button>
-      <Button
-      variant="secondary"
-      onClick={() => handleSubmitAttempt(true)}
-      disabled={end || (isTimeTrial && solved)}
-      className="flex-shrink-0 text-sm sm:text-base" // w-auto ist implizit, flex-shrink-0 ist wichtig
-      >
-      Überspringen
-      </Button>
-      </div>
-      </>
+        disabled={!guess.trim() || end || (effectiveMode === 'TimeTrial' && solved)}
+        className="flex-1 text-sm sm:text-base"
+        >
+        Raten
+        </Button>
+        <Button
+        variant="secondary"
+        onClick={() => handleSubmitAttempt(true)}
+        disabled={end || (effectiveMode === 'TimeTrial' && solved)}
+        className="flex-shrink-0 text-sm sm:text-base"
+        >
+        Überspringen
+        </Button>
+        </div>
+        </>
       ) : !done ? (
         <Button onClick={handleNextSong} className="mt-4 w-full text-sm sm:text-base">
         {idx + 1 < songs.length ? "➡ Nächster Song" : "📊 Zum Ergebnis"}
@@ -438,12 +585,15 @@ export default function SoloQuiz() {
       {info && <p className="text-center font-semibold mt-3 text-sm sm:text-base break-words">{info}</p>}
       {hist.length > 0 && (
         <ul className="text-xs sm:text-sm space-y-1 max-h-20 sm:max-h-24 overflow-y-auto p-2 bg-gray-800 rounded mt-2 border border-gray-700">
-        {hist.map((h, i) => <li key={i} className="break-words">{h}</li>)}
+        {hist.map((h, hIdx) => <li key={hIdx} className="break-words">{h}</li>)}
         </ul>
       )}
       </>
-    ) : (
-      <p className="text-center text-gray-400 py-10">{songs.length === 0 && !catLabel.includes("Alle") ? "Keine Songs für die gewählten Kategorien gefunden." : "Lade Songs für das Quiz..."}</p>
+    ) : ( // Wird angezeigt, wenn cur._id nicht existiert (z.B. während Songs noch laden oder wenn Fehler)
+    <p className="text-center text-gray-400 py-10">
+    {songs.length === 0 && db.length > 0 && !catLabel.includes("Alle") && !done ? "Keine Songs für die gewählten Kategorien gefunden." :
+      (songs.length === 0 && !done ? "Lade Songs für das Quiz..." : "")}
+      </p>
     )}
     </Card>
 
