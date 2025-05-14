@@ -1,0 +1,44 @@
+# docker-compose.yml
+# version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: quiz-api
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
+    volumes:
+      # ACHTUNG: Dieses Volume ist immer noch wichtig, damit der API-Container
+      # beim Upload in dieses Verzeichnis schreiben kann!
+      - ./backend/public/audio:/app/public/audio
+      - ./backend/data:/app/data
+      - ./backend/logs:/app/logs
+    networks:
+      - quiz-net
+    expose:
+      - "${PORT:-3001}"
+
+  nginx:
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    container_name: quiz-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      # Korrektes Mapping für die 'root /var/www;' Direktive in der /audio/ location:
+      # Mappe das Host-Verzeichnis, das 'audio' enthält (also ./backend/public)
+      # nach /var/www im Container. Nginx sucht dann /audio/datei.mp3 in /var/www/audio/datei.mp3
+      - ./backend/public:/var/www:ro
+    depends_on:
+      - api
+    networks:
+      - quiz-net
+
+networks:
+  quiz-net:
+    driver: bridge

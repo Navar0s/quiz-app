@@ -1,0 +1,75 @@
+[navaro@navaroplexpi quiz-app]$ tree -L 4 -I 'node_modules'
+
+├── backend
+│   ├── data
+│   │   ├── highscores.json
+│   │   └── songs.json
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── public
+│   │   ├── assets
+│   │   │   ├── index-BtxxqjeU.css
+│   │   │   └── index-Cnr02SJ0.js
+│   │   ├── audio
+│   │   └── index.html
+│   └── server.js
+├── docker-compose.yml
+├── frontend
+│   ├── dist
+│   │   ├── assets
+│   │   │   ├── index-C6_gripS.js
+│   │   │   └── index-CVNG6nXX.css
+│   │   ├── index.html
+│   │   └── robots.txt
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.js
+│   ├── public
+│   │   └── robots.txt
+│   ├── src
+│   │   ├── api.js
+│   │   ├── App.jsx
+│   │   ├── BuzzerClient.jsx
+│   │   ├── BuzzerQuizConfig.jsx
+│   │   ├── BuzzerQuiz.jsx
+│   │   ├── components
+│   │   │   ├── BackButton.jsx
+│   │   │   ├── Button.jsx
+│   │   │   ├── Card.jsx
+│   │   │   ├── CustomAudioPlayer.jsx
+│   │   │   ├── EditorGuard.jsx
+│   │   │   ├── Header.jsx
+│   │   │   ├── Input.jsx
+│   │   │   ├── Modal.jsx
+│   │   │   ├── Select.jsx
+│   │   │   ├── SongEditor.jsx
+│   │   │   ├── Textarea.jsx
+│   │   │   ├── ToggleSwitch.jsx
+│   │   │   └── WavePlayer.jsx
+│   │   ├── config
+│   │   │   └── quizConfig.js
+│   │   ├── Datenschutz.jsx
+│   │   ├── GamemasterQuizConfig.jsx
+│   │   ├── GamemasterQuiz.jsx
+│   │   ├── HighscoreView.jsx
+│   │   ├── hooks
+│   │   │   └── useStopwatch.js
+│   │   ├── Impressum.jsx
+│   │   ├── index.css
+│   │   ├── main.jsx
+│   │   ├── QuizDataEditor.jsx
+│   │   ├── QuizLayout.jsx
+│   │   ├── QuizStartScreen.jsx
+│   │   ├── SoloQuizConfig.jsx
+│   │   ├── SoloQuiz.jsx
+│   │   ├── TestComponents.jsx
+│   │   ├── theme-context.jsx
+│   │   └── theme.js
+│   ├── tailwind.config.js
+│   └── vite.config.js
+├── nginx
+│   ├── Dockerfile
+│   └── quiz.conf
+├── nginx_debug.log
