@@ -1,29 +1,72 @@
-import { useEffect, useRef, useState } from 'react';
+// frontend/src/hooks/useStopwatch.js
+import { useState, useRef, useCallback, useEffect } from 'react';
 
-/** Sehr genauer Stoppuhr-Hook (requestAnimationFrame).
- *  Gibt [ms, reset] zurück. */
-export default function useStopwatch(isRunning) {
+/**
+ * Ein Hook für eine Stoppuhr.
+ * @param {boolean} controlledIsActive Ob die Stoppuhr von außen gesteuert aktiv sein soll.
+ * @returns {[number, () => void, () => void, () => void]} Ein Array mit:
+ *  - elapsed: Die vergangene Zeit in Millisekunden.
+ *  - resetStopwatch: Funktion zum Zurücksetzen der Stoppuhr.
+ *  - startStopwatch: Funktion zum Starten der Stoppuhr.
+ *  - pauseStopwatch: Funktion zum Pausieren der Stoppuhr.
+ */
+const useStopwatch = (controlledIsActive) => {
     const [elapsed, setElapsed] = useState(0);
-    const raf   = useRef(null);
-    const base  = useRef(0);
+    const [isRunning, setIsRunning] = useState(false); // Interner Laufstatus
+    const intervalRef = useRef(null);
+    const startTimeRef = useRef(0);
 
-    /* Start / Stopp */
+    // Effekt, der auf die externe Aktivierungssteuerung reagiert
     useEffect(() => {
-        if (!isRunning) {
-            cancelAnimationFrame(raf.current);
-            return;
+        if (controlledIsActive) {
+            if (!isRunning) { // Nur starten, wenn nicht schon läuft und von außen aktiviert
+                setIsRunning(true);
+                startTimeRef.current = Date.now() - elapsed; // Korrigiere Startzeit, falls schon was gelaufen ist
+                console.log("[useStopwatch] Extern aktiviert, starte Timer. Elapsed war:", elapsed);
+            }
+        } else {
+            if (isRunning) { // Nur pausieren, wenn läuft und von außen deaktiviert
+                setIsRunning(false);
+                console.log("[useStopwatch] Extern deaktiviert, pausiere Timer.");
+            }
         }
-        base.current = performance.now() - elapsed;
-        const step = (t) => {
-            setElapsed(t - base.current);
-            raf.current = requestAnimationFrame(step);
-        };
-        raf.current = requestAnimationFrame(step);
-        return () => cancelAnimationFrame(raf.current);
+    }, [controlledIsActive, isRunning, elapsed]); // elapsed hier wichtig für korrekte startTimeRef
+
+    // Intervall-Logik
+    useEffect(() => {
+        if (isRunning) {
+            intervalRef.current = setInterval(() => {
+                setElapsed(Date.now() - startTimeRef.current);
+            }, 100); // Update alle 100ms für zehntel Sekunden
+        } else {
+            clearInterval(intervalRef.current);
+        }
+        return () => clearInterval(intervalRef.current);
     }, [isRunning]);
 
-    /** Reset auf 0 ms */
-    const reset = () => { setElapsed(0); base.current = performance.now(); };
+    const startStopwatch = useCallback(() => {
+        // Diese Funktion ist eher für manuellen Start gedacht, wenn nicht extern gesteuert.
+        // Bei externer Steuerung reagiert der useEffect auf controlledIsActive.
+        if (!isRunning) {
+            setIsRunning(true);
+            startTimeRef.current = Date.now() - elapsed; // Wichtig, um bei Resume korrekt weiterzuzählen
+            console.log("[useStopwatch] Manuell gestartet.");
+        }
+    }, [isRunning, elapsed]);
 
-    return [elapsed, reset];
-}
+    const pauseStopwatch = useCallback(() => {
+        setIsRunning(false);
+        console.log("[useStopwatch] Manuell pausiert.");
+    }, []);
+
+    const resetStopwatch = useCallback(() => {
+        setIsRunning(false);
+        setElapsed(0);
+        console.log("[useStopwatch] Zurückgesetzt.");
+    }, []);
+
+    // Gib die Zeit und die memoisierten Kontrollfunktionen zurück
+    return [elapsed, resetStopwatch, startStopwatch, pauseStopwatch];
+};
+
+export default useStopwatch;

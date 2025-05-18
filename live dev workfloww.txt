@@ -1,0 +1,45 @@
+Live (main-Branch):
+
+git checkout main
+
+Um die override.yml zu ignorieren, könntest du sie temporär umbenennen oder docker-compose -f docker-compose.yml ... verwenden.
+
+docker-compose -f docker-compose.yml build api nginx (wenn nötig)
+docker-compose -f docker-compose.yml up -d api nginx
+
+----
+
+Dev (feature/soloquiz-scoring-Branch):
+
+git checkout feature/soloquiz-scoring
+
+docker-compose -f docker-compose.yml -f docker-compose.override.yml build api_dev nginx_dev (wenn nötig)
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d api_dev nginx_dev
+
+
+
+-----
+
+Zur Erinnerung für die Zukunft, um gezielter zu arbeiten:
+
+
+Nur Dev-Services stoppen/starten:
+
+docker-compose -f docker-compose.yml -f docker-compose.override.yml down
+# Stoppt api_dev, nginx_dev
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d api_dev nginx_dev
+# Startet/updated api_dev, nginx_dev
+
+
+Nur Live-Services stoppen/starten:
+
+docker-compose -f docker-compose.yml down
+# Stoppt api, nginx
+docker-compose -f docker-compose.yml up -d api nginx
+# Startet/updated api, nginx
+
+Alle Services aller Compose-Konfigurationen im aktuellen Projekt stoppen:
+
+docker-compose down
+(ohne -f Flags, wenn beide Konfigs Services definieren, die nicht komplett getrennt sind, kann das unvorhersehbar sein oder alles stoppen).
+Am sichersten ist es, immer die expliziten -f Flags zu verwenden, wenn mehrere Compose-Dateien im Spiel sind.

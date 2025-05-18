@@ -8,20 +8,23 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import http from 'http';
 import { Server } from 'socket.io';
-import crypto from 'crypto';
+import crypto from 'crypto'; // Import für crypto.randomUUID()
 import dotenv from 'dotenv';
 
 dotenv.config();
+
+const CATEGORIES = ['Filme', 'Serien', 'Games']; // Synchron mit Frontend halten
+const HIGHSCORE_QUESTION_COUNTS = [10, 25, 50]; // Synchron mit Frontend halten
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'quizadmin_default_pls_change';
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'quizmaster23';
 
 const SONGS_FILE = path.join(__dirname, 'data', 'songs.json');
-const HIGHSCORE_FILE = path.join(__dirname, 'data', 'highscores.json');
+const HIGHSCORE_FILE = path.join(__dirname, 'data', 'highscores.json'); // Ist schon da
 
 // Verzeichnisse sicherstellen
 const dataDir = path.join(__dirname, 'data');
@@ -80,20 +83,43 @@ const loadJson = (filePath) => {
   try {
     if (fs.existsSync(filePath)) {
       const fileData = fs.readFileSync(filePath, 'utf-8');
+      // Erste Zeile parsen, um leere Datei abzufangen bevor JSON.parse einen Fehler wirft
+      if (fileData.trim() === '') {
+        if (filePath === HIGHSCORE_FILE) {
+          console.log(`Highscore-Datei ${filePath} ist leer, initialisiere mit leerer Struktur.`);
+          return { timetrial_hs: [], survival: [] };
+        }
+        return []; // Für andere leere JSONs
+      }
       const jsonData = JSON.parse(fileData);
+
       if (filePath === SONGS_FILE && Array.isArray(jsonData)) {
         return jsonData.map(song => ({
           ...song,
           reportedIssues: song.reportedIssues || [],
-          // NEU: isNew Flag initialisieren, Default false für alte Einträge
           isNew: song.isNew === undefined ? false : song.isNew
         }));
       }
+      // Für Highscores ein Objekt mit leeren Arrays als Fallback sicherstellen
+      if (filePath === HIGHSCORE_FILE) {
+        return {
+          timetrial_hs: Array.isArray(jsonData.timetrial_hs) ? jsonData.timetrial_hs : [],
+          survival: Array.isArray(jsonData.survival) ? jsonData.survival : [],
+        };
+      }
       return jsonData;
+    }
+    // Wenn die Datei nicht existiert
+    if (filePath === HIGHSCORE_FILE) {
+      console.log(`Highscore-Datei ${filePath} nicht gefunden, initialisiere mit leerer Struktur.`);
+      return { timetrial_hs: [], survival: [] };
     }
     return [];
   } catch (err) {
     console.error(`Fehler beim Laden von JSON aus ${filePath}:`, err);
+    if (filePath === HIGHSCORE_FILE) {
+      return { timetrial_hs: [], survival: [] }; // Fallback bei Parse-Fehler
+    }
     return [];
   }
 };
@@ -116,6 +142,132 @@ api.get('/songs', (_req, res) => {
   const songs = loadJson(SONGS_FILE); // loadJson stellt nun sicher, dass reportedIssues existiert
   console.log(`GET /api/songs - ${songs.length} Songs geladen. Sende Antwort.`);
   res.json(songs);
+});
+
+const MAX_HIGHSCORES_GLOBAL_PER_MODE = 100; // Globale Obergrenze pro Modus, um die Datei nicht explodieren zu lassen
+
+function addAndManageHighscores(allHighscores, mode, newEntry) {
+  if (!allHighscores[mode] || !Array.isArray(allHighscores[mode])) {
+    console.warn(`Modus ${mode} in Highscores nicht als Array initialisiert. Wird jetzt erstellt.`);
+    allHighscores[mode] = [];
+  }
+
+  // Eindeutige ID für den neuen Eintrag, falls nicht schon vom Client gesetzt (Backend sollte immer eine setzen)
+  if (!newEntry.id) {
+    newEntry.id = crypto.randomUUID();
+  }
+  // Sicherstellen, dass der Timestamp vorhanden ist
+  if (!newEntry.timestamp) {
+    newEntry.timestamp = new Date().toISOString();
+  }
+
+
+  allHighscores[mode].push(newEntry);
+  console.log(`Neuer Eintrag für Modus ${mode} hinzugefügt. Aktuelle Anzahl: ${allHighscores[mode].length}`);
+
+
+  // Sortiere die Highscores für den spezifischen Modus
+  if (mode === 'timetrial_hs') {
+    allHighscores[mode].sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score; // Score DESC
+      return a.totalTimeMs - b.totalTimeMs;              // Time ASC
+    });
+    console.log(`Highscores für ${mode} sortiert nach Score (DESC), dann Zeit (ASC).`);
+  } else if (mode === 'survival') {
+    allHighscores[mode].sort((a, b) => {
+      if (b.songsCleared !== a.songsCleared) return b.songsCleared - a.songsCleared; // Songs DESC
+      return b.score - a.score;                                                      // Score DESC
+    });
+    console.log(`Highscores für ${mode} sortiert nach SongsCleared (DESC), dann Score (DESC).`);
+  }
+
+  // Globale Begrenzung der Liste pro Modus (einfache Variante)
+  if (allHighscores[mode].length > MAX_HIGHSCORES_GLOBAL_PER_MODE) {
+    console.log(`Highscore-Liste für Modus ${mode} von ${allHighscores[mode].length} auf die besten ${MAX_HIGHSCORES_GLOBAL_PER_MODE} gekürzt.`);
+    allHighscores[mode] = allHighscores[mode].slice(0, MAX_HIGHSCORES_GLOBAL_PER_MODE);
+  }
+  // Für eine präzisere Kürzung (z.B. Top X pro Kategorie/Fragenanzahl) wäre hier deutlich mehr Logik nötig.
+  // Das würde bedeuten:
+  // 1. Gruppieren der Einträge nach `category` und (für timetrial_hs) `questionCount`.
+  // 2. Innerhalb jeder Gruppe die Top N behalten.
+  // 3. Alle Gruppen wieder zusammenführen.
+  // Das heben wir uns für später auf, falls nötig.
+
+  return allHighscores;
+}
+// --- HIGHSCORE ENDPUNKTE ---
+
+// GET /api/highscores (ersetzt/aktualisiert den alten /api/highscore GET)
+api.get('/highscores', (_req, res) => {
+  console.log('GET /api/highscores');
+  const highscores = loadJson(HIGHSCORE_FILE); // Nutzt die angepasste loadJson Funktion
+  res.json(highscores);
+});
+
+// POST /api/highscores/:mode
+api.post('/highscores/:mode', (req, res) => {
+  const mode = req.params.mode;
+  const newEntryData = req.body; // Das ist das Objekt vom Frontend
+
+  console.log(`POST /api/highscores/${mode} mit Body:`, JSON.stringify(newEntryData, null, 2).substring(0, 500) + '...'); // Gekürztes Log
+
+  if (mode !== 'timetrial_hs' && mode !== 'survival') {
+    return res.status(400).json({ error: 'Ungültiger Modus. Erlaubt: timetrial_hs, survival.' });
+  }
+
+  // Validierung: Grundlegende Felder
+  if (!newEntryData.playerName || typeof newEntryData.playerName !== 'string' || newEntryData.playerName.trim() === '') {
+    return res.status(400).json({ error: 'Spielername ist erforderlich.' });
+  }
+  if (newEntryData.playerName.length > 15) { // Entspricht Frontend-maxLength
+    return res.status(400).json({ error: 'Spielername darf maximal 15 Zeichen lang sein.'});
+  }
+  if (typeof newEntryData.score !== 'number') { // score ist für beide Modi wichtig
+    return res.status(400).json({ error: 'Score ist erforderlich und muss eine Zahl sein.' });
+  }
+  if (!newEntryData.category || typeof newEntryData.category !== 'string') {
+    return res.status(400).json({ error: 'Kategorie ist erforderlich.'});
+  }
+  // Gültige Kategorien prüfen (optional, aber gut für Datenintegrität)
+  const validCategories = [...CATEGORIES, "mixed"]; // Annahme: CATEGORIES ist ['Filme', 'Serien', 'Games']
+  if (!validCategories.includes(newEntryData.category)) {
+    return res.status(400).json({ error: `Ungültige Kategorie: ${newEntryData.category}. Erlaubt: ${validCategories.join(', ')}`});
+  }
+
+
+  // Modus-spezifische Validierungen
+  if (mode === 'timetrial_hs') {
+    if (typeof newEntryData.totalTimeMs !== 'number' || typeof newEntryData.questionCount !== 'number') {
+      return res.status(400).json({ error: 'Für TimeTrial HS sind totalTimeMs und questionCount Zahlenwerte erforderlich.' });
+    }
+    const validCounts = HIGHSCORE_QUESTION_COUNTS; // [10, 25, 50] aus quizConfig.js
+    if (!validCounts.includes(newEntryData.questionCount)) {
+      return res.status(400).json({ error: `Ungültige questionCount für TimeTrial HS. Erlaubt: ${validCounts.join(', ')}`});
+    }
+    if (typeof newEntryData.correctlyGuessed !== 'number') {
+      return res.status(400).json({ error: 'correctlyGuessed ist für TimeTrial HS erforderlich.'});
+    }
+  } else if (mode === 'survival') {
+    if (typeof newEntryData.songsCleared !== 'number') {
+      return res.status(400).json({ error: 'Für Survival ist songsCleared als Zahlenwert erforderlich.' });
+    }
+  }
+
+  // Serverseitige ID und Timestamp setzen/überschreiben (Sicherheitsmaßnahme)
+  newEntryData.id = crypto.randomUUID();
+  newEntryData.timestamp = new Date().toISOString();
+
+  try {
+    let allHighscores = loadJson(HIGHSCORE_FILE);
+    allHighscores = addAndManageHighscores(allHighscores, mode, newEntryData);
+    saveJson(HIGHSCORE_FILE, allHighscores);
+
+    console.log(`Highscore für ${mode} erfolgreich gespeichert. ID: ${newEntryData.id}`);
+    res.status(201).json({ message: 'Highscore erfolgreich gespeichert!', entryId: newEntryData.id });
+  } catch (error) {
+    console.error(`Fehler beim Speichern des Highscores für Modus ${mode}:`, error);
+    res.status(500).json({ error: 'Interner Serverfehler beim Speichern des Highscores.' });
+  }
 });
 
 // Multer Konfigurationen (initialUploadStorage, audioReplaceStorage, initialUpload, uploadAudioReplace)
@@ -390,12 +542,12 @@ api.get('/highscore', (_req, res) => {
   const highscores = loadJson(HIGHSCORE_FILE);
   res.json(highscores);
 });
-api.post('/highscore', (req, res) => {
-  console.log('POST /api/highscore mit Body:', JSON.stringify(req.body, null, 2));
-  // const highscores = loadJson(HIGHSCORE_FILE); // Laden, falls Logik komplexer wird
-  saveJson(HIGHSCORE_FILE, req.body); // Momentan überschreibt es einfach
-  res.status(201).json({ message: 'Highscore gespeichert'});
-});
+//api.post('/highscore', (req, res) => {
+//  console.log('POST /api/highscore mit Body:', JSON.stringify(req.body, null, 2));
+//  const highscores = loadJson(HIGHSCORE_FILE); // Laden, falls Logik komplexer wird
+//  saveJson(HIGHSCORE_FILE, req.body); // Momentan überschreibt es einfach
+//  res.status(201).json({ message: 'Highscore gespeichert'});
+//});
 
 // Auth Endpunkt
 api.post('/auth', (req, res) => {

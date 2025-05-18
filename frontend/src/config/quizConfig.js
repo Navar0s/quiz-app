@@ -46,7 +46,7 @@ export const metadataFieldsConfig = {
 export const SCORE_CONFIG = {
     Freemode: { // Bezieht sich auf 'freemode' und 'highscore' (6 Versuche HS)
         MAX_POINTS_PER_SONG: 100,
-        DEDUCTION_PER_WRONG_ATTEMPT: 15,
+        DEDUCTION_PER_WRONG_ATTEMPT: 10,
         // MAX_TOTAL_ATTEMPTS ist bereits durch deine FREEMODE_ATTEMPTS Konstante (6) in SoloQuiz definiert.
         // 0 Punkte, wenn fails >= FREEMODE_ATTEMPTS (also 6 oder mehr Fehlversuche)
         // oder wenn im 6. Versuch falsch geraten wird.
@@ -55,10 +55,13 @@ export const SCORE_CONFIG = {
     },
     TimeTrial: { // Bezieht sich auf 'timetrial' und 'timetrialHS'
         BASE_POINTS_PER_SONG: 200,
-        TIME_DEDUCTION_PER_SECOND: 1, // Abzug pro ganzer Sekunde (elapsed wird in ms sein)
-        WRONG_ATTEMPT_DEDUCTION: 15,
+        TIME_DEDUCTION_PER_SECOND: 2, // Abzug pro ganzer Sekunde (elapsed wird in ms sein)
+        WRONG_ATTEMPT_DEDUCTION: 10,
         // DNF_TIME_PENALTY_SECONDS: 30, // Könnten wir hinzufügen, wenn ein DNF eine feste Zeitstrafe bekommen soll
     },
+
+    TIP_COST: 15
+
 };
 
 // NEU: Verfügbare Fragenanzahlen für Highscore-Modi (falls du die Auswahl dynamischer gestalten willst)

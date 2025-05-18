@@ -5,3 +5,27 @@
 body {
     @apply bg-gray-900 text-white;
 }
+
+@keyframes pulseAndFade {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8); /* Start etwas kleiner */
+        opacity: 0;
+    }
+    20% {
+        transform: translate(-50%, -100%) scale(1.1); /* Nach oben bewegen und größer werden */
+        opacity: 1;
+    }
+    80% {
+        transform: translate(-50%, -130%) scale(1); /* Etwas weiter nach oben, normale Größe */
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -150%) scale(0.8); /* Weiter nach oben und ausfaden */
+        opacity: 0;
+    }
+}
+
+.animate-pulse-and-fade {
+    animation: pulseAndFade 2s ease-out forwards;
+    /* transform-origin: center bottom; // Nicht mehr nötig mit translate -50% */
+}

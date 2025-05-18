@@ -1,0 +1,6042 @@
+[
+  {
+    "_id": "922d669b-0f51-479e-8804-72a519dc91bd",
+    "title": "Léon - Der Profi",
+    "category": "Filme",
+    "audio": "/audio/01-Noon.mp3",
+    "filename": "01-Noon.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1994",
+      "Genre": "Thriller/Drama",
+      "Regie": "Luc Besson",
+      "Darsteller": "Jean Reno",
+      "Zitat": "\"Keine Frauen, keine Kinder! Das ist die Regel!\""
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "759d383a-ced5-45ba-8fe3-23d2c8316f27",
+    "title": "Aladdin",
+    "category": "Filme",
+    "audio": "/audio/Aladdin - Arabische NÃÂ¤chte (German).mp3",
+    "filename": "Aladdin - Arabische NÃÂ¤chte (German).mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Zitat": "\"Phänomenale kosmische Kräfte! Winzig kleiner Lebensraum!\"",
+      "Darsteller": "Robin Williams",
+      "Regie": "John Musker, Ron Clements",
+      "Genre": "Zeichentrick",
+      "Erscheinungsjahr": "1992"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "6ce7823f-64f4-4a33-b358-5dcd1baf5b49",
+    "title": "Der weiße Hai",
+    "category": "Filme",
+    "audio": "/audio/weier_hai_theme_song.mp3",
+    "filename": "weier_hai_theme_song.mp3",
+    "startTime": 0,
+    "metadata": {
+      "Erscheinungsjahr": "1975",
+      "Genre": "Thriller ",
+      "Regie": "Steven Spielberg",
+      "Darsteller": "Richard Dreyfuss",
+      "Zitat": "\"Sie werden ein größeres Boot brauchen!\""
+    },
+    "alternativeTitles": [],
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "3b6d7c86-40ec-4e7e-b145-781fd9a10e48",
+    "title": "Jäger des verlorenen Schatzes",
+    "category": "Filme",
+    "audio": "/audio/Indiana Jones - Theme.mp3",
+    "filename": "Indiana Jones - Theme.mp3",
+    "startTime": 0,
+    "metadata": {
+      "Erscheinungsjahr": "1981",
+      "Genre": "Abenteuer, Action",
+      "Regie": "Steven Spielberg",
+      "Darsteller": "Harrison Ford",
+      "Zitat": "„Ich hasse Schlagen!“"
+    },
+    "alternativeTitles": [
+      "Indiana Jones"
+    ],
+    "reportedIssues": [
+      {
+        "type": "playback_error",
+        "timestamp": "2025-05-17T20:29:18.684Z"
+      }
+    ],
+    "isNew": false
+  },
+  {
+    "_id": "fc93c707-cfa1-42ae-9561-23d04e35f459",
+    "title": "James Bond - 007 jagt Dr. No",
+    "category": "Filme",
+    "audio": "/audio/James Bond 007 Movie Theme Music.mp3",
+    "filename": "James Bond 007 Movie Theme Music.mp3",
+    "startTime": 0,
+    "metadata": {
+      "Erscheinungsjahr": "1962",
+      "Genre": "Action",
+      "Regie": "Terence Young",
+      "Darsteller": "Sean Connery",
+      "Zitat": "„Mein Name ist Bond, James Bond.\""
+    },
+    "alternativeTitles": [],
+    "reportedIssues": [
+      {
+        "type": "playback_error",
+        "timestamp": "2025-05-16T13:17:42.111Z"
+      }
+    ],
+    "isNew": false
+  },
+  {
+    "_id": "f3b16093-2be1-49bd-a798-d1057d3645eb",
+    "title": "Gladiator",
+    "category": "Filme",
+    "audio": "/audio/Gladiator Soundtrack - Main Theme.mp3",
+    "filename": "Gladiator Soundtrack - Main Theme.mp3",
+    "startTime": 0,
+    "metadata": {
+      "Erscheinungsjahr": "2000",
+      "Genre": "Historiendrama ",
+      "Regie": "Ridley Scott",
+      "Darsteller": "Russell Crowe",
+      "Zitat": "„Gefällt es euch nicht?! Unterhalte ich euch nicht?!“"
+    },
+    "alternativeTitles": [],
+    "reportedIssues": [
+      {
+        "type": "playback_error",
+        "timestamp": "2025-05-15T21:21:20.375Z"
+      },
+      {
+        "type": "playback_error",
+        "timestamp": "2025-05-16T16:36:43.444Z"
+      },
+      {
+        "type": "playback_error",
+        "timestamp": "2025-05-16T16:37:59.096Z"
+      }
+    ],
+    "isNew": false
+  },
+  {
+    "_id": "303368bc-104f-4375-84f4-1fc0311d30d8",
+    "title": "Braveheart",
+    "category": "Filme",
+    "audio": "/audio/James_Horner_-_Braveheart_Theme_Song.mp3",
+    "filename": "James_Horner_-_Braveheart_Theme_Song.mp3",
+    "startTime": 0,
+    "metadata": {
+      "Erscheinungsjahr": "1995",
+      "Genre": "Historiendrama",
+      "Regie": "Mel Gibson",
+      "Darsteller": "Mel Gibson",
+      "Zitat": "\"Sie mögen uns das Leben nehmen, aber niemals nehmen sie uns unsere Freiheit!\""
+    },
+    "alternativeTitles": [],
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "b6c9fd87-f54d-4b1b-b5bb-ba2c7161ad37",
+    "title": "Kill Bill - Volume 1",
+    "category": "Filme",
+    "audio": "/audio/Kill_Bill_Theme.mp3",
+    "filename": "Kill_Bill_Theme.mp3",
+    "startTime": 0,
+    "metadata": {
+      "Regie": " Quentin Tarantino",
+      "Darsteller": "Uma Thurman",
+      "Erscheinungsjahr": "2003",
+      "Genre": "Action",
+      "Zitat": "\"Diese Frau verdient ihre Rache. Und wir verdienen den Tod!\""
+    },
+    "alternativeTitles": [],
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "e99e74b5-3468-4cdf-8abe-8e872e5c5db2",
+    "title": "Requiem for a Dream",
+    "category": "Filme",
+    "audio": "/audio/Requiem for a Dream Soundtrack - Theme Song.mp3",
+    "filename": "Requiem for a Dream Soundtrack - Theme Song.mp3",
+    "startTime": 0,
+    "metadata": {
+      "Regie": "Darren Aronofsky",
+      "Genre": "Drama",
+      "Erscheinungsjahr": "2000",
+      "Darsteller": "Jared Leto",
+      "Zitat": "„Die gute Nachricht ist, es soll in den nächsten Tagen wieder guten Stoff geben.“"
+    },
+    "alternativeTitles": [],
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a5bc1288-cb94-46a1-b90d-00bc2a97862f",
+    "title": "Der Schuh Des Manitu",
+    "category": "Filme",
+    "audio": "/audio/Der_Schuh_Des_Manitu_-_Super_Perforator_Song.mp3",
+    "filename": "Der_Schuh_Des_Manitu_-_Super_Perforator_Song.mp3",
+    "startTime": 5,
+    "metadata": {
+      "Erscheinungsjahr": "2001",
+      "Genre": "Komödie",
+      "Regie": "Michael Herbig",
+      "Darsteller": "Michael Herbig",
+      "Zitat": "\"Jetzt geht jeder noch mal aufs Klo und dann reiten wir los.\""
+    },
+    "alternativeTitles": [],
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a90506ba-7b01-4069-9083-2a89291d967b",
+    "title": "Die fabelhafte Welt der Amélie",
+    "category": "Filme",
+    "audio": "/audio/01_-_JY_Suis_Jamias_All.mp3",
+    "filename": "01_-_JY_Suis_Jamias_All.mp3",
+    "startTime": 0,
+    "metadata": {
+      "Genre": "Komödie, Romanze",
+      "Regie": "Jean-Pierre Jeunet",
+      "Erscheinungsjahr": "2001",
+      "Darsteller": "Audrey Tautou",
+      "Zitat": "\"Das Leben ist nichts anderes, als die endlose Probe einer Vorstellung, die niemals stattfindet.\""
+    },
+    "alternativeTitles": [],
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "1264dd01-dfd9-48da-9c23-fe579d1296ac",
+    "title": "Lord of War",
+    "category": "Filme",
+    "audio": "/audio/Warlord - Theme Song from _Lord of War_ OST.mp3",
+    "filename": "Warlord - Theme Song from _Lord of War_ OST.mp3",
+    "startTime": 0,
+    "metadata": {
+      "Genre": "Krimi, Thriller",
+      "Darsteller": "Nicholas Cage",
+      "Regie": " Andrew Niccol",
+      "Erscheinungsjahr": "2005",
+      "Zitat": "\"Die einzige Armee, die ich nicht mit Waffen beliefert habe, ist die Heilsarmee\""
+    },
+    "alternativeTitles": [],
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a17a344d-577c-4f56-ae03-19fcecde7065",
+    "title": "Die Unendliche Geschichte",
+    "category": "Filme",
+    "audio": "/audio/Die_Unendliche_Geschichte_Theme_Song_Audiosurf.mp3",
+    "filename": "Die_Unendliche_Geschichte_Theme_Song_Audiosurf.mp3",
+    "startTime": 0,
+    "metadata": {
+      "Erscheinungsjahr": "1984",
+      "Genre": "Fantasy",
+      "Regie": "Wolfgang Petersen",
+      "Darsteller": "Barret Oliver",
+      "Zitat": "\"Phantasien kann wieder ganz neu entstehen! Aus deinen Träumen und Wünschen, Bastian!\""
+    },
+    "alternativeTitles": [],
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "1edaeeee-e760-4576-87c8-d09a7c130821",
+    "title": "Highlander",
+    "category": "Filme",
+    "audio": "/audio/Highlander Theme song.mp3",
+    "filename": "Highlander Theme song.mp3",
+    "startTime": 0,
+    "metadata": {
+      "Zitat": "\"Geboren wurde ich 1518 in Glenn Finnen am Ufer des Loch Sheal.\"",
+      "Darsteller": "Christopher Lambert",
+      "Regie": "Russell Mulcahy",
+      "Genre": "Action, Fantasy",
+      "Erscheinungsjahr": "1986"
+    },
+    "alternativeTitles": [],
+    "reportedIssues": [
+      {
+        "type": "playback_error",
+        "timestamp": "2025-05-15T21:02:13.649Z"
+      },
+      {
+        "type": "playback_error",
+        "timestamp": "2025-05-17T10:26:16.641Z"
+      }
+    ],
+    "isNew": false
+  },
+  {
+    "_id": "725fca23-d9ff-4728-a078-1d4fb5975f83",
+    "title": "Das Dschungelbuch",
+    "category": "Filme",
+    "audio": "/audio/Soundtrack - Dschungelbuch.mp3",
+    "filename": "Soundtrack - Dschungelbuch.mp3",
+    "startTime": 0,
+    "metadata": {
+      "Erscheinungsjahr": "1967",
+      "Genre": "Zeichentrick",
+      "Regie": "Wolfgang Reitherman",
+      "Darsteller": "Phil Harris",
+      "Zitat": "\"Dies ist das Gesetz des Dschungels – so alt und wahr wie der Himmel.\""
+    },
+    "alternativeTitles": [],
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a914c56a-44aa-49a3-b5b1-f6db5240f9cd",
+    "title": "Speed",
+    "category": "Filme",
+    "audio": "/audio/Speed soundrack-Main theme.mp3",
+    "filename": "Speed soundrack-Main theme.mp3",
+    "startTime": 0,
+    "metadata": {
+      "Erscheinungsjahr": "1994",
+      "Regie": "Jan de Bont",
+      "Darsteller": "Keanu Reeves",
+      "Genre": "Action, Thriller",
+      "Zitat": "\"Sie haben 'ne Bombe in ihrem Bus!\""
+    },
+    "alternativeTitles": [],
+    "reportedIssues": [
+      {
+        "type": "length_issue",
+        "timestamp": "2025-05-16T16:38:25.262Z",
+        "comment": "start"
+      }
+    ],
+    "isNew": false
+  },
+  {
+    "_id": "a1d42b04-be90-4ae5-946f-c512aa0cb3d0",
+    "title": "Arielle, die Meerjungfrau",
+    "category": "Filme",
+    "audio": "/audio/Kinderlieder_-_Arielle_-_Kss_Sie_Doch.mp3",
+    "filename": "Kinderlieder_-_Arielle_-_Kss_Sie_Doch.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1989",
+      "Genre": "Zeichentrick",
+      "Regie": "John Musker, Ron Clements",
+      "Darsteller": "Jodi Benson",
+      "Zitat": "\"Oh Fabius du bist eine Wucht! Es sieht genauso aus wie er, es hat sogar seine Augen!\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "6cf259d9-7cc5-43e1-9f8d-070b1d1fff9a",
+    "title": "Police Academy",
+    "category": "Filme",
+    "audio": "/audio/Police Academy full Soundtrack (1984).mp3",
+    "filename": "Police Academy full Soundtrack (1984).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1984",
+      "Genre": "Komödie",
+      "Regie": "Hugh Wilson",
+      "Darsteller": "Steve Guttenberg",
+      "Zitat": "\"Als ich durch diese Academy gegangen bin, hatte jeder Kadett das richtige Gewicht, die richtige Grösse, die richtige Frisur und alle hatten sie richtige Lümmel!\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "88a4e8df-b7a0-4f55-a325-1fe01731bf03",
+    "title": "Mary Poppins",
+    "category": "Filme",
+    "audio": "/audio/Kinderlieder - Disney - Mary Poppins - Superkalifragilisticexpialegetisch (deutsch).mp3",
+    "filename": "Kinderlieder - Disney - Mary Poppins - Superkalifragilisticexpialegetisch (deutsch).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1964",
+      "Genre": "Musical/Fantasy",
+      "Regie": "Robert Stevenson",
+      "Darsteller": "Julie Andrews",
+      "Zitat": "\"Oft genügt ein Löffel Zucker... und was bitter ist, wird süß.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "a7c72699-184d-42f9-9a42-f5003f94bae8",
+    "title": "Corpse Bride",
+    "category": "Filme",
+    "audio": "/audio/Corpse Bride - Main Titles.mp3",
+    "filename": "Corpse Bride - Main Titles.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2005",
+      "Genre": "Animation/Fantasy",
+      "Regie": "Tim Burton",
+      "Darsteller": "Helena Bonham Carter",
+      "Zitat": "\"Aber vielleicht gehört er wirklich zu ihr...Zu dem kleinen lebendigem Ding mit den rosigen Wangen und dem schlagendem Herzen...\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "53cd41ed-cc86-42d4-a3c7-7e6cf223bc8e",
+    "title": "Team America",
+    "category": "Filme",
+    "audio": "/audio/03 - America, Fuck Yeah.mp3",
+    "filename": "03 - America, Fuck Yeah.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2004",
+      "Genre": "Komödie",
+      "Regie": "Trey Parker",
+      "Darsteller": "Matt Stone",
+      "Zitat": "\"Bonjour alle zuammen. Keine Sorge, es ist alles bon. Wir haben die Terroristen ausgeschaltet.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "8447e794-52e7-4dbc-a063-c5addd29680f",
+    "title": "Titanic",
+    "category": "Filme",
+    "audio": "/audio/Titanic.mp3",
+    "filename": "Titanic.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1997",
+      "Genre": "Romanze/Abenteuer",
+      "Regie": "James Cameron",
+      "Darsteller": "Kate Winslet",
+      "Zitat": "\"Ach vergiss es, mein Freund. An so eine Frau wie die, kommst du nicht ran. Vorher fliegen dir kleine Engel aus dem Hintern.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "8c5ee28f-d758-40e3-b0be-2865fe4710de",
+    "title": "Pulp Fiction",
+    "category": "Filme",
+    "audio": "/audio/Pulp Fiction Theme (Leningrad Cowboys).mp3",
+    "filename": "Pulp Fiction Theme (Leningrad Cowboys).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1994",
+      "Genre": "Thriller/Krimi",
+      "Regie": "Quentin Tarantino",
+      "Darsteller": "John Travolta",
+      "Zitat": "\"Also ich werde jetzt bis drei zählen, wenn Du bis dahin nicht den Koffer geöffnet hast, bleiben von Deinem Gesicht nur noch die Ohren übrig!\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "019b4fd1-08d3-48fd-90ae-be1184994535",
+    "title": "Fight Club",
+    "category": "Filme",
+    "audio": "/audio/Fight Club -  Main Titles.mp3",
+    "filename": "Fight Club -  Main Titles.mp3",
+    "startTime": 0,
+    "reportedIssues": [
+      {
+        "type": "length_issue",
+        "timestamp": "2025-05-15T21:03:47.897Z",
+        "comment": "start"
+      }
+    ],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1999",
+      "Genre": "Action/Thriller",
+      "Regie": "David Fincher",
+      "Darsteller": "Edward Norton",
+      "Zitat": "\"Das Salz-Fett-Verhältnis muss genau stimmen. Deshalb kommt das beste Fett für Seife immer noch vom Menschen.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "524ba48b-2292-43cd-8626-d09f91fedab8",
+    "title": "Austin Powers",
+    "category": "Filme",
+    "audio": "/audio/Soundtrack - Austin Powers.mp3",
+    "filename": "Soundtrack - Austin Powers.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1997",
+      "Genre": "Komödie/Action",
+      "Regie": "Jay Roach",
+      "Darsteller": "Mike Myers",
+      "Zitat": "\"Au contraire, Babies! Ich schätze, ihr könnt mir nicht wiederstehen!\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "e8e62b6e-c4ea-4665-ae14-458ab2af8b31",
+    "title": "Halloween",
+    "category": "Filme",
+    "audio": "/audio/Halloween - Theme.mp3",
+    "filename": "Halloween - Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1978",
+      "Genre": "Horror",
+      "Regie": "John Carpenter",
+      "Darsteller": "Jamie Lee Curtis",
+      "Zitat": "\"Ben, Haddonfield ist über 150 Meilen von hier entfernt und er kann überhaupt nicht Auto fahren.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "ac0d7d38-257a-4ef5-9f51-98e49812a6b9",
+    "title": "Fluch der Karibik",
+    "category": "Filme",
+    "audio": "/audio/Klaus Badelt - Pirates of the Caribbean - 15 - He's a Pirate.mp3",
+    "filename": "Klaus Badelt - Pirates of the Caribbean - 15 - He's a Pirate.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2003",
+      "Genre": "Action/Abenteuer",
+      "Regie": "Gore Verbinski",
+      "Darsteller": "Johnny Depp",
+      "Zitat": "\"Das ist zweifellos der schlechteste Pirat, den ich je gesehn habe.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "f3b03c9e-3feb-452a-805a-9ad01cc3c358",
+    "title": "Prinzessin Mononoke",
+    "category": "Filme",
+    "audio": "/audio/Princess Mononoke - The Legend of Ashitaka.mp3",
+    "filename": "Princess Mononoke - The Legend of Ashitaka.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1997",
+      "Genre": "Animation/Fantasy",
+      "Regie": "Hayao Miyazaki",
+      "Darsteller": "Yōji Matsuda",
+      "Zitat": "\"Auf dir lastet ein Fluch, sagst du? Der lastet auf der ganzen Welt.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "7a252f86-1af3-43bb-82f6-73d00c63f30b",
+    "title": "Harry Potter und der Stein der Weisen",
+    "category": "Filme",
+    "audio": "/audio/Harry_Potter__Theme_Song_Hedwig39s_Theme.mp3",
+    "filename": "Harry_Potter__Theme_Song_Hedwig39s_Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [
+      {
+        "type": "length_issue",
+        "timestamp": "2025-05-15T14:20:32.030Z",
+        "comment": "start"
+      }
+    ],
+    "alternativeTitles": [],
+    "metadata": {
+      "Zitat": "\"Es verlangt sehr viel Tapferkeit sich seinen Feinden in den Weg zu stellen, aber wesentlich mehr noch, sich seinen Freunden in den Weg zu stellen.\"",
+      "Erscheinungsjahr": "2001",
+      "Genre": "Fantasy",
+      "Regie": "Chris Columbus",
+      "Darsteller": "Daniel Radcliffe"
+    },
+    "isNew": false
+  },
+  {
+    "_id": "c565b8d8-3a52-4d54-87f1-d0a725d2a9de",
+    "title": "Beetlejuice",
+    "category": "Filme",
+    "audio": "/audio/Beatlejuice - Main Titles.mp3",
+    "filename": "Beatlejuice - Main Titles.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Zitat": "\"Barbara, wir sind tot. Ich finde es völlig zwecklos, wenn wir uns noch über irgendwas aufregen.\"",
+      "Erscheinungsjahr": "1988",
+      "Genre": "Horror/Komödie",
+      "Regie": "Tim Burton",
+      "Darsteller": "Michael Keaton"
+    },
+    "isNew": false
+  },
+  {
+    "_id": "0e8b7cdb-cc22-464b-85f0-61971ffb8922",
+    "title": "Der Herr der Ringe - Die Gefährten ",
+    "category": "Filme",
+    "audio": "/audio/The Lord Of The Rings - 02 - Howard Shore - Concerning Hobbits.mp3",
+    "filename": "The Lord Of The Rings - 02 - Howard Shore - Concerning Hobbits.mp3",
+    "startTime": 0,
+    "reportedIssues": [
+      {
+        "type": "length_issue",
+        "timestamp": "2025-05-16T12:40:44.177Z",
+        "comment": "start"
+      }
+    ],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2001",
+      "Genre": "Fantasy/Abenteuer",
+      "Regie": "Peter Jackson",
+      "Darsteller": "Elijah Wood",
+      "Zitat": "\"Ich möchte ihn noch ein letztes Mal sehen.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "57cb4d9f-e0c4-42a5-9028-0adc2fa7d837",
+    "title": "Gremlins",
+    "category": "Filme",
+    "audio": "/audio/Gremlins - Main Theme by Danny Elfman.mp3",
+    "filename": "Gremlins - Main Theme by Danny Elfman.mp3",
+    "startTime": 7,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1984",
+      "Genre": "Horror/Komödie",
+      "Regie": "Joe Dante",
+      "Darsteller": "Zach Galligan",
+      "Zitat": "\"Vielleicht bist du eines Tages dafür bereit, und so lange wird Moguay auf dich warten.\""
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8a9508ac-eeb0-4717-b59f-e53bf20ad25f",
+    "title": "Der Soldat James Ryan",
+    "category": "Filme",
+    "audio": "/audio/Saving Private Ryan Theme.mp3",
+    "filename": "Saving Private Ryan Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1998",
+      "Genre": "Krieg/Acion",
+      "Regie": "Steven Spielberg",
+      "Darsteller": "Tom Hanks",
+      "Zitat": "\"Der Strand ist mit dem MG Feuer der Deutschen komplett ausgezirkelt, hier zu bleiben wäre glatter Selbstmord!\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "4c821064-c0bf-48d5-a96b-6cd11300b153",
+    "title": "Beverly Hills Cop",
+    "category": "Filme",
+    "audio": "/audio/Beverly Hills Cop -Theme Song.mp3",
+    "filename": "Beverly Hills Cop -Theme Song.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1984",
+      "Genre": "Komödie/Action",
+      "Regie": "Martin Brest",
+      "Darsteller": "Eddie Murphy",
+      "Zitat": "\"Also Leute, das ist echt der sauberste und gemütlichste Streifenwagen, in dem ich je gesessen habe. Kann ich hier mit meiner Schrankwand einziehen?\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "a6acdcc1-c765-403b-8fc9-725c190b9f6a",
+    "title": "Spiel mir das Lied vom Tod ",
+    "category": "Filme",
+    "audio": "/audio/Theme - Spiel mir das Lied vom Tod .MP3",
+    "filename": "Theme - Spiel mir das Lied vom Tod .MP3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1968",
+      "Genre": "Western",
+      "Regie": "Sergio Leone",
+      "Darsteller": "Charles Bronson",
+      "Zitat": "\"Cheyenne hatte Recht, wenn man vier umgebracht hat, macht einem der fünfte auch nichts mehr aus!\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "7da09a37-6356-4096-bef3-3eb02e3750ee",
+    "title": "Der König der Löwen",
+    "category": "Filme",
+    "audio": "/audio/Kinderlieder - KÃ¶nig der LÃ¶wen - Hakuna Matata(deutsch).mp3",
+    "filename": "Kinderlieder - KÃ¶nig der LÃ¶wen - Hakuna Matata(deutsch).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1994",
+      "Genre": "Zeichentrick",
+      "Regie": "Rob MInkoff, Roger Allers",
+      "Darsteller": "James Earl Jones",
+      "Zitat": "\"Ich bin von Idioten umgeben.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "275267cb-454e-4b95-bdd4-ed49c7158222",
+    "title": "Der Pate",
+    "category": "Filme",
+    "audio": "/audio/01 - Main Title (The Godfather Waltz).mp3",
+    "filename": "01 - Main Title (The Godfather Waltz).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Zitat": "\"Lass die Kanone im Auto! Die Canelli kannst du mitnehmen.\"",
+      "Erscheinungsjahr": "1972",
+      "Genre": "Krimi/Mafia",
+      "Regie": "Francis Ford Coppola",
+      "Darsteller": "Marlon Brando"
+    },
+    "isNew": false
+  },
+  {
+    "_id": "61b5d53a-a26c-42f7-84d5-6a5366395c15",
+    "title": "Cinderella",
+    "category": "Filme",
+    "audio": "/audio/Kinderlieder - Cinderella - Bibbidi-Bobbidi-Boo.mp3",
+    "filename": "Kinderlieder - Cinderella - Bibbidi-Bobbidi-Boo.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1950",
+      "Genre": "Zeichentrick",
+      "Regie": "Clyde Geronimi",
+      "Darsteller": "Ilene Woods",
+      "Zitat": "\"Das ist wie ein Traum. Ein wundervoller Traum ist wahr geworden.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "a08fd219-8244-42d5-b4d3-a90041ced28e",
+    "title": "Die Schöne und das Biest",
+    "category": "Filme",
+    "audio": "/audio/Die SchÃ¶ne und das Biest - Sei Hier Gast.mp3",
+    "filename": "Die SchÃ¶ne und das Biest - Sei Hier Gast.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1991",
+      "Genre": "Zeichentrick",
+      "Regie": "Gary Trousdale, Kirk Wise",
+      "Darsteller": "Paige O’Hara",
+      "Zitat": "\"Verzaubert? Wer hat denn behauptet, dass dieses Schloss verzaubert ist?\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "6a4df8df-091d-4e1e-b07f-7adcc1fb4bd6",
+    "title": "Sonnenallee",
+    "category": "Filme",
+    "audio": "/audio/Sonnenallee.mp3",
+    "filename": "Sonnenallee.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1999",
+      "Genre": "Komödie/Drama",
+      "Regie": "Leander Haußmann",
+      "Darsteller": "Alexander Scheer",
+      "Zitat": "\"Aber das wissen wir doch nich, Genosse Hockefeld, wir hamm doch nur russisch in der Schule...\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "de3cdd55-6ab3-4f30-8102-3aec574a4f9c",
+    "title": "Mission Impossible",
+    "category": "Filme",
+    "audio": "/audio/Soundtrack - Mission Impossible.mp3",
+    "filename": "Soundtrack - Mission Impossible.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1996",
+      "Genre": "Action/Thriller",
+      "Regie": "Brian De Palma",
+      "Darsteller": "Tom Cruise",
+      "Zitat": "\"Alles, was lauter als ein Flüstern ist, löst einen Alarm aus.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "f79d8ab2-fe01-4475-977a-1f32d68ebd9d",
+    "title": "Ghostbusters",
+    "category": "Filme",
+    "audio": "/audio/Kinderlieder-Theme - Ghostbusters.mp3",
+    "filename": "Kinderlieder-Theme - Ghostbusters.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1984",
+      "Genre": "Komödie/Sci-Fi",
+      "Regie": "Ivan Reitman",
+      "Darsteller": "Bill Murray",
+      "Zitat": "\"Da ist etwas sehr wichtiges, was ich vergaß euch zu sagen: Ihr dürft NIE die Laserströme kreuzen!\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "27199b20-9ac0-44e4-9fe1-f9318b21d0c1",
+    "title": "Catch me if you can",
+    "category": "Filme",
+    "audio": "/audio/Theme - Catch me if you can.mp3",
+    "filename": "Theme - Catch me if you can.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Genre": "Krimi/Komödie",
+      "Erscheinungsjahr": "2002",
+      "Regie": "Steven Spielberg",
+      "Darsteller": "Leonardo DiCaprio",
+      "Zitat": "\"Die Presse liebt diesen Clown. Sie nennen ihn den James Bond der Lüfte.\" "
+    },
+    "isNew": false
+  },
+  {
+    "_id": "ebc81e89-cb96-4941-952c-f1d103bbdeb8",
+    "title": "Pocahontas",
+    "category": "Filme",
+    "audio": "/audio/Kinderlieder-Pocahonts.mp3",
+    "filename": "Kinderlieder-Pocahonts.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1995",
+      "Genre": "Zeichentrick",
+      "Regie": "Eric Goldberg, Mike Gabriel",
+      "Darsteller": "Mel Gibson",
+      "Zitat": "\"Doch jeder Stein und Baum und jedes Wesen hat sein Leben, seine Seele, seinen Stolz!\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "26b0b32d-cf3e-4ca7-a534-c4096f701624",
+    "title": "Top Gun",
+    "category": "Filme",
+    "audio": "/audio/Harold Faltermeyer - Top Gun Anthem.mp3",
+    "filename": "Harold Faltermeyer - Top Gun Anthem.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Genre": "Action/Abenteuer",
+      "Regie": "Tony Scott",
+      "Erscheinungsjahr": "1986",
+      "Darsteller": "Tom Cruise",
+      "Zitat": "\"Also wenn ihr einen Flugzeugträger sucht....da unten links ist einer!\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "701c8907-1cc9-4da0-a017-50fe68c63409",
+    "title": "Der blutige Pfad Gottes",
+    "category": "Filme",
+    "audio": "/audio/Der blutige Pfad Gottes - Boondock Saints Theme.mp3",
+    "filename": "Der blutige Pfad Gottes - Boondock Saints Theme.mp3",
+    "startTime": 0,
+    "metadata": {
+      "Erscheinungsjahr": "1999",
+      "Genre": "Action, Thriller",
+      "Regie": "Troy Duffy",
+      "Darsteller": "Norman Reedus",
+      "Zitat": "\"Ich bin um 9 zurück. Und kratz die Katze von der Wand!\""
+    },
+    "alternativeTitles": [
+      "The Boondock Saints"
+    ],
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "5c89d787-8a06-485d-a5c1-af803241e4f1",
+    "title": "Eiskalte Engel",
+    "category": "Filme",
+    "audio": "/audio/Eiskalte Engel - Placebo - Every You Every Me.mp3",
+    "filename": "Eiskalte Engel - Placebo - Every You Every Me.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Regie": "Roger Kumble",
+      "Genre": "Romanze/Thriller",
+      "Erscheinungsjahr": "1999",
+      "Darsteller": "Sarah Michelle Gellar",
+      "Zitat": "\"Alle Welt liebt mich. Und ich gedenke es dabei zu belassen.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "7302195b-6bb2-48ec-a74a-822168d31edc",
+    "title": "Drei Haselnüsse für Aschenbrödel",
+    "category": "Filme",
+    "audio": "/audio/Drei HaselnÃ¼sse fÃ¼r AschenbrÃ¶del (Motiv I) - Einleitung.mp3",
+    "filename": "Drei HaselnÃ¼sse fÃ¼r AschenbrÃ¶del (Motiv I) - Einleitung.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1973",
+      "Genre": "Fantasy",
+      "Regie": "Václav Vorlíček",
+      "Darsteller": "Libuše Šafránková",
+      "Zitat": "\"Aber Nikolaus, wo kommst du denn her? Und wer hat dich gesattelt?\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "20de227f-f899-4068-9013-0c9f8ae354ad",
+    "title": "Nausicaä aus dem Tal der Winde",
+    "category": "Filme",
+    "audio": "/audio/Nausicaa - Kaze No Tani No Nausicaa (Opening).mp3",
+    "filename": "Nausicaa - Kaze No Tani No Nausicaa (Opening).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Zitat": "\"Sie kann den Wind lesen wie ein Buch.\"",
+      "Erscheinungsjahr": "1984",
+      "Genre": "Animation/Fantasy",
+      "Regie": "Hayao Miyazaki",
+      "Darsteller": "Shimamoto Sumi"
+    },
+    "isNew": false
+  },
+  {
+    "_id": "1b3d5615-343b-4988-a5f9-787299c4a34f",
+    "title": "Dirty Dancing",
+    "category": "Filme",
+    "audio": "/audio/Dirty Dancing - Bill Medley & Jennifer Warnes - The time of my life.mp3",
+    "filename": "Dirty Dancing - Bill Medley & Jennifer Warnes - The time of my life.mp3",
+    "startTime": "6",
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1987",
+      "Genre": "Romanze/Tanz",
+      "Regie": "Emile Ardolino",
+      "Darsteller": "Jennifer Grey",
+      "Zitat": "\"Ich hab eine Wassermelone getragen!\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "7016499e-acc3-417e-8e85-0870fb3384f5",
+    "title": "A Beautiful Mind",
+    "category": "Filme",
+    "audio": "/audio/A_beautiful_Mind.mp3",
+    "filename": "A_beautiful_Mind.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Genre": "Biografie/Thriller/Romanz",
+      "Regie": "Ron Howard",
+      "Darsteller": "Russell Crowe",
+      "Erscheinungsjahr": "2001",
+      "Zitat": "\"Ich glaube nicht an Glück, aber ich glaube daran Dingen einen Wert zuzuordnen\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "95732d6b-f680-4b88-ad29-3ca957f9b81d",
+    "title": "Star Wars: Episode IV - Krieg der Sterne",
+    "category": "Filme",
+    "audio": "/audio/Star Wars - Theme.mp3",
+    "filename": "Star Wars - Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1977",
+      "Genre": "Sci-Fi/Action",
+      "Regie": "George Lucas",
+      "Darsteller": "Mark Hamill",
+      "Zitat": "\"Das sind nicht die Droiden die ihr sucht.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "c7cd1242-71dd-4af0-9ad1-650dd05b3e7b",
+    "title": "From Dusk till Dawn",
+    "category": "Filme",
+    "audio": "/audio/Tito & Tarantula - After dark.mp3",
+    "filename": "Tito & Tarantula - After dark.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1996",
+      "Genre": "Horror/Action",
+      "Regie": "Robert Rodriguez",
+      "Darsteller": "Quentin Tarantino",
+      "Zitat": "\"Geh mit diesem Pfahl auf meinen Bruder los, Biker, dann werden Vampire Dein Blut vom Boden lecken!\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "20265da8-9f0a-4f71-8dab-1eb3b1c0de11",
+    "title": "Ghost In The Shell",
+    "category": "Filme",
+    "audio": "/audio/Ghost In The Shell Movie Intro Credits.mp3",
+    "filename": "Ghost In The Shell Movie Intro Credits.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Zitat": "\"Sämtliche Informationen, die ein Mensch in seinem Leben sammelt, sind wie ein Tropfen im Ozean.\"",
+      "Erscheinungsjahr": "1995",
+      "Genre": "Animation/Sci-Fi",
+      "Regie": "Mamoru Oshii",
+      "Darsteller": "Atsuko Tanaka"
+    },
+    "isNew": false
+  },
+  {
+    "_id": "133155f2-7e2c-4fd5-9b78-bd44eee496de",
+    "title": "Bourne Identität",
+    "category": "Filme",
+    "audio": "/audio/Bourne Identity Soundtrack - Main Titles.mp3",
+    "filename": "Bourne Identity Soundtrack - Main Titles.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Genre": "Action/Thriller",
+      "Erscheinungsjahr": "2002",
+      "Regie": "Doug Liman",
+      "Darsteller": "Matt Damon",
+      "Zitat": "\"Aber wie könnte ich sie vergessen? Sie sind der einzige Mensch, den ich kenne.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "89b95968-458f-4f91-bc38-bd15abba365a",
+    "title": "The Fast and the Furious",
+    "category": "Filme",
+    "audio": "/audio/02-ludacris-act_a_fool-rns.mp3",
+    "filename": "02-ludacris-act_a_fool-rns.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2001",
+      "Genre": "Action/Krimi",
+      "Regie": "Rob Cohen",
+      "Darsteller": "Paul Walker",
+      "Zitat": "\"Es kommt nicht drauf an wie man neben seinem Wagen stehen kann, sondern wie man mit ihm fahren kann.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "36de6e24-710c-4a91-9dc0-3ee377340bff",
+    "title": "Batman",
+    "category": "Filme",
+    "audio": "/audio/The Batman Theme.mp3",
+    "filename": "The Batman Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1989",
+      "Genre": "Action/Comic",
+      "Regie": "Tim Burton",
+      "Darsteller": "Michael Keaton",
+      "Zitat": "\"Wahrlich, wahrlich ich sage Euch: Ich hab eine Fledermaus in meinem Glockenturm!\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "1924865c-6ad5-4af3-92ae-c057c8da8b23",
+    "title": "Königin der Verdammten",
+    "category": "Filme",
+    "audio": "/audio/KÃ¶nigin der Verdammten - Wayne Static of Static X - Not meant for me.mp3",
+    "filename": "KÃ¶nigin der Verdammten - Wayne Static of Static X - Not meant for me.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Zitat": "\"...aber während ich dort lag, klang die Welt nicht mehr so, wie ich sie verlassen hatte...irgendwie anders..besser..\"",
+      "Erscheinungsjahr": "2002",
+      "Darsteller": "Stuart Townsend",
+      "Regie": "Michael Rymer",
+      "Genre": "Horror/Fantasy"
+    },
+    "isNew": false
+  },
+  {
+    "_id": "cb1a4e1f-5a72-4df6-ae67-d9a3ea094109",
+    "title": "Edward mit den Scherenhänden",
+    "category": "Filme",
+    "audio": "/audio/Edward Scissorshand - Introduction.mp3",
+    "filename": "Edward Scissorshand - Introduction.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Zitat": "\"Das ist keine Waffe, das sind seine Hände!\"",
+      "Erscheinungsjahr": "1990",
+      "Genre": "Fantasy/Romanze",
+      "Regie": "Tim Burton",
+      "Darsteller": "Johnny Depp"
+    },
+    "isNew": false
+  },
+  {
+    "_id": "e43d53b4-d834-4ac6-8b85-8d56d49e5f54",
+    "title": "American Beauty",
+    "category": "Filme",
+    "audio": "/audio/American Beauty  - Thomas Newman - Dead Already.mp3",
+    "filename": "American Beauty  - Thomas Newman - Dead Already.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1999",
+      "Genre": "Komödie/Romanze",
+      "Regie": "Sam Mendes",
+      "Darsteller": "Kevin Spacey",
+      "Zitat": "\"Beide, meine Frau und meine Tochter, halten mich für einen totalen Verlierer. Und, sie haben recht.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "a658b120-5988-4209-92ce-a72521cd8a23",
+    "title": "Jurassic Park",
+    "category": "Filme",
+    "audio": "/audio/02 - Theme from Jurassic Park.mp3",
+    "filename": "02 - Theme from Jurassic Park.mp3",
+    "startTime": 27,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1993",
+      "Genre": "Abenteuer/Sci-Fi",
+      "Regie": "Steven Spielberg",
+      "Darsteller": "Sam Neill",
+      "Zitat": "\"Der Mangel an Demut vor der Natur, der hier offen gezeigt wird... erschüttert mich!\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "c354f775-8cd7-445e-8b39-b4a4ce409b81",
+    "title": "Sweeney Todd",
+    "category": "Filme",
+    "audio": "/audio/01 - Opening Title.mp3",
+    "filename": "01 - Opening Title.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Regie": "Tim Burton",
+      "Darsteller": "Johnny Depp",
+      "Genre": "Musical/Horror",
+      "Erscheinungsjahr": "2007",
+      "Zitat": "\"Dies sind verzweifelte Zeiten, Mrs. Lovett, die nach verzweifelten Maßnahmen verlangen.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "780fa959-2022-4b88-88c4-78de75ae59dc",
+    "title": "Forrest Gump",
+    "category": "Filme",
+    "audio": "/audio/Soundtrack - Forrest Gump.mp3",
+    "filename": "Soundtrack - Forrest Gump.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1994",
+      "Genre": "Komödie/Romanze",
+      "Regie": "Robert Zemeckis",
+      "Darsteller": "Tom Hanks",
+      "Zitat": "\"Ich bin kein kluger Mann, Jenny ...aber ich weiß, was Liebe ist!\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "d832ba44-6f81-4c7e-a106-78240663fbff",
+    "title": "Big Fish",
+    "category": "Filme",
+    "audio": "/audio/Danny Elfman - 09 - Big Fish (Titles).mp3",
+    "filename": "Danny Elfman - 09 - Big Fish (Titles).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2003",
+      "Genre": "Fantasy/Abenteuer",
+      "Regie": "Tim Burton",
+      "Darsteller": "Ewan McGregor",
+      "Zitat": "\"Erzählt man die Lebensgeschichte meines Vaters, ist es unmöglich zwischen Phantasie und Wirklichkeit zu unterscheiden, zwischen Mensch und Mythos.\""
+    },
+    "isNew": false
+  },
+  {
+    "_id": "58eb0a01-c5c4-4a26-a21e-aecd1785ebc8",
+    "title": "Tetris",
+    "category": "Games",
+    "audio": "/audio/Original Tetris theme (Tetris Soundtrack).mp3",
+    "filename": "Original Tetris theme (Tetris Soundtrack).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "3edd8245-f8d9-4835-8dc3-9cd64be84ce7",
+    "title": "Warcraft III: The Frozen Throne",
+    "category": "Games",
+    "audio": "/audio/Warcraft III Sound Track The Frozen Throne Main Menu.wmv.mp3",
+    "filename": "Warcraft III Sound Track The Frozen Throne Main Menu.wmv.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "ad7b7bdf-3e70-4c9d-99b8-4a697ce410db",
+    "title": "Half-Life",
+    "category": "Games",
+    "audio": "/audio/Half-Life - Valve Theme (Long Version).mp3",
+    "filename": "Half-Life - Valve Theme (Long Version).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "d959fc61-0500-4cce-8490-9550e850009d",
+    "title": "Crash Bandicoot",
+    "category": "Games",
+    "audio": "/audio/Crash Bandicoot 1 Theme.mp3",
+    "filename": "Crash Bandicoot 1 Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Plattform": "PSX",
+      "Genre": "Jump ’n’ Run",
+      "Erscheinungsjahr": "1996",
+      "Entwickler": "Naughty Dog",
+      "Publisher": "Sony Computer Entertainment",
+      "Nebenfigur": "Doctor Neo Cortex"
+    }
+  },
+  {
+    "_id": "f84b73f4-ba8d-4619-abb0-867da71ecf18",
+    "title": "Battlefield 3",
+    "category": "Games",
+    "audio": "/audio/Battlefield 3 Theme Song (Official Soundtrack) HQ.mp3",
+    "filename": "Battlefield 3 Theme Song (Official Soundtrack) HQ.mp3",
+    "startTime": "10",
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Entwickler": "DICE",
+      "Publisher": "Electronic Arts",
+      "Plattform": "PC, Xbox360, PS3",
+      "Erscheinungsjahr": "2011",
+      "Genre": "Taktik-Shooter",
+      "Nebenfigur": "Sergeant Blackburn"
+    }
+  },
+  {
+    "_id": "3fc6c332-add0-45e1-87ea-b76fa2f121fd",
+    "title": "The Elder Scrolls IV Oblivion",
+    "category": "Games",
+    "audio": "/audio/The Elder Scrolls IV Oblivion theme.mp3",
+    "filename": "The Elder Scrolls IV Oblivion theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "9ee390ca-8a11-4401-aae8-bdb91fee4234",
+    "title": "The Elder Scrolls III Morrowind",
+    "category": "Games",
+    "audio": "/audio/Morrowind Theme Song.mp3",
+    "filename": "Morrowind Theme Song.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "6cc1ecfc-5cf5-4ac9-a93b-0f3690835f17",
+    "title": "Splinter Cell",
+    "category": "Games",
+    "audio": "/audio/Splinter_Cell_1_HD_OST_-_Main_Menu.mp3",
+    "filename": "Splinter_Cell_1_HD_OST_-_Main_Menu.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {}
+  },
+  {
+    "_id": "ccc52791-2b73-469e-b952-5ba3704610e2",
+    "title": "Unreal Tournament",
+    "category": "Games",
+    "audio": "/audio/Unreal Tournament Soundtrack - Main Theme.mp3",
+    "filename": "Unreal Tournament Soundtrack - Main Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "7d83141c-f4f9-4431-a05a-a84e993c613c",
+    "title": "Mass Effect",
+    "category": "Games",
+    "audio": "/audio/Mass Effect - Main Theme.mp3",
+    "filename": "Mass Effect - Main Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "6fcc70e0-5775-4e17-bcb6-a416bd57feff",
+    "title": "StarCraft",
+    "category": "Games",
+    "audio": "/audio/Starcraft Main Menu (music).mp3",
+    "filename": "Starcraft Main Menu (music).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {}
+  },
+  {
+    "_id": "702496bd-115d-440b-9f0e-fe23eee77ff7",
+    "title": "Fallout 2",
+    "category": "Games",
+    "audio": "/audio/Fallout 2 - Theme (music) (Louis Armstrong - A kiss to Build a Dream on).mp3",
+    "filename": "Fallout 2 - Theme (music) (Louis Armstrong - A kiss to Build a Dream on).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8b0a0541-f3d5-4920-a572-5fe9d9b5ac31",
+    "title": "World of Warcaft",
+    "category": "Games",
+    "audio": "/audio/wow original theme song.mp3",
+    "filename": "wow original theme song.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "55c1cb43-e302-45ab-b568-85943f7c9f2c",
+    "title": "Neverwinter Nights",
+    "category": "Games",
+    "audio": "/audio/Neverwinter Nights Main Theme.mp3",
+    "filename": "Neverwinter Nights Main Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f768ea37-f040-47bc-85df-ddc93dc30acb",
+    "title": "Tekken 3",
+    "category": "Games",
+    "audio": "/audio/Tekken 3 opening theme psx.mp3",
+    "filename": "Tekken 3 opening theme psx.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "94d567ec-3736-476c-8cf1-30e98281c707",
+    "title": "Die Sims",
+    "category": "Games",
+    "audio": "/audio/The Sims Soundtrack_ Buy Mode 2.mp3",
+    "filename": "The Sims Soundtrack_ Buy Mode 2.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2000",
+      "Genre": "Lebenssimulation",
+      "Plattform": "PC, macOS, PS2, Gamecube, Xbox, ",
+      "Entwickler": "Maxis",
+      "Publisher": "Electronic Arts",
+      "Nebenfigur": "Bella Grusel"
+    }
+  },
+  {
+    "_id": "4d099655-e61c-41f6-84f3-b0d3f723b8e2",
+    "title": "Metal Gear Solid",
+    "category": "Games",
+    "audio": "/audio/Metal Gear Solid Main Theme.mp3",
+    "filename": "Metal Gear Solid Main Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [
+      "MGS"
+    ],
+    "metadata": {}
+  },
+  {
+    "_id": "9a74e456-f9f0-4df7-90c2-9ccada6021cd",
+    "title": "Tomb Raider II",
+    "category": "Games",
+    "audio": "/audio/Tomb Raider 2 Theme - Soundtrack.mp3",
+    "filename": "Tomb Raider 2 Theme - Soundtrack.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {}
+  },
+  {
+    "_id": "0a932c7a-d0e8-4b73-9797-70c39d86881c",
+    "title": "Tony Hawks Pro Skater 2",
+    "category": "Games",
+    "audio": "/audio/Brian Bright - THPS 2 Menu Music.mp3",
+    "filename": "Brian Bright - THPS 2 Menu Music.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "fe61f007-c387-4bc2-8a99-03bb529bcb62",
+    "title": "The Secret of Monkey Island",
+    "category": "Games",
+    "audio": "/audio/Soundtrack - Monkey Island.mp3",
+    "filename": "Soundtrack - Monkey Island.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a16bfe7e-c16f-4821-ad94-79a8104c9423",
+    "title": "Metal Gear Solid 2",
+    "category": "Games",
+    "audio": "/audio/Metal Gear Solid 2 Intro Main Theme.mp3",
+    "filename": "Metal Gear Solid 2 Intro Main Theme.mp3",
+    "startTime": "7",
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [
+      "MGS"
+    ],
+    "metadata": {}
+  },
+  {
+    "_id": "d5de0c91-0d8b-4041-a316-62fcea6411b6",
+    "title": "Portal",
+    "category": "Games",
+    "audio": "/audio/Portal - Credits Song 'Still Alive'.mp3",
+    "filename": "Portal - Credits Song 'Still Alive'.mp3",
+    "startTime": "7",
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {}
+  },
+  {
+    "_id": "c03a3878-e8f9-4dca-ab55-79efd3bee1c5",
+    "title": "Grand Theft Auto 2",
+    "category": "Games",
+    "audio": "/audio/GTA 2 theme.mp3",
+    "filename": "GTA 2 theme.mp3",
+    "startTime": 0,
+    "metadata": {},
+    "alternativeTitles": [
+      "GTA 2"
+    ],
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "952e9f4b-5f78-427b-bfe5-a5667fa1b492",
+    "title": "Unreal",
+    "category": "Games",
+    "audio": "/audio/Unreal - Dusk Horizon.mp3",
+    "filename": "Unreal - Dusk Horizon.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "2028ea0c-a45b-40d5-b4cd-4b303856d221",
+    "title": "Max Payne",
+    "category": "Games",
+    "audio": "/audio/Max Payne - Main Theme.mp3",
+    "filename": "Max Payne - Main Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "3156265f-4331-49d1-8a1f-6c2bed7750a9",
+    "title": "The Elder Scrolls V Skyrim",
+    "category": "Games",
+    "audio": "/audio/The Elder Scrolls V - Skyrim Theme.mp3",
+    "filename": "The Elder Scrolls V - Skyrim Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "79644c49-3b14-4f24-848f-78d389209b2e",
+    "title": "Final Fantasy VII",
+    "category": "Games",
+    "audio": "/audio/Final Fantasy VII - Opening Theme, Bombing Mission [HQ].mp3",
+    "filename": "Final Fantasy VII - Opening Theme, Bombing Mission [HQ].mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f26814d9-b990-47fb-844c-ba8f928db257",
+    "title": "Battlefield 1942",
+    "category": "Games",
+    "audio": "/audio/Battlefield 1942 theme.mp3",
+    "filename": "Battlefield 1942 theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2002",
+      "Genre": "Taktik-Shooter",
+      "Plattform": "PC, macOS",
+      "Entwickler": "Digital Illusions CE",
+      "Publisher": "Electronic Arts",
+      "Nebenfigur": "Midway"
+    }
+  },
+  {
+    "_id": "94cc6219-0eb2-4718-b4bd-25df67f78893",
+    "title": "Need For Speed Underground",
+    "category": "Games",
+    "audio": "/audio/Get Low - Need For Speed.mp3",
+    "filename": "Get Low - Need For Speed.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "c2c5847d-87b1-42fd-9267-6f638f35a5db",
+    "title": "Grand Theft Auto 3",
+    "category": "Games",
+    "audio": "/audio/gta 3 theme song.mp3",
+    "filename": "gta 3 theme song.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a2a05870-ea98-4841-a45c-155eb15b5943",
+    "title": "Halo: Combat Evolved",
+    "category": "Games",
+    "audio": "/audio/Halo Theme Song.mp3",
+    "filename": "Halo Theme Song.mp3",
+    "startTime": "2",
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {}
+  },
+  {
+    "_id": "8ba49be6-147a-4c5f-a6e3-6bd4888f31b3",
+    "title": "Die Sims 2",
+    "category": "Games",
+    "audio": "/audio/The Sims 2 Theme.mp3",
+    "filename": "The Sims 2 Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2004",
+      "Genre": "Lebenssimulation",
+      "Plattform": "PC, macOS, PS2, Gamecube, Xbox",
+      "Entwickler": "Maxis",
+      "Nebenfigur": "Bella Grusel",
+      "Publisher": "Electronic Arts"
+    }
+  },
+  {
+    "_id": "22c2aed9-9daa-45c6-b46b-fe9b35815fad",
+    "title": "The Legend of Zelda",
+    "category": "Games",
+    "audio": "/audio/The Music of Video Games [29] The Legend of Zelda.mp3",
+    "filename": "The Music of Video Games [29] The Legend of Zelda.mp3",
+    "startTime": "5",
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {}
+  },
+  {
+    "_id": "ff02915d-f86d-4e13-8444-7eb5fe7986e0",
+    "title": "Pokemon Rot/Blau",
+    "category": "Games",
+    "audio": "/audio/(Pt. 1) All Main PokÃ©mon Game OPenings (GB, GBC, GBA, NDS).mp3",
+    "filename": "(Pt. 1) All Main PokÃ©mon Game OPenings (GB, GBC, GBA, NDS).mp3",
+    "startTime": 7,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "99a74c69-8bfb-46cf-aecc-f29063980e0d",
+    "title": "F-ZERO",
+    "category": "Games",
+    "audio": "/audio/F-ZERO SOUNDTRACK 2 (MUTE CITY).mp3",
+    "filename": "F-ZERO SOUNDTRACK 2 (MUTE CITY).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a3d78c24-3bf0-4059-9740-c416741856dc",
+    "title": "Silent Hill",
+    "category": "Games",
+    "audio": "/audio/Silent Hill -MainThemeCover.mp3",
+    "filename": "Silent Hill -MainThemeCover.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a8b0fae7-18ce-4ed4-9ba5-dd932fef08cd",
+    "title": "Mortal Kombat",
+    "category": "Games",
+    "audio": "/audio/Mortal Kombat - Final Combat.mp3",
+    "filename": "Mortal Kombat - Final Combat.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "b22e6e8c-0a78-474f-bd50-622dc05dffb4",
+    "title": "Diablo II",
+    "category": "Games",
+    "audio": "/audio/Diablo II - Tristram Theme (Blizzard's Original Version).mp3",
+    "filename": "Diablo II - Tristram Theme (Blizzard's Original Version).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2000",
+      "Plattform": "PC, macOS",
+      "Entwickler": "Blizzard North",
+      "Nebenfigur": "Deckard Cain",
+      "Publisher": "Blizzard Entertainment",
+      "Genre": "Hack'n'Slay"
+    }
+  },
+  {
+    "_id": "3d894f21-64d4-4770-a71a-976128efb714",
+    "title": "Sonic the Hedgehog",
+    "category": "Games",
+    "audio": "/audio/The Music of Video Games [84] Sonic the Hedgehog.mp3",
+    "filename": "The Music of Video Games [84] Sonic the Hedgehog.mp3",
+    "startTime": "6",
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {}
+  },
+  {
+    "_id": "06358db9-b6d6-4c95-b67b-64b7251952f7",
+    "title": "Lemmings",
+    "category": "Games",
+    "audio": "/audio/Amiga music_ Lemmings (compilation mix).mp3",
+    "filename": "Amiga music_ Lemmings (compilation mix).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "5fdec006-534d-4c0f-969a-3e2f28b39cd0",
+    "title": "Castlevania",
+    "category": "Games",
+    "audio": "/audio/The Music of Video Games [12] Castlevania III.mp3",
+    "filename": "The Music of Video Games [12] Castlevania III.mp3",
+    "startTime": "6",
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Plattform": "NES, MS-DOS, C64",
+      "Erscheinungsjahr": "1986",
+      "Nebenfigur": "Dracula",
+      "Entwickler": "Konami",
+      "Publisher": "Konami",
+      "Genre": "Metroidvania"
+    }
+  },
+  {
+    "_id": "cdde4f6b-36ad-4d44-a6b5-4bf245befe88",
+    "title": "Batman",
+    "category": "Serien",
+    "audio": "/audio/Batman - Titellied_32.mp3",
+    "filename": "Batman - Titellied_32.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "1966",
+      "Endjahr": "1968",
+      "Handlungsort": "USA",
+      "Staffelanzahl": "1",
+      "Nebencharakter": "Dick Grayson",
+      "Sender": "ABC/Sat.1",
+      "Genre": "Action"
+    }
+  },
+  {
+    "_id": "64df8350-3c36-4384-ac69-348f1e04ad5a",
+    "title": "Als die Tiere den Wald verliessen",
+    "category": "Serien",
+    "audio": "/audio/Als die Tiere den Wald verliessen - Theme (Intro)_32.mp3",
+    "filename": "Als die Tiere den Wald verliessen - Theme (Intro)_32.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "1993",
+      "Endjahr": "1995",
+      "Sender": "ARD",
+      "Genre": "Zeichentrick",
+      "Staffelanzahl": "3",
+      "Handlungsort": "Thalerwald",
+      "Nebencharakter": "Dachs"
+    }
+  },
+  {
+    "_id": "eec8ff16-4eb5-4bfb-8643-72b2471a0a75",
+    "title": "Alle unter einem Dach",
+    "category": "Serien",
+    "audio": "/audio/Alle unter einen Dach Intro.mp3",
+    "filename": "Alle unter einen Dach Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [
+      "Family Matters"
+    ],
+    "metadata": {
+      "Startjahr": "1989",
+      "Endjahr": "1998",
+      "Sender": "ABC/ProSieben",
+      "Handlungsort": "Chicago",
+      "Genre": "Sitcom",
+      "Staffelanzahl": "9",
+      "Nebencharakter": "Laura Winslow"
+    }
+  },
+  {
+    "_id": "f6e36cb0-26d1-48b7-b800-7b71ab13c471",
+    "title": "ALF",
+    "category": "Serien",
+    "audio": "/audio/ALF - Titellied_32.mp3",
+    "filename": "ALF - Titellied_32.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "1986",
+      "Endjahr": "1990",
+      "Genre": "Sitcom",
+      "Staffelanzahl": "4",
+      "Handlungsort": "Kalifornien",
+      "Nebencharakter": "William Francis „Willie“ Tanner",
+      "Sender": "NBC/ZDF"
+    }
+  },
+  {
+    "_id": "5c51fe89-1394-4c60-b015-bc9f8a7e9134",
+    "title": "Chip & Chap",
+    "category": "Serien",
+    "audio": "/audio/Chip & Chap - Titellied_32.mp3",
+    "filename": "Chip & Chap - Titellied_32.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "dea4ac9f-0d2d-4b05-8654-8d52241306f0",
+    "title": "Die Ninja Turtles",
+    "category": "Serien",
+    "audio": "/audio/Die Ninja Turtles - Titellied_32.mp3",
+    "filename": "Die Ninja Turtles - Titellied_32.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "e40b677f-f28c-4602-8319-6f00604ab90c",
+    "title": "Aktenzeichen-XY ungelöst",
+    "category": "Serien",
+    "audio": "/audio/Aktenzeichen-XY - Theme.mp3",
+    "filename": "Aktenzeichen-XY - Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Sender": "ZDF",
+      "Startjahr": "1967",
+      "Genre": "True Crime",
+      "Staffelanzahl": "1",
+      "Handlungsort": "Deutschland",
+      "Nebencharakter": "Polizei"
+    }
+  },
+  {
+    "_id": "a4b2a0e5-5c3a-417f-b444-7811fe46830f",
+    "title": "CSI MIAMI",
+    "category": "Serien",
+    "audio": "/audio/CSI MIAMI Original Theme.mp3",
+    "filename": "CSI MIAMI Original Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "9aa01764-0dce-40db-be56-1f1c95523815",
+    "title": "Californication",
+    "category": "Serien",
+    "audio": "/audio/Californication Intro, beautiful!.mp3",
+    "filename": "Californication Intro, beautiful!.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "69d6ffc0-f228-4275-b9d7-5232672bde7b",
+    "title": "Desperate Housewives",
+    "category": "Serien",
+    "audio": "/audio/Desperate Housewives Theme.mp3",
+    "filename": "Desperate Housewives Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "7c298224-8ed3-492b-a525-17545221536d",
+    "title": "Doug",
+    "category": "Serien",
+    "audio": "/audio/Doug Theme.mp3",
+    "filename": "Doug Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a0747a17-62ec-4a43-bc55-83c13af6925d",
+    "title": "Die Bezaubernde Jeannie",
+    "category": "Serien",
+    "audio": "/audio/Bezaubernde Jeannie - Theme.mp3",
+    "filename": "Bezaubernde Jeannie - Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "987fa78c-d1f5-4a28-9a26-8f5b450a59eb",
+    "title": "Olsenbande",
+    "category": "Serien",
+    "audio": "/audio/Bjarne Liller - Olsen Banden (Titelmusik der Olsenbande).mp3",
+    "filename": "Bjarne Liller - Olsen Banden (Titelmusik der Olsenbande).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "d9b5ad39-bcc6-48b0-9c55-0880fcff531b",
+    "title": "Alarm für Cobra 11",
+    "category": "Serien",
+    "audio": "/audio/Alarm fÃ¼r Cobra 11 - Intro.mp3",
+    "filename": "Alarm fÃ¼r Cobra 11 - Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "1996",
+      "Staffelanzahl": "50",
+      "Genre": "Action, Krimi",
+      "Handlungsort": "Deutschland",
+      "Sender": "RTL",
+      "Nebencharakter": "Erdoğan Atalay"
+    }
+  },
+  {
+    "_id": "89efba85-93a8-4c72-a979-30203dc86646",
+    "title": "Power Puff Girls",
+    "category": "Serien",
+    "audio": "/audio/Cartoon Network - Power Puff Girls Theme.mp3",
+    "filename": "Cartoon Network - Power Puff Girls Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8b67bb8c-5724-48d8-8386-82574ab66e6f",
+    "title": "Columbo",
+    "category": "Serien",
+    "audio": "/audio/Columbo.mp3",
+    "filename": "Columbo.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "df894632-e9a7-4c38-b1b4-ee7868ff70d7",
+    "title": "Dawsons Creek",
+    "category": "Serien",
+    "audio": "/audio/Dawsons Creek Season2 Intro.mp3",
+    "filename": "Dawsons Creek Season2 Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "6c96e673-08a4-4de0-a07e-de51e84ae06d",
+    "title": "Clarissa",
+    "category": "Serien",
+    "audio": "/audio/Clarissa Intro.mp3",
+    "filename": "Clarissa Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "db4c8600-e11f-4e0b-8fbc-602aece68e9a",
+    "title": "Die Dinos",
+    "category": "Serien",
+    "audio": "/audio/Die Dinos Intro (german).mp3",
+    "filename": "Die Dinos Intro (german).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "e2c0dd13-a5b3-4235-9318-2729c8a1307e",
+    "title": "Die Glücksbärchis",
+    "category": "Serien",
+    "audio": "/audio/Die GlÃ¼cksbÃ¤rchis.mp3",
+    "filename": "Die GlÃ¼cksbÃ¤rchis.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "fa04b431-ae89-4f3d-82bc-3e824f87d136",
+    "title": "Die Sechs-Millionen-Dollar-Familie",
+    "category": "Serien",
+    "audio": "/audio/Bionic Six Deutsches Intro.mp3",
+    "filename": "Bionic Six Deutsches Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [
+      "Bionic Six"
+    ],
+    "metadata": {
+      "Startjahr": "1987",
+      "Genre": "Sci-Fi, Action",
+      "Sender": "MCA/SuperRTL",
+      "Nebencharakter": "Eric Bennett",
+      "Staffelanzahl": "2",
+      "Endjahr": "1988",
+      "Handlungsort": "USA"
+    }
+  },
+  {
+    "_id": "b4d8d7fd-fc5c-4229-8058-ba7820742c25",
+    "title": "Alvin und die Chipmunks",
+    "category": "Serien",
+    "audio": "/audio/Chipmunks Theme.mp3",
+    "filename": "Chipmunks Theme.mp3",
+    "startTime": "2",
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "1983",
+      "Endjahr": "1991",
+      "Genre": "Zeichentrick",
+      "Staffelanzahl": "8",
+      "Sender": "NBC",
+      "Handlungsort": "USA",
+      "Nebencharakter": "David Seville"
+    }
+  },
+  {
+    "_id": "005fa295-b09e-48ab-ad7d-bff49122499f",
+    "title": "Golden Boy",
+    "category": "Serien",
+    "audio": "/audio/Die Computer Jockeys - My Golden Boy.mp3",
+    "filename": "Die Computer Jockeys - My Golden Boy.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "27eaa2f1-27b4-49a4-9646-3ad7536a7593",
+    "title": "Der Rosarote Panther",
+    "category": "Serien",
+    "audio": "/audio/Der Rosarote Panther - The Pink Panter (Titelmusik) (Tv-Theme).mp3",
+    "filename": "Der Rosarote Panther - The Pink Panter (Titelmusik) (Tv-Theme).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [
+      "pink"
+    ],
+    "metadata": {}
+  },
+  {
+    "_id": "d7d6e818-7888-47f2-867a-49a53305f60f",
+    "title": "24",
+    "category": "Serien",
+    "audio": "/audio/24 Theme.mp3",
+    "filename": "24 Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "2001",
+      "Genre": "Action/Thriller",
+      "Staffelanzahl": "8",
+      "Handlungsort": "USA",
+      "Nebencharakter": "Kim Bauer",
+      "Endjahr": "2010",
+      "Sender": "FOX/RTL2"
+    },
+    "isNew": false
+  },
+  {
+    "_id": "4aa589c0-a972-4ec2-9b1f-ac5c3fe2d700",
+    "title": "Beverly Hills, 90210",
+    "category": "Serien",
+    "audio": "/audio/Beverly hills 90210.mp3",
+    "filename": "Beverly hills 90210.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "1990",
+      "Endjahr": "2000",
+      "Genre": "Seifenoper",
+      "Staffelanzahl": "10",
+      "Handlungsort": "Kalifornien",
+      "Sender": "FOX/RTL",
+      "Nebencharakter": "Dylan McKay"
+    }
+  },
+  {
+    "_id": "7af016e6-cab2-45a4-8d6c-817e4ac6df33",
+    "title": "David der Kabauter",
+    "category": "Serien",
+    "audio": "/audio/David der Kabauter Intro Deutsch.mp3",
+    "filename": "David der Kabauter Intro Deutsch.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "1dd23b41-a4ba-4925-b8d1-e841ab05511e",
+    "title": "Captain Planet",
+    "category": "Serien",
+    "audio": "/audio/Captain Planet Theme germandeutsch.mp3",
+    "filename": "Captain Planet Theme germandeutsch.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "188a47c9-5bda-4c10-b720-b2581c016d56",
+    "title": "Dragonball Z",
+    "category": "Serien",
+    "audio": "/audio/Dargonball Z - Cha -La Head Cha - La.mp3",
+    "filename": "Dargonball Z - Cha -La Head Cha - La.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {},
+    "isNew": false
+  },
+  {
+    "_id": "b41b4ff9-5e88-48c2-89db-a94de16e168c",
+    "title": "Bernd das Brot",
+    "category": "Serien",
+    "audio": "/audio/bernd_das_brot_-_tanzt_das_brot-ministry.mp3",
+    "filename": "bernd_das_brot_-_tanzt_das_brot-ministry.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "2003",
+      "Endjahr": "2015",
+      "Staffelanzahl": "1",
+      "Handlungsort": "Erde",
+      "Sender": "KiKA",
+      "Nebencharakter": "Chili",
+      "Genre": "Comedy"
+    }
+  },
+  {
+    "_id": "cb6d8714-5533-4f7e-b309-d8339dc7909b",
+    "title": "Grisu Der Kleine Drache",
+    "category": "Serien",
+    "audio": "/audio/Grisu Der Kleine Drache - Titellied_32.mp3",
+    "filename": "Grisu Der Kleine Drache - Titellied_32.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "67274e9f-5c81-47dd-83dc-caf87554a26b",
+    "title": "How I Met Your Mother",
+    "category": "Serien",
+    "audio": "/audio/How I Met Your Mother TV Opening Theme.mp3",
+    "filename": "How I Met Your Mother TV Opening Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "9a472e65-995a-4bde-b0cf-1276eefbd243",
+    "title": "In aller Freundschaft",
+    "category": "Serien",
+    "audio": "/audio/In aller Freundschaft - neuer Vorspann.mp3",
+    "filename": "In aller Freundschaft - neuer Vorspann.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "14f7b2e0-d0e1-41d9-8478-bfccc502cc6b",
+    "title": "Dr House",
+    "category": "Serien",
+    "audio": "/audio/Dr House Intro S1 (Deutsch_German).mp3",
+    "filename": "Dr House Intro S1 (Deutsch_German).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "4aabc48a-7500-4b9e-849a-13eb38165315",
+    "title": "Die Gummibärenbande",
+    "category": "Serien",
+    "audio": "/audio/GummibÃ¤renbande - Titellied_32.mp3",
+    "filename": "GummibÃ¤renbande - Titellied_32.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "86263139-50b8-4060-b696-fb6ccbe1aaf7",
+    "title": "Farscape",
+    "category": "Serien",
+    "audio": "/audio/Theme_from_Farscape.mp3",
+    "filename": "Theme_from_Farscape.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {}
+  },
+  {
+    "_id": "fd1f4aaf-c4a7-492b-9aa5-190442401d60",
+    "title": "JAG",
+    "category": "Serien",
+    "audio": "/audio/JAG - Theme.mp3",
+    "filename": "JAG - Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "fcfbb8c6-a0f7-4604-a48d-b5476566c2dd",
+    "title": "Emergency Room",
+    "category": "Serien",
+    "audio": "/audio/ER Opening Theme Season 1.mp3",
+    "filename": "ER Opening Theme Season 1.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "0878eaac-e11e-4c32-8ed6-b5be0149d591",
+    "title": "Greys Anatomy",
+    "category": "Serien",
+    "audio": "/audio/Greys Anatomy New Intro.mp3",
+    "filename": "Greys Anatomy New Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "80c3864d-7d3e-40d8-996b-17af43c4840f",
+    "title": "Es war einmal der Mensch",
+    "category": "Serien",
+    "audio": "/audio/Es war einmal der Mensch - Theme_32.mp3",
+    "filename": "Es war einmal der Mensch - Theme_32.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f75f9e10-b6fb-45a1-9b76-b5ffd845093d",
+    "title": "Flintstones",
+    "category": "Serien",
+    "audio": "/audio/Flintstones - Theme.mp3",
+    "filename": "Flintstones - Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "00522c9e-aec9-4570-8dff-6b640f1f26b7",
+    "title": "Inspector Gadget",
+    "category": "Serien",
+    "audio": "/audio/Inspector Gadget Opening german deutsch.mp3",
+    "filename": "Inspector Gadget Opening german deutsch.mp3",
+    "startTime": "7",
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {}
+  },
+  {
+    "_id": "b8f7374b-744c-4cb1-b5e7-58aa83cb834f",
+    "title": "Miami Vice",
+    "category": "Serien",
+    "audio": "/audio/Jan Hammer - Miami Vice Theme.mp3",
+    "filename": "Jan Hammer - Miami Vice Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "9ee384f4-d5cb-4f27-b915-d0eb70fe6df5",
+    "title": "Family Guy",
+    "category": "Serien",
+    "audio": "/audio/Family Guy Intro.mp3",
+    "filename": "Family Guy Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "5ccc1c5a-52d1-4a48-b21d-8efd7716713e",
+    "title": "Invader Zim",
+    "category": "Serien",
+    "audio": "/audio/Invader Zim - Theme (Obey The Fist Remix).mp3",
+    "filename": "Invader Zim - Theme (Obey The Fist Remix).mp3",
+    "startTime": 0,
+    "reportedIssues": [
+      {
+        "type": "length_issue",
+        "timestamp": "2025-05-13T21:06:39.752Z",
+        "comment": "Start oder neu"
+      }
+    ],
+    "isNew": false
+  },
+  {
+    "_id": "546c617a-d068-4faa-bf5d-4772dc84af54",
+    "title": "Dragon Ball",
+    "category": "Serien",
+    "audio": "/audio/Dragon Ball Opening (German).mp3",
+    "filename": "Dragon Ball Opening (German).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "c1da61c3-9504-467e-b69e-f482540927f9",
+    "title": "GZSZ - Gute Zeiten, Schlechte Zeiten",
+    "category": "Serien",
+    "audio": "/audio/GZSZ - Vorspann .mp3",
+    "filename": "GZSZ - Vorspann .mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "63c3be6b-302d-41d3-954d-a343a3a2404f",
+    "title": "Gilmore Girls",
+    "category": "Serien",
+    "audio": "/audio/Gilmore Girls Theme Song.mp3",
+    "filename": "Gilmore Girls Theme Song.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "11fbffcf-5ff6-4c3f-b656-483507a430b8",
+    "title": "Goofy & Max",
+    "category": "Serien",
+    "audio": "/audio/Goofy & Max Intro German (Deutsch).mp3",
+    "filename": "Goofy & Max Intro German (Deutsch).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "95fd21ec-fb05-46f8-9eec-9d57c13b1569",
+    "title": "Gargoyles",
+    "category": "Serien",
+    "audio": "/audio/Gargoyles german intro.mp3",
+    "filename": "Gargoyles german intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "50854839-eaae-46a5-b75e-d36c07c91160",
+    "title": "Eine schrecklich nette Familie",
+    "category": "Serien",
+    "audio": "/audio/Eine schrecklich nette Familie- Intro.mp3",
+    "filename": "Eine schrecklich nette Familie- Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "5ff87bad-51ab-42b3-ae59-357b4d7840f2",
+    "title": "Happy Tree Friends",
+    "category": "Serien",
+    "audio": "/audio/Happy Tree Friends Soundtrack - Intro.mp3",
+    "filename": "Happy Tree Friends Soundtrack - Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "d603d8a1-449c-49f1-8dd9-4fa3e0801101",
+    "title": "Der Prinz von Bel Air",
+    "category": "Serien",
+    "audio": "/audio/Fresh Prince of Bel Air Intro (Der Prinz von Bel Air).mp3",
+    "filename": "Fresh Prince of Bel Air Intro (Der Prinz von Bel Air).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a7bfcd1b-51d1-4b81-851b-d95110ec3c72",
+    "title": "Full House",
+    "category": "Serien",
+    "audio": "/audio/Full House.mp3",
+    "filename": "Full House.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "d23e2016-2041-4baf-8f2e-26fd5193d356",
+    "title": "Futurama",
+    "category": "Serien",
+    "audio": "/audio/Futurama - Theme.mp3",
+    "filename": "Futurama - Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "741b5725-1232-45e5-8ec5-dcdc4f5020ec",
+    "title": "Heidi",
+    "category": "Serien",
+    "audio": "/audio/Heidi - Theme.mp3",
+    "filename": "Heidi - Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "97122e9f-fcdb-4e19-9dca-b0777fbf32b9",
+    "title": "Digimon",
+    "category": "Serien",
+    "audio": "/audio/German Digimon opening.mp3",
+    "filename": "German Digimon opening.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "6b2bc5f4-c015-4a62-8049-2b58db6c05e0",
+    "title": "Elfen Lied",
+    "category": "Serien",
+    "audio": "/audio/Elfen Lied Theme Full version {Lyrics}.mp3",
+    "filename": "Elfen Lied Theme Full version {Lyrics}.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "897b97b4-a232-4352-aa2a-60ac9421f5f5",
+    "title": "Malcom Mittendrin",
+    "category": "Serien",
+    "audio": "/audio/Malcom Mittendrin  Thema Song.mp3",
+    "filename": "Malcom Mittendrin  Thema Song.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "774c05c6-000e-4890-b6b6-91a73c830af1",
+    "title": "Pumuckl",
+    "category": "Serien",
+    "audio": "/audio/Pumuckl - Titellied_32.mp3",
+    "filename": "Pumuckl - Titellied_32.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "b417affa-f047-4e5a-ba03-a850c4e5276c",
+    "title": "Mord ist ihr Hobby",
+    "category": "Serien",
+    "audio": "/audio/Mord ist ihr Hobby - German Intro.mp3",
+    "filename": "Mord ist ihr Hobby - German Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "70122270-64f2-402d-9e0f-86c93016709b",
+    "title": "Michel aus Lönneberga",
+    "category": "Serien",
+    "audio": "/audio/Michel aus LÃ¶nneberga  - Titelmusik.mp3",
+    "filename": "Michel aus LÃ¶nneberga  - Titelmusik.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "84ce9cb3-8767-4075-b1a7-e8a0a461d09e",
+    "title": "Bob der Baumeister",
+    "category": "Serien",
+    "audio": "/audio/Kinderlieder - Bob der Baumeister (Titelsong).mp3",
+    "filename": "Kinderlieder - Bob der Baumeister (Titelsong).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "1998",
+      "Endjahr": "2011",
+      "Genre": "Animation",
+      "Staffelanzahl": "1",
+      "Sender": "BBC/SuperRTL",
+      "Nebencharakter": "Wendy",
+      "Handlungsort": "Bobhausen"
+    }
+  },
+  {
+    "_id": "d7e8a059-b39a-4bef-a59f-ac4511830b7e",
+    "title": "Marienhof",
+    "category": "Serien",
+    "audio": "/audio/Marienhof Vorspann 2000-2001.mp3",
+    "filename": "Marienhof Vorspann 2000-2001.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "9523ec1b-35c3-4181-8ccc-b9b89926b295",
+    "title": "Sesamstraße",
+    "category": "Serien",
+    "audio": "/audio/Kinderlieder - SesamstraÃe -  Wer, Wie, Was.mp3",
+    "filename": "Kinderlieder - SesamstraÃe -  Wer, Wie, Was.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "b9511284-822f-4cb6-ba9f-725d4ce50334",
+    "title": "King of Queens",
+    "category": "Serien",
+    "audio": "/audio/King of Queens Intro.mp3",
+    "filename": "King of Queens Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "4608b6d6-4123-46db-abae-22c48090b00f",
+    "title": "Pipi Langstrumpf",
+    "category": "Serien",
+    "audio": "/audio/Kinderlieder-Pipi Langstrumpf.mp3",
+    "filename": "Kinderlieder-Pipi Langstrumpf.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "255c11d0-0fe2-4a73-a46e-c165dc02c652",
+    "title": "Captain Balu",
+    "category": "Serien",
+    "audio": "/audio/kinderlieder - Captain Balu.mp3",
+    "filename": "kinderlieder - Captain Balu.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "942c171c-112e-4fbf-b177-e973011ccf97",
+    "title": "Oggy und die Kakerlaken",
+    "category": "Serien",
+    "audio": "/audio/Oggy und die Kakerlaken.mp3",
+    "filename": "Oggy und die Kakerlaken.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f96ced36-c40c-466d-91c9-7b77d18f8e46",
+    "title": "Teletubbies",
+    "category": "Serien",
+    "audio": "/audio/Kinderlieder - Teletubbies Deutsch.mp3",
+    "filename": "Kinderlieder - Teletubbies Deutsch.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {},
+    "isNew": false
+  },
+  {
+    "_id": "c80818e8-3927-41dc-890f-392f7e531d02",
+    "title": "Löwenzahn",
+    "category": "Serien",
+    "audio": "/audio/LÃ¶wenzahn - Theme.mp3",
+    "filename": "LÃ¶wenzahn - Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "2d4a510b-5ee6-4822-b66e-48bb0aa85686",
+    "title": "Calimero",
+    "category": "Serien",
+    "audio": "/audio/Kinderlieder - Calimero.mp3",
+    "filename": "Kinderlieder - Calimero.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8d0ed8d2-1a43-4010-9b78-b778e0b6f41f",
+    "title": "Pinky and the Brain",
+    "category": "Serien",
+    "audio": "/audio/Pinky und der Brain Opening German.mp3",
+    "filename": "Pinky und der Brain Opening German.mp3",
+    "startTime": "7",
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {}
+  },
+  {
+    "_id": "8bef10f0-ff44-484c-9f59-de03b99d3207",
+    "title": "Navy CIS",
+    "category": "Serien",
+    "audio": "/audio/NCIS extended intro (season 1-7).mp3",
+    "filename": "NCIS extended intro (season 1-7).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [
+      "Ncis"
+    ],
+    "metadata": {}
+  },
+  {
+    "_id": "5da1e3cf-91a1-4ef9-9fe2-083d79661e4f",
+    "title": "Sandmann",
+    "category": "Serien",
+    "audio": "/audio/Kinderlieder-Sandmann.MP3",
+    "filename": "Kinderlieder-Sandmann.MP3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "6b38d3bf-b6da-4f7d-9c59-7b2789dc82b2",
+    "title": "Sailor Moon",
+    "category": "Serien",
+    "audio": "/audio/Kinderlieder-Sailor Moon - Anime - Sailormoon - Theme (German).mp3",
+    "filename": "Kinderlieder-Sailor Moon - Anime - Sailormoon - Theme (German).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "ca237ec5-8006-4353-bd8e-c1c7d086f82c",
+    "title": "Michel Vaillant",
+    "category": "Serien",
+    "audio": "/audio/Michel vaillant intro deutsch.mp3",
+    "filename": "Michel vaillant intro deutsch.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "0fd0c123-16ef-48d7-b8a7-1cbf1cc9d604",
+    "title": "Pokemon",
+    "category": "Serien",
+    "audio": "/audio/Pokemon Theme Deutsch.mp3",
+    "filename": "Pokemon Theme Deutsch.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "75375d72-37d5-421b-a93a-b0ba9499f76f",
+    "title": "Power Rangers",
+    "category": "Serien",
+    "audio": "/audio/Power Rangers Intro deutsch.mp3",
+    "filename": "Power Rangers Intro deutsch.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "49bf8fc3-f179-454a-8cd0-8c417e7ca855",
+    "title": "Jim Knopf",
+    "category": "Serien",
+    "audio": "/audio/Kinderlieder - eine Insel mit zwei Bergen.mp3",
+    "filename": "Kinderlieder - eine Insel mit zwei Bergen.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "39bca56b-11a6-48fb-9efb-8de76041373f",
+    "title": "Kickers",
+    "category": "Serien",
+    "audio": "/audio/Kickers Intro.mp3",
+    "filename": "Kickers Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "e3f1e73e-1f17-411f-bfec-d899483cc9c2",
+    "title": "Nils Holgerson",
+    "category": "Serien",
+    "audio": "/audio/Nils Holgerson Theme.mp3",
+    "filename": "Nils Holgerson Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "846d717e-bdb1-436b-8085-c636e11e95ba",
+    "title": "Jackass",
+    "category": "Serien",
+    "audio": "/audio/MTV-Jackass Theme Song.mp3",
+    "filename": "MTV-Jackass Theme Song.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "20bbe075-7e0c-4442-8837-d8da198d5020",
+    "title": "Mila Superstar",
+    "category": "Serien",
+    "audio": "/audio/Mila Superstar (Deutsch).mp3",
+    "filename": "Mila Superstar (Deutsch).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "37dd6a10-1b6a-438b-89ec-4f83b1240da2",
+    "title": "Alfred J. Kwak",
+    "category": "Serien",
+    "audio": "/audio/Kinderlieder - Hermann van Veen  - warum bin ich so frÃ¶hlich.mp3",
+    "filename": "Kinderlieder - Hermann van Veen  - warum bin ich so frÃ¶hlich.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "1989",
+      "Endjahr": "1990",
+      "Genre": "Zeichentrick",
+      "Staffelanzahl": "1",
+      "Handlungsort": "Großwasserland",
+      "Nebencharakter": "Henk",
+      "Sender": "TV Tokyo/ZDF"
+    }
+  },
+  {
+    "_id": "0cda8edb-72d7-4609-94f5-f7c682a9266e",
+    "title": "Lupin 3rd",
+    "category": "Serien",
+    "audio": "/audio/Lupin 3rd - deutsches Intro.mp3",
+    "filename": "Lupin 3rd - deutsches Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "7bd9fcbe-fd11-4248-b3d5-97d4e68f95f1",
+    "title": "Neon Genesis Evangelion",
+    "category": "Serien",
+    "audio": "/audio/Neon Genesis Evangelion - Cruel Angel Thesis.mp3",
+    "filename": "Neon Genesis Evangelion - Cruel Angel Thesis.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "e36ad446-929d-4600-ab62-f3828aff1204",
+    "title": "Nip & Tuck",
+    "category": "Serien",
+    "audio": "/audio/Nip & Tuck - The Engine Room - A Perfect Lie (Gabriel & Dresden Remix).mp3",
+    "filename": "Nip & Tuck - The Engine Room - A Perfect Lie (Gabriel & Dresden Remix).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "2858ff2e-1462-4a5d-b365-8cc6772bff12",
+    "title": "Bill Cosby Show",
+    "category": "Serien",
+    "audio": "/audio/Theme - Bill Cosby.mp3",
+    "filename": "Theme - Bill Cosby.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "1984",
+      "Endjahr": "1992",
+      "Genre": "Sitcom",
+      "Staffelanzahl": "8",
+      "Sender": "NBC/ProSieben",
+      "Handlungsort": "New York",
+      "Nebencharakter": "Denise Huxtable-Kendall"
+    }
+  },
+  {
+    "_id": "9c2937dc-c2a5-441e-a35f-a12ef5bd14d8",
+    "title": "The IT Crowd",
+    "category": "Serien",
+    "audio": "/audio/The IT Crowd theme tune.mp3",
+    "filename": "The IT Crowd theme tune.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "006edc36-b547-4a35-bb4e-7298820eda36",
+    "title": "OC California",
+    "category": "Serien",
+    "audio": "/audio/The OC theme - Season1.mp3",
+    "filename": "The OC theme - Season1.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "5d64e54e-047b-442f-8dd9-7f5196180db1",
+    "title": "Tom und Jerry",
+    "category": "Serien",
+    "audio": "/audio/Tom und Jerry - Titellied_32.mp3",
+    "filename": "Tom und Jerry - Titellied_32.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "149bf3da-f75e-4b7b-972f-57298e5ace6a",
+    "title": "Tatort",
+    "category": "Serien",
+    "audio": "/audio/Tatort Intro HD.mp3",
+    "filename": "Tatort Intro HD.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "9ea97c2f-8403-42e3-8395-aa51bdfc4823",
+    "title": "Scrubs",
+    "category": "Serien",
+    "audio": "/audio/Scrubs Intro (long).mp3",
+    "filename": "Scrubs Intro (long).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "3ba67d74-0722-467e-b9f2-10970d284088",
+    "title": "SouthPark",
+    "category": "Serien",
+    "audio": "/audio/SouthParkTheme.mp3",
+    "filename": "SouthParkTheme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "66c6ab96-5547-4e6d-a8a1-eadc35dac693",
+    "title": "Batman: The Animated Series",
+    "category": "Serien",
+    "audio": "/audio/Toonami - Batman Intro.mp3",
+    "filename": "Toonami - Batman Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Handlungsort": "Gotham",
+      "Startjahr": "1992",
+      "Endjahr": "1999",
+      "Genre": "Zeichentrick",
+      "Staffelanzahl": "3",
+      "Sender": "FOX/ProSieben",
+      "Nebencharakter": "Dick Grayson"
+    }
+  },
+  {
+    "_id": "bdbc76ff-019d-4d01-8885-cd8c70ea8b29",
+    "title": "Bugs Bunny",
+    "category": "Serien",
+    "audio": "/audio/Soundtrack - Bugs Bunny.mp3",
+    "filename": "Soundtrack - Bugs Bunny.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [
+      "Mein Name ist Hase"
+    ],
+    "metadata": {
+      "Startjahr": "1938",
+      "Endjahr": "1980",
+      "Genre": "Zeichentrick",
+      "Staffelanzahl": "1",
+      "Handlungsort": "USA",
+      "Nebencharakter": "Daffy Duck",
+      "Sender": "WB/ZDF"
+    }
+  },
+  {
+    "_id": "fff86124-10d8-46be-a13d-69d95ff66faa",
+    "title": "Die Simpsons",
+    "category": "Serien",
+    "audio": "/audio/Simpsons-CDTitle.mp3",
+    "filename": "Simpsons-CDTitle.mp3",
+    "startTime": 5,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "df9192c4-7739-4f05-8c25-990677da87cd",
+    "title": "Raumschiff Enterprise",
+    "category": "Serien",
+    "audio": "/audio/Raumschiff Enterprise (deutsch) - Theme.mp3",
+    "filename": "Raumschiff Enterprise (deutsch) - Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "b875486e-c32f-4f9d-bad0-584d9bb63fe3",
+    "title": "Buffy",
+    "category": "Serien",
+    "audio": "/audio/Soundtrack - Buffy.mp3",
+    "filename": "Soundtrack - Buffy.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Handlungsort": "Kalifornien",
+      "Startjahr": "1997",
+      "Endjahr": "2003",
+      "Genre": "Drama, Mystery, Action, Comedy",
+      "Staffelanzahl": "7",
+      "Nebencharakter": "Cordelia Chase",
+      "Sender": "The WB/ProSieben"
+    }
+  },
+  {
+    "_id": "b562f623-a285-4ada-bbb1-4269cc379783",
+    "title": "Darkwing Duck",
+    "category": "Serien",
+    "audio": "/audio/Soundtrack - Darkwing Duck.mp3",
+    "filename": "Soundtrack - Darkwing Duck.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "c2c6349a-53e0-459f-9623-054513d0bc3c",
+    "title": "Spongebob Schwammkopf",
+    "category": "Serien",
+    "audio": "/audio/Spongebob Schwammkopf titel song(deutsch).mp3",
+    "filename": "Spongebob Schwammkopf titel song(deutsch).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "3d28cc31-a93c-4e77-8e88-d254d8ed29da",
+    "title": "Roseanne",
+    "category": "Serien",
+    "audio": "/audio/Roseanne TV intro.mp3",
+    "filename": "Roseanne TV intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "7b37db59-651b-4fc0-ab31-9c6e2122dcc3",
+    "title": "Monk",
+    "category": "Serien",
+    "audio": "/audio/Randy Newman - It's A Jungle Out There (Season 2 Main Title).mp3",
+    "filename": "Randy Newman - It's A Jungle Out There (Season 2 Main Title).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "ee9a0bf2-f7c8-4b42-a194-280e0f68b308",
+    "title": "Turbo Teen",
+    "category": "Serien",
+    "audio": "/audio/Turbo Teen German intro deutsches Intro.mp3",
+    "filename": "Turbo Teen German intro deutsches Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "12f4235e-281d-439f-8868-df998ef31d73",
+    "title": "Smallville",
+    "category": "Serien",
+    "audio": "/audio/Smallville Intro.mp3",
+    "filename": "Smallville Intro.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "bf9ffcf4-f207-4757-938f-a161f9d60fd4",
+    "title": "Dallas",
+    "category": "Serien",
+    "audio": "/audio/Soundtrack - Dallas.mp3",
+    "filename": "Soundtrack - Dallas.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "46c05d27-1743-4f97-aec4-bbec38eca096",
+    "title": "Speedy Gonzales",
+    "category": "Serien",
+    "audio": "/audio/Soundtrack - Die schnellste Maus von Mexiko.mp3",
+    "filename": "Soundtrack - Die schnellste Maus von Mexiko.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "b51ef6bd-d276-4e6f-9bcc-9cc99c30d4e5",
+    "title": "Stargate SG-1",
+    "category": "Serien",
+    "audio": "/audio/Stargate SG-1 Intro 1.mp3",
+    "filename": "Stargate SG-1 Intro 1.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "4d8b875b-7a82-4939-8048-4eed6df58f14",
+    "title": "Es war einmal das Leben",
+    "category": "Serien",
+    "audio": "/audio/Soundtrack - Es war einmal das Leben.mp3",
+    "filename": "Soundtrack - Es war einmal das Leben.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "701a5664-bec7-4645-8bef-88a03a13a361",
+    "title": "Wickie und die starken Männer",
+    "category": "Serien",
+    "audio": "/audio/Soundtrack - Wickie und die starken MÃ¤nner.mp3",
+    "filename": "Soundtrack - Wickie und die starken MÃ¤nner.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "635633b5-9b1d-49ac-84fa-8899f96142c2",
+    "title": "The Benny Hill Show",
+    "category": "Serien",
+    "audio": "/audio/The Benny Hill Show Theme Tune.mp3",
+    "filename": "The Benny Hill Show Theme Tune.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "b6ccb91e-db36-4843-b9c9-97ae9046677e",
+    "title": "Ein Colt für alle Fälle",
+    "category": "Serien",
+    "audio": "/audio/Soundtrack - Ein Colt fÃ¼r alle FÃ¤lle.mp3",
+    "filename": "Soundtrack - Ein Colt fÃ¼r alle FÃ¤lle.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "62ad8bd6-bf74-4789-9a5c-4f054f482a2c",
+    "title": "Die Biene Maja ",
+    "category": "Serien",
+    "audio": "/audio/Soundtrack - Karel Gott - Die Biene Maja .mp3",
+    "filename": "Soundtrack - Karel Gott - Die Biene Maja .mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f574d663-4612-46c0-9bd4-5ea9290d09ae",
+    "title": "Knight Rider",
+    "category": "Serien",
+    "audio": "/audio/Soundtrack - Knight Rider.mp3",
+    "filename": "Soundtrack - Knight Rider.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "3863564e-c3af-4519-b541-84b46929b94a",
+    "title": "Lindenstraße",
+    "category": "Serien",
+    "audio": "/audio/Soundtrack - LindenstraÃe.mp3",
+    "filename": "Soundtrack - LindenstraÃe.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "087510f7-abcc-49c9-b36a-1483c3d835f9",
+    "title": "Das A-Team",
+    "category": "Serien",
+    "audio": "/audio/Soundtrack - The A Team.mp3",
+    "filename": "Soundtrack - The A Team.mp3",
+    "startTime": 21,
+    "reportedIssues": [
+      {
+        "type": "length_issue",
+        "timestamp": "2025-05-16T23:00:24.472Z"
+      }
+    ],
+    "isNew": false
+  },
+  {
+    "_id": "1c0de60c-b075-42e0-aa92-f4bb7203294b",
+    "title": "Charmed",
+    "category": "Serien",
+    "audio": "/audio/Soundtrack - Charmed Theme Song .mp3",
+    "filename": "Soundtrack - Charmed Theme Song .mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "d7abe0d2-f207-4bc2-918f-c6b1aad4a670",
+    "title": "Kampfstern Galactica",
+    "category": "Serien",
+    "audio": "/audio/theme - battlestar galactica.mp3",
+    "filename": "theme - battlestar galactica.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [
+      "Battlestar Galactica"
+    ],
+    "metadata": {
+      "Startjahr": "1978",
+      "Endjahr": "1980",
+      "Genre": "Sci-Fi, Action, Drama",
+      "Staffelanzahl": "2",
+      "Handlungsort": "Weltraum",
+      "Nebencharakter": "Lieutenant Starbuck",
+      "Sender": "ABC/Das Erste"
+    }
+  },
+  {
+    "_id": "3019c05c-6667-4edd-a322-b01538b95c93",
+    "title": "Auf schlimmer und ewig",
+    "category": "Serien",
+    "audio": "/audio/TV Intro - Auf schlimmer und ewig (USA, 1995-1999).mp3",
+    "filename": "TV Intro - Auf schlimmer und ewig (USA, 1995-1999).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "1995",
+      "Endjahr": "1999",
+      "Genre": "Sitcom",
+      "Staffelanzahl": "5",
+      "Nebencharakter": "Tiffany Malloy",
+      "Sender": "The WB/RTL",
+      "Handlungsort": "Kalifornien"
+    }
+  },
+  {
+    "_id": "6bb9fbee-a98a-4833-ab56-a1d98c379803",
+    "title": "Die Sendung mit der Maus",
+    "category": "Serien",
+    "audio": "/audio/TV Themes-Die Sendung mit der Maus.mp3",
+    "filename": "TV Themes-Die Sendung mit der Maus.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "5b9f6859-a3eb-418f-88d9-e425ec870715",
+    "title": "Two and a half men",
+    "category": "Serien",
+    "audio": "/audio/Two and a half men Theme.mp3",
+    "filename": "Two and a half men Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "0c6bc543-ab8c-40c4-88c8-0f589f77d682",
+    "title": "Looney Tunes",
+    "category": "Serien",
+    "audio": "/audio/TV Themes - Looney Tunes.mp3",
+    "filename": "TV Themes - Looney Tunes.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "fffd0d39-e10b-4871-9899-b8a1b27d4a88",
+    "title": "Munsters",
+    "category": "Serien",
+    "audio": "/audio/TV - Munsters - Theme.mp3",
+    "filename": "TV - Munsters - Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "6d50af6e-8e37-4f96-b42e-2fafe80727e2",
+    "title": "Unter Uns",
+    "category": "Serien",
+    "audio": "/audio/Unter Uns Opening 2008.mp3",
+    "filename": "Unter Uns Opening 2008.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8ec27b1f-3680-4a3e-ac0c-427230da840e",
+    "title": "Verbotene Liebe",
+    "category": "Serien",
+    "audio": "/audio/Verbotene Liebe Vorspann.mp3",
+    "filename": "Verbotene Liebe Vorspann.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f6a3f267-14e8-4452-8a00-db0e68be8ec4",
+    "title": "Unsere kleine Farm",
+    "category": "Serien",
+    "audio": "/audio/Unsere kleine Farm - Theme.mp3",
+    "filename": "Unsere kleine Farm - Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8661a720-29d4-4fc7-8118-5706d2692895",
+    "title": "Woody Woodpecker Show",
+    "category": "Serien",
+    "audio": "/audio/Woody Woodpecker Show - Theme.mp3",
+    "filename": "Woody Woodpecker Show - Theme.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f8e926b8-efcc-47f0-a006-f102931d30e8",
+    "title": "Ducktales",
+    "category": "Serien",
+    "audio": "/audio/TV Theme - Ducktales (deutsch).mp3",
+    "filename": "TV Theme - Ducktales (deutsch).mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "2aa4c0db-8933-4d8c-8013-f48b42de5aa6",
+    "title": "Angel",
+    "category": "Serien",
+    "audio": "/audio/TV Theme - Angel Theme Song Extended.mp3",
+    "filename": "TV Theme - Angel Theme Song Extended.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Sender": "The WB/ProSieben",
+      "Startjahr": "1999",
+      "Endjahr": "2004",
+      "Genre": "Drama, Mystery, Action, Comedy",
+      "Staffelanzahl": "5",
+      "Handlungsort": "Los Angeles",
+      "Nebencharakter": "Lindsey McDonald"
+    }
+  },
+  {
+    "_id": "b84fc753-d814-4ed0-85dd-370f03925db3",
+    "title": "Magnum P.I.",
+    "category": "Serien",
+    "audio": "/audio/TV Theme - magnum_pi.mp3",
+    "filename": "TV Theme - magnum_pi.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8f1bc0c1-f068-475b-97e1-641743a5f2f8",
+    "title": "Hör mal, wer da hämmert!",
+    "category": "Serien",
+    "audio": "/audio/TV Intro - HÃ¶r mal, wer da hÃ¤mmert!.mp3",
+    "filename": "TV Intro - HÃ¶r mal, wer da hÃ¤mmert!.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "1af2b4c0-46e6-402e-af09-3c5ef4f3e7c1",
+    "title": "Wer ist hier der Boss",
+    "category": "Serien",
+    "audio": "/audio/Wer_ist_hier_der_BoÃ.mp3",
+    "filename": "Wer_ist_hier_der_BoÃ.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "eff87d2c-17cd-4045-ab4b-ec5836ed96d2",
+    "title": "Star Trek - Voyager",
+    "category": "Serien",
+    "audio": "/audio/TV Theme - star trek - voyager.mp3",
+    "filename": "TV Theme - star trek - voyager.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "9aa78c6e-4559-47c3-9648-d5e220aeb348",
+    "title": "Addams Family",
+    "category": "Serien",
+    "audio": "/audio/TV Theme - Adams Family.mp3",
+    "filename": "TV Theme - Adams Family.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "1964",
+      "Endjahr": "1966",
+      "Genre": "Sitcom",
+      "Staffelanzahl": "2",
+      "Handlungsort": "0001 Cemetery Lane",
+      "Nebencharakter": "Lurch",
+      "Sender": "ABC/WDR"
+    }
+  },
+  {
+    "_id": "9004807e-9be4-42e6-88c8-a26e8a686353",
+    "title": "Yu-Gi-Oh",
+    "category": "Serien",
+    "audio": "/audio/Yu-Gi-Oh Intro 1.mp3",
+    "filename": "Yu-Gi-Oh Intro 1.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "df8835f0-b19f-4302-be4e-2603c3daacdd",
+    "title": "Winnie the Pooh",
+    "category": "Serien",
+    "audio": "/audio/Winnie the pooh intro german.mp3",
+    "filename": "Winnie the pooh intro german.mp3",
+    "startTime": 3,
+    "reportedIssues": [],
+    "alternativeTitles": [],
+    "metadata": {},
+    "isNew": false
+  },
+  {
+    "_id": "81561162-d0ce-47f8-9724-a57987b71095",
+    "title": "Bonanza",
+    "category": "Serien",
+    "audio": "/audio/TV Theme - ennio morricone - bonanza.mp3",
+    "filename": "TV Theme - ennio morricone - bonanza.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "1959",
+      "Endjahr": "1973",
+      "Sender": "NBC/Das Erste",
+      "Staffelanzahl": "14",
+      "Genre": "Western",
+      "Handlungsort": "Nevada",
+      "Nebencharakter": "Joseph Francis „Little Joe“ Cartwright"
+    }
+  },
+  {
+    "_id": "4e9e4280-1901-4465-985a-b73f16e043e6",
+    "title": "MacGyver",
+    "category": "Serien",
+    "audio": "/audio/tv themes - macgyver.mp3",
+    "filename": "tv themes - macgyver.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a1da7dc0-f806-4c38-acdc-d9ac37bc8e29",
+    "title": "X-Factor",
+    "category": "Serien",
+    "audio": "/audio/X Factor Hintergrundmusik.mp3",
+    "filename": "X Factor Hintergrundmusik.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8f59bd7a-ac5f-4f02-8449-3be0983208cb",
+    "title": "Akte X",
+    "category": "Serien",
+    "audio": "/audio/TV Theme - X-Files.mp3",
+    "filename": "TV Theme - X-Files.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [
+      "X-Files"
+    ],
+    "metadata": {
+      "Startjahr": "1993",
+      "Endjahr": "2018",
+      "Genre": "Sci-Fi, Mystery, Thriller",
+      "Staffelanzahl": "11",
+      "Handlungsort": "USA",
+      "Sender": "FOX/ProSieben",
+      "Nebencharakter": "Walter Sergei Skinner"
+    }
+  },
+  {
+    "_id": "ff85b1e3-d222-4617-b78a-e0257e1fe6d6",
+    "title": "Baywatch",
+    "category": "Serien",
+    "audio": "/audio/tv themes - baywatch.mp3",
+    "filename": "tv themes - baywatch.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "1989",
+      "Endjahr": "2001",
+      "Genre": "Action, Drama",
+      "Staffelanzahl": "11",
+      "Handlungsort": "USA",
+      "Nebencharakter": "Casey Jean „C. J.“ Parker",
+      "Sender": "NBC/Das Erste"
+    }
+  },
+  {
+    "_id": "d025a748-67c7-42e9-852d-a11728ade443",
+    "title": "Verliebt in Berlin",
+    "category": "Serien",
+    "audio": "/audio/Verliebt in Berlin - Nena - Liebe ist.mp3",
+    "filename": "Verliebt in Berlin - Nena - Liebe ist.mp3",
+    "startTime": 0,
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "32210dec-d25d-47cf-953f-3d6e0244811f",
+    "title": "Star Trek Enterprise - The Next Generation",
+    "category": "Serien",
+    "audio": "/audio/TV Theme - Enterprise next generation.mp3",
+    "filename": "TV Theme - Enterprise next generation.mp3",
+    "startTime": 0,
+    "metadata": {},
+    "alternativeTitles": [],
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a8f24f22-f806-4932-897e-e2808ffe2691",
+    "title": "Lucky Luke",
+    "category": "Serien",
+    "audio": "/audio/TV Theme - Lucky Luke (I'm A Poor Lonesome Cowboy).mp3",
+    "filename": "TV Theme - Lucky Luke (I'm A Poor Lonesome Cowboy).mp3",
+    "startTime": 0,
+    "metadata": {},
+    "alternativeTitles": [],
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "fdc1422d-9cb4-442d-9db1-99debcb029d0",
+    "title": "Friends",
+    "category": "Serien",
+    "audio": "/audio/TV_Themes_-_007_-_Friends.mp3",
+    "filename": "TV_Themes_-_007_-_Friends.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "e98652c7-52ec-43f6-986f-6f7e581fd311",
+    "title": "Sex in the City",
+    "category": "Serien",
+    "audio": "/audio/TV Themes - 002 - Sex And The City.mp3",
+    "filename": "TV Themes - 002 - Sex And The City.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "0cbe936f-ed4f-43d6-84ce-4b4cb1f4a4d9",
+    "title": "Sherlock",
+    "category": "Serien",
+    "audio": "/audio/59._Sherlock.mp3",
+    "filename": "59._Sherlock.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "c66aee5c-ec45-481c-8c0a-cbb5ae72d80b",
+    "title": "Baldur’s Gate II",
+    "category": "Games",
+    "audio": "/audio/Baldurs_Gate_II_Main_Theme.mp3",
+    "filename": "Baldurs_Gate_II_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2000",
+      "Entwickler": "BioWare",
+      "Publisher": "Interplay Entertainment",
+      "Plattform": "PC, macOS",
+      "Genre": "Rollenspiel",
+      "Nebenfigur": "Jaheira"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "11ba9b80-eb63-40af-9e16-1c7b93b1e4f8",
+    "title": "Der Denver-Clan",
+    "category": "Serien",
+    "audio": "/audio/TV_Themes_-_033_-_Dynasty.mp3",
+    "filename": "TV_Themes_-_033_-_Dynasty.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "96c5f2b3-ccbb-456a-83ce-baff6a16c009",
+    "title": "Wolfenstein 3D Title Theme",
+    "category": "Games",
+    "audio": "/audio/Wolfenstein_3D_Title_Theme.mp3",
+    "filename": "Wolfenstein_3D_Title_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "2d9486a5-fcd7-45d1-bab3-3409689309ab",
+    "title": "Warcraft III: The Frozen Throne",
+    "category": "Games",
+    "audio": "/audio/Warcraft_III_Frozen_Throne_Music_-_Main_Screen_The_Frozen_Throne.mp3",
+    "filename": "Warcraft_III_Frozen_Throne_Music_-_Main_Screen_The_Frozen_Throne.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "2aa40d2e-1479-473c-9932-09503a5f6de9",
+    "title": "Until Dawn",
+    "category": "Games",
+    "audio": "/audio/Until_Dawn_-_Intro_Song_-_O_Death.mp3",
+    "filename": "Until_Dawn_-_Intro_Song_-_O_Death.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "e7e4c6ba-f8b1-46a5-a95d-f1bc2516ac14",
+    "title": "Alan Wake",
+    "category": "Games",
+    "audio": "/audio/Welcome_to_Bright_Falls.mp3",
+    "filename": "Welcome_to_Bright_Falls.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2010",
+      "Genre": "Third-Person-Shooter / Survival Horror",
+      "Plattform": "XBox360, PC",
+      "Entwickler": "Remedy Entertainment",
+      "Publisher": "Microsoft Game Studios",
+      "Nebenfigur": "Barry Wheeler"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "68478439-9f09-452f-b286-9143f9ac717e",
+    "title": "Shadow of the Colossus",
+    "category": "Games",
+    "audio": "/audio/High_Quality_Shadow_of_the_Colossus_OST_01_-_Prologue.mp3",
+    "filename": "High_Quality_Shadow_of_the_Colossus_OST_01_-_Prologue.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "861b06fd-6b2e-4b59-ab5f-48d531698623",
+    "title": "Doctor Who",
+    "category": "Serien",
+    "audio": "/audio/1-24_Doctor_Who.mp3",
+    "filename": "1-24_Doctor_Who.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "96a650ee-a87d-4d8d-bea8-3cdd021b683a",
+    "title": "PacMan",
+    "category": "Games",
+    "audio": "/audio/PacMan_Original_Theme.mp3",
+    "filename": "PacMan_Original_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "7eca9ec6-00d3-4d9b-ab48-dba87435998f",
+    "title": "Resident Evil",
+    "category": "Games",
+    "audio": "/audio/Resident_Evil_1_OST_-_Save_Room.mp3",
+    "filename": "Resident_Evil_1_OST_-_Save_Room.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "bd9d2015-dbca-4908-b421-34ab171a244c",
+    "title": "Stranger Things",
+    "category": "Serien",
+    "audio": "/audio/Stranger_Things__Title_Sequence_HD__Netflix.mp3",
+    "filename": "Stranger_Things__Title_Sequence_HD__Netflix.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "c78210c7-8054-48bb-ae08-d914f2a82d11",
+    "title": "Donkey Kong",
+    "category": "Games",
+    "audio": "/audio/NES_Donkey_Kong_Title_Theme_Full_Version.mp3",
+    "filename": "NES_Donkey_Kong_Title_Theme_Full_Version.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1981",
+      "Genre": "Jump'n'Run",
+      "Plattform": "NES, Arcade",
+      "Entwickler": "Nintendo R&D1",
+      "Nebenfigur": "Jumpman",
+      "Publisher": "Nintendo"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "2db5beb1-b65a-4a9b-a620-ef8c0b1b1657",
+    "title": "Grand Theft Auto: Vice City",
+    "category": "Games",
+    "audio": "/audio/Gta_Vice_City_Theme.mp3",
+    "filename": "Gta_Vice_City_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "1d266122-5fdd-472b-872e-05cc72df9c1f",
+    "title": "Super Mario Bros. ",
+    "category": "Games",
+    "audio": "/audio/Super_Mario_Bros._Theme_Song.mp3",
+    "filename": "Super_Mario_Bros._Theme_Song.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "989de732-8d66-453b-9abc-c61a0c298e63",
+    "title": "Cuphead",
+    "category": "Games",
+    "audio": "/audio/Cuphead_Opening_Theme.mp3",
+    "filename": "Cuphead_Opening_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Entwickler": "Studio MDHR",
+      "Publisher": "Studio MDHR",
+      "Nebenfigur": "Mugman",
+      "Plattform": "PC, macOS, XboxOne, PS4, Switch",
+      "Genre": "Run and Gun",
+      "Erscheinungsjahr": "2017"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "bc16647f-892e-4978-b63f-95d964c73846",
+    "title": "Undertale",
+    "category": "Games",
+    "audio": "/audio/Undertale_OST_-_Once_Upon_a_Time.mp3",
+    "filename": "Undertale_OST_-_Once_Upon_a_Time.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "015a4cfc-5414-4b60-bd4f-d811c5a76bbd",
+    "title": "Kerbal Space Program",
+    "category": "Games",
+    "audio": "/audio/Kerbal_Space_Program_Theme_Song.mp3",
+    "filename": "Kerbal_Space_Program_Theme_Song.mp3",
+    "startTime": 0,
+    "alternativeTitles": [
+      "KSP"
+    ],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "5e6e7946-ebef-4c55-939d-28f6e8237613",
+    "title": "Resident Evil 4",
+    "category": "Games",
+    "audio": "/audio/Resident_Evil_4_OST_-_06_-_Serenity_Safe_RoomMerchant_Theme.mp3",
+    "filename": "Resident_Evil_4_OST_-_06_-_Serenity_Safe_RoomMerchant_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f426b078-ec64-41d5-835a-355b5f418068",
+    "title": "Left 4 Dead",
+    "category": "Games",
+    "audio": "/audio/Left_4_Dead_-_Menu_Theme.mp3",
+    "filename": "Left_4_Dead_-_Menu_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "7a0215b9-1e8c-472e-b967-67ff1dae6751",
+    "title": "The Legend of Zelda: Ocarina of Time",
+    "category": "Games",
+    "audio": "/audio/The_Legend_of_Zelda_Ocarina_of_Time__Title_Theme___Koji_Kondo.mp3",
+    "filename": "The_Legend_of_Zelda_Ocarina_of_Time__Title_Theme___Koji_Kondo.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f3f06a3d-9092-4fd3-af8e-b6b2dde2da55",
+    "title": "Fallout 3",
+    "category": "Games",
+    "audio": "/audio/Fallout_3_-_Intro_song.mp3",
+    "filename": "Fallout_3_-_Intro_song.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "4f7317b3-b749-41b1-b0fc-8d8c749129e1",
+    "title": "Doom",
+    "category": "Games",
+    "audio": "/audio/Doom_OST_-_E1M1_-_At_Dooms_Gate.mp3",
+    "filename": "Doom_OST_-_E1M1_-_At_Dooms_Gate.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1993",
+      "Genre": "Ego-Shooter",
+      "Plattform": "Everywhere",
+      "Entwickler": "id Software",
+      "Publisher": "id Software",
+      "Nebenfigur": "Imp"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "c82a205b-b76b-4100-ad42-3de182832101",
+    "title": "Half Life 2",
+    "category": "Games",
+    "audio": "/audio/Half_Life_2_Soundtrack_CP_Violation.mp3",
+    "filename": "Half_Life_2_Soundtrack_CP_Violation.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "53e5f963-443d-4a88-bd85-43c92f3b1d94",
+    "title": "Journey",
+    "category": "Games",
+    "audio": "/audio/Journey_Soundtrack_PS3_-_Main_Theme.mp3",
+    "filename": "Journey_Soundtrack_PS3_-_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "eaf29fc2-1741-4d76-ab91-253db588f348",
+    "title": "Gothic 2",
+    "category": "Games",
+    "audio": "/audio/Gothic_2_-_Main_Theme.mp3",
+    "filename": "Gothic_2_-_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "79f6ce0f-10f5-4ea4-9df1-0f6fb1afcaf9",
+    "title": "Resident Evil 2",
+    "category": "Games",
+    "audio": "/audio/Resident_Evil_2_Save_Room.mp3",
+    "filename": "Resident_Evil_2_Save_Room.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "83315093-9e38-41ac-bd77-e73006777e6e",
+    "title": "Quake 3: Arena",
+    "category": "Games",
+    "audio": "/audio/Quake_3_Arena_Theme_Song_OST.mp3",
+    "filename": "Quake_3_Arena_Theme_Song_OST.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "7076692f-ba49-4f48-91a5-bd4c4b9112f5",
+    "title": "The Legend of Zelda: The Wind Waker",
+    "category": "Games",
+    "audio": "/audio/The_Legend_of_Zelda_The_Wind_Waker_HD_OST_Title.mp3",
+    "filename": "The_Legend_of_Zelda_The_Wind_Waker_HD_OST_Title.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "347d802a-e9af-49df-886c-d7cabe493012",
+    "title": "GoldenEye 007",
+    "category": "Games",
+    "audio": "/audio/GoldenEye_N64_-_Theme_Song.mp3",
+    "filename": "GoldenEye_N64_-_Theme_Song.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "65a5505d-24e0-4c4f-beb5-315df42f22fe",
+    "title": "Firewatch",
+    "category": "Games",
+    "audio": "/audio/Firewatch_Soundtrack_-_Stay_in_Your_Tower_and_Watch.mp3",
+    "filename": "Firewatch_Soundtrack_-_Stay_in_Your_Tower_and_Watch.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "27a9e2ef-e424-4dfb-8c06-2cbc4b3fa6cd",
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "category": "Games",
+    "audio": "/audio/The_Legend_of_Zelda_Breath_of_the_Wild_-_Theme_SoundTrack.mp3",
+    "filename": "The_Legend_of_Zelda_Breath_of_the_Wild_-_Theme_SoundTrack.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "0c156f66-78e1-4e21-ba49-0bc0ae8bac7b",
+    "title": "Destiny",
+    "category": "Games",
+    "audio": "/audio/Destiny_OST_Main_Theme.mp3",
+    "filename": "Destiny_OST_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2014",
+      "Genre": "Ego-Shooter",
+      "Plattform": "PS3, PS4, Xbox360, XboxOne",
+      "Entwickler": "Bungie",
+      "Publisher": "Activision",
+      "Nebenfigur": "Oryx"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f4670498-df1b-453b-b907-5e092e965d5e",
+    "title": "Subnautica",
+    "category": "Games",
+    "audio": "/audio/Salutations.mp3",
+    "filename": "Salutations.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "2d3abb19-7440-431e-94d9-cfc3641e5e80",
+    "title": "The Stanley Parable",
+    "category": "Games",
+    "audio": "/audio/The_Stanley_Parable_OST_Introducing_Stanley.mp3",
+    "filename": "The_Stanley_Parable_OST_Introducing_Stanley.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [
+      {
+        "type": "wrong_info",
+        "timestamp": "2025-05-17T10:27:35.168Z",
+        "comment": "richtig geschrieben?\n"
+      }
+    ],
+    "isNew": false
+  },
+  {
+    "_id": "14e786a8-34d7-4932-a8b0-384c6dca8622",
+    "title": "Overwatch",
+    "category": "Games",
+    "audio": "/audio/Overwatch_Music_-_01_Overture.mp3",
+    "filename": "Overwatch_Music_-_01_Overture.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f5a647a0-4cac-479e-9a6e-fab741115650",
+    "title": "Counter-Strike 1.6",
+    "category": "Games",
+    "audio": "/audio/Counter_Strike_Theme_Song_1.6_Main_Menu.mp3",
+    "filename": "Counter_Strike_Theme_Song_1.6_Main_Menu.mp3",
+    "startTime": 0,
+    "alternativeTitles": [
+      "CS"
+    ],
+    "metadata": {
+      "Erscheinungsjahr": "2000",
+      "Genre": "Ego-Shooter",
+      "Plattform": "PC",
+      "Entwickler": "Hobbyentwickler",
+      "Publisher": "Valve",
+      "Nebenfigur": "Deagle"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "d1629793-3287-4e04-916d-c105c45743ea",
+    "title": "S.T.A.L.K.E.R.: Shadow Of Chernobyl",
+    "category": "Games",
+    "audio": "/audio/S.T.A.L.K.E.R._Shadow_Of_Chernobyl_Music_-_Menu_Theme.mp3",
+    "filename": "S.T.A.L.K.E.R._Shadow_Of_Chernobyl_Music_-_Menu_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [
+      "Stalker"
+    ],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8a020a83-22d2-4c32-8e1e-035548ad0c61",
+    "title": "Super Metroid",
+    "category": "Games",
+    "audio": "/audio/Super_Metroid_Music_-_Title_Theme.mp3",
+    "filename": "Super_Metroid_Music_-_Title_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "5424edf2-3360-4ec5-88a3-1715fadf2a40",
+    "title": "Counter-Strike: Global Offensive",
+    "category": "Games",
+    "audio": "/audio/Counter-Strike_Global_Offensive_-_Main_Menu_Music.mp3",
+    "filename": "Counter-Strike_Global_Offensive_-_Main_Menu_Music.mp3",
+    "startTime": 0,
+    "alternativeTitles": [
+      "CS:GO"
+    ],
+    "metadata": {
+      "Entwickler": "Valve",
+      "Publisher": "Valve",
+      "Plattform": "PC, macOS, PS3, Xbox360, XboxOne",
+      "Genre": "Ego-Shooter",
+      "Erscheinungsjahr": "2012",
+      "Nebenfigur": "Deagle"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "13249d9c-1064-478c-a72b-0403f96028a2",
+    "title": "Stray ",
+    "category": "Games",
+    "audio": "/audio/Stray_-_Main_Menu_Theme_-_OST_Soundtrack_stray_straygame.mp3",
+    "filename": "Stray_-_Main_Menu_Theme_-_OST_Soundtrack_stray_straygame.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "3cd48616-9f1d-4646-8d70-76e7ebae557e",
+    "title": "Hollow Knight",
+    "category": "Games",
+    "audio": "/audio/Hollow_Knight_OST_-_Hollow_Knight.mp3",
+    "filename": "Hollow_Knight_OST_-_Hollow_Knight.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "56320c4e-b894-482d-9c85-f74d86dc0bd7",
+    "title": "Gone Home",
+    "category": "Games",
+    "audio": "/audio/Main_Menu_Gone_Home.mp3",
+    "filename": "Main_Menu_Gone_Home.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a6521afa-0f97-4d7e-acad-59a3912abbc0",
+    "title": "Deus Ex",
+    "category": "Games",
+    "audio": "/audio/Deus_Ex_-_001_-_Main_Title.mp3",
+    "filename": "Deus_Ex_-_001_-_Main_Title.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2000",
+      "Genre": "Action-Rollenspiel",
+      "Plattform": "PC, macOS, PS2",
+      "Entwickler": "Ion Storm Austin",
+      "Publisher": "Eidos Interactive",
+      "Nebenfigur": "Paul Denton"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "29953f41-c0a4-440a-a672-da04ce0a4012",
+    "title": "The Witcher 3: Wild Hunt",
+    "category": "Games",
+    "audio": "/audio/The_Witcher_3_Wild_Hunt_OST_-_Sword_of_Destiny_-_Main_Theme.mp3",
+    "filename": "The_Witcher_3_Wild_Hunt_OST_-_Sword_of_Destiny_-_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f977c86c-13db-4658-a61d-2440e156851f",
+    "title": "Kingdom Hearts",
+    "category": "Games",
+    "audio": "/audio/Kingdom_Hearts_OST_Menu_Theme.mp3",
+    "filename": "Kingdom_Hearts_OST_Menu_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f29243f5-d7f0-4008-acda-0f4718f6af35",
+    "title": "Tomb Raider III",
+    "category": "Games",
+    "audio": "/audio/Tomb_Raider_III_Main_Theme.mp3",
+    "filename": "Tomb_Raider_III_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "dc990a72-d516-49ec-8341-5f23c3c89045",
+    "title": "The Dark Project",
+    "category": "Games",
+    "audio": "/audio/Thief_-_The_Dark_Project_Theme_Song.mp3",
+    "filename": "Thief_-_The_Dark_Project_Theme_Song.mp3",
+    "startTime": 0,
+    "alternativeTitles": [
+      "Thief"
+    ],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "427b22ed-675c-443d-b9e7-a4e6d2949bf5",
+    "title": "Heretic",
+    "category": "Games",
+    "audio": "/audio/Heretic_-_The_Docks.mp3",
+    "filename": "Heretic_-_The_Docks.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "fb4f5465-2de4-4e67-bd97-b4ffd9b5163d",
+    "title": "Terraria",
+    "category": "Games",
+    "audio": "/audio/Terraria_Music_-_Day.mp3",
+    "filename": "Terraria_Music_-_Day.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "5315455c-e91a-4777-b0e3-bd40363e88b2",
+    "title": "Rollercoaster Tycoon",
+    "category": "Games",
+    "audio": "/audio/Rollercoaster_Tycoon_Title_Theme_-_PC_OST.mp3",
+    "filename": "Rollercoaster_Tycoon_Title_Theme_-_PC_OST.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [
+      {
+        "type": "playback_error",
+        "timestamp": "2025-05-17T21:22:47.861Z"
+      }
+    ],
+    "isNew": false
+  },
+  {
+    "_id": "a9358e87-c9d6-43cb-a250-12987bea4b65",
+    "title": "Outer Wilds",
+    "category": "Games",
+    "audio": "/audio/Outer_Wilds.mp3",
+    "filename": "Outer_Wilds.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "cf99782d-9916-4e0b-99aa-7b93421e3765",
+    "title": "Mass Effect 3",
+    "category": "Games",
+    "audio": "/audio/Mass_Effect_3_Soundtrack_-_Leaving_Earth.mp3",
+    "filename": "Mass_Effect_3_Soundtrack_-_Leaving_Earth.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "74c91db4-f6de-4d2a-bec4-037e8748998f",
+    "title": "Red Dead Redemption 2",
+    "category": "Games",
+    "audio": "/audio/Main_Theme__Red_Dead_Redemption_2_OST.mp3",
+    "filename": "Main_Theme__Red_Dead_Redemption_2_OST.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f01d5c39-7065-4393-a9d2-9d9192156e44",
+    "title": "Starfield",
+    "category": "Games",
+    "audio": "/audio/Starfield_-_Main_Theme_Official_OST.mp3",
+    "filename": "Starfield_-_Main_Theme_Official_OST.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "aa0aea51-7ed2-4ef9-855d-f2371d8731aa",
+    "title": "Stardew Valley",
+    "category": "Games",
+    "audio": "/audio/Stardew_Valley_OST_-_Stardew_Valley_Overture.mp3",
+    "filename": "Stardew_Valley_OST_-_Stardew_Valley_Overture.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "c88d948e-f9b7-4580-a631-e7a3062b692e",
+    "title": "Breaking Bad",
+    "category": "Serien",
+    "audio": "/audio/Breaking_Bad_Full_Intro_Title_Sequence.mp3",
+    "filename": "Breaking_Bad_Full_Intro_Title_Sequence.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Startjahr": "2008",
+      "Endjahr": "2013",
+      "Genre": "Drama, Krimi, Thriller",
+      "Staffelanzahl": "5",
+      "Sender": "AMC/AXN/",
+      "Nebencharakter": "Hank Schrader",
+      "Handlungsort": "New Mexico"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "3a4c95b8-9734-4609-bc1b-cf3f9b1fde5b",
+    "title": "Super Meat Boy",
+    "category": "Games",
+    "audio": "/audio/Super_Meat_Boy_-_Digital_Special_Edition_Soundtrack_-_03_Forest_Funk_Ch_1_Light_World.mp3",
+    "filename": "Super_Meat_Boy_-_Digital_Special_Edition_Soundtrack_-_03_Forest_Funk_Ch_1_Light_World.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "1fff0f69-9743-465a-9f17-437d31f87fbb",
+    "title": "Super Mario 64",
+    "category": "Games",
+    "audio": "/audio/Super_Mario_64_-_Main_Theme_Music_-_Bob-Omb_Battlefield.mp3",
+    "filename": "Super_Mario_64_-_Main_Theme_Music_-_Bob-Omb_Battlefield.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "0ad670c8-6ed2-449a-97bb-9923749ce0f5",
+    "title": "Pathfinder: Kingmaker",
+    "category": "Games",
+    "audio": "/audio/Pathfinder_Kingmaker._Inon_Zur_-_Main_Theme..mp3",
+    "filename": "Pathfinder_Kingmaker._Inon_Zur_-_Main_Theme..mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "fdf1bcb3-55a8-41f2-959b-55e87194db29",
+    "title": "The Last of Us",
+    "category": "Games",
+    "audio": "/audio/The_Last_Of_us_-_Theme_song.mp3",
+    "filename": "The_Last_Of_us_-_Theme_song.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "1beb3ee3-67d8-4581-a1c1-fdabff1ea981",
+    "title": "Tomb Raider ",
+    "category": "Games",
+    "audio": "/audio/Tomb_Raider_1996_Ost_-_Main_Theme.mp3",
+    "filename": "Tomb_Raider_1996_Ost_-_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f66d3594-90fa-4093-af92-bcdd97153653",
+    "title": "It Takes Two",
+    "category": "Games",
+    "audio": "/audio/It_Takes_Two_Credits_Theme_Soundtrack.mp3",
+    "filename": "It_Takes_Two_Credits_Theme_Soundtrack.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "02a19d9b-3bd6-4483-a2d9-524020c0fe34",
+    "title": "Dishonored",
+    "category": "Games",
+    "audio": "/audio/DISHONORED_-_01_Main_Theme.mp3",
+    "filename": "DISHONORED_-_01_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2012",
+      "Plattform": "PC, PS3, Xbox360",
+      "Genre": "Stealth-Action-Adventure",
+      "Entwickler": "Arkane Studios",
+      "Publisher": "Bethesda Softworks",
+      "Nebenfigur": "Emily Kaldwin"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "6c59b7ae-a275-4a25-9a84-d2b409a57a5f",
+    "title": "Hotline Miami",
+    "category": "Games",
+    "audio": "/audio/Hotline_Miami_Soundtrack__A_New_Morning.mp3",
+    "filename": "Hotline_Miami_Soundtrack__A_New_Morning.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "3645f81b-ac4f-4221-9f97-5e8a8e6dc3d9",
+    "title": "Command & Conquer: Alarmstufe Rot 2",
+    "category": "Games",
+    "audio": "/audio/Red_alert_2_theme_song_menu_soundtrack.mp3",
+    "filename": "Red_alert_2_theme_song_menu_soundtrack.mp3",
+    "startTime": 0,
+    "alternativeTitles": [
+      "Red Alert 2"
+    ],
+    "metadata": {
+      "Erscheinungsjahr": "2006",
+      "Genre": "Echtzeit-Strategie",
+      "Plattform": "PC, macOS, PS3, Xbox360",
+      "Entwickler": "EA Los Angeles",
+      "Publisher": "Electronic Arts",
+      "Nebenfigur": "Yuri"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "acfe487d-c532-4c84-b630-2ce2d5b5901d",
+    "title": "Chrono Trigger",
+    "category": "Games",
+    "audio": "/audio/Chrono_Trigger_Main_Theme.mp3",
+    "filename": "Chrono_Trigger_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1995",
+      "Genre": "Rollenspiel",
+      "Plattform": "SNES, PSX, ",
+      "Entwickler": "Square",
+      "Publisher": "Square",
+      "Nebenfigur": "Marle"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "d5e799ac-928c-484f-8bda-3a775764d9f3",
+    "title": "System Shock 2",
+    "category": "Games",
+    "audio": "/audio/System_Shock_2_OST_Intro_Music.mp3",
+    "filename": "System_Shock_2_OST_Intro_Music.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "152fa2ec-e7cc-4535-b927-3eeb3df8051e",
+    "title": "Metal Gear Solid 3: Snake Eater",
+    "category": "Games",
+    "audio": "/audio/Metal_Gear_Solid_3_Snake_Eater_Theme_FLAC.mp3",
+    "filename": "Metal_Gear_Solid_3_Snake_Eater_Theme_FLAC.mp3",
+    "startTime": 0,
+    "alternativeTitles": [
+      "MGS"
+    ],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "b9dec016-6625-401e-b0b6-7345ca3783db",
+    "title": "Banjo-Kazooie",
+    "category": "Games",
+    "audio": "/audio/Banjo_Kazooie_Theme_Song_Intro.mp3",
+    "filename": "Banjo_Kazooie_Theme_Song_Intro.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Genre": "Jump ’n’ Run",
+      "Erscheinungsjahr": "1998",
+      "Plattform": "N64",
+      "Entwickler": "Rare",
+      "Nebenfigur": "Tooty",
+      "Publisher": "Nintendo"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "07625ed5-dd35-47dd-982f-dacbd05d2199",
+    "title": "Baldur's Gate",
+    "category": "Games",
+    "audio": "/audio/Baldurs_Gate_Music-_Main_Theme.mp3",
+    "filename": "Baldurs_Gate_Music-_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1998",
+      "Genre": "Rollenspiel",
+      "Plattform": "PC, macOS",
+      "Entwickler": "BioWare",
+      "Publisher": "Interplay Entertainment",
+      "Nebenfigur": "Dynaheir"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "466f304a-ed05-451b-95c1-1d3df170348e",
+    "title": "Tom Clancy's Rainbow Six: Siege",
+    "category": "Games",
+    "audio": "/audio/Tom_Clancys_Siege_Original_Game_Soundtrack__Paul_Haslinger_-_Main_Theme_Track_01.mp3",
+    "filename": "Tom_Clancys_Siege_Original_Game_Soundtrack__Paul_Haslinger_-_Main_Theme_Track_01.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "cb1fd634-4838-4a59-9822-ee2c5a1deef3",
+    "title": "Fallout 4",
+    "category": "Games",
+    "audio": "/audio/Fallout_4_Main_Theme.mp3",
+    "filename": "Fallout_4_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "17a95943-15b3-44f8-83cd-85bc248e66c4",
+    "title": "Bioshock",
+    "category": "Games",
+    "audio": "/audio/Bioshock_Soundtrack_01_The_Ocean_on_His_Shoulders.mp3",
+    "filename": "Bioshock_Soundtrack_01_The_Ocean_on_His_Shoulders.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2007",
+      "Genre": "Ego-Shooter",
+      "Plattform": "PC, Xbox360, PS3",
+      "Entwickler": "2K Boston",
+      "Publisher": "2K Games",
+      "Nebenfigur": "Andrew Ryan"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "bf53bf51-cf1a-422e-9c3c-f520977f12db",
+    "title": "Fable",
+    "category": "Games",
+    "audio": "/audio/Fable_OST_-_Oakvale.mp3",
+    "filename": "Fable_OST_-_Oakvale.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "245904ce-9cac-491b-b48d-1a0200ef6428",
+    "title": "Silent Hill 2",
+    "category": "Games",
+    "audio": "/audio/Silent_Hill_2_OST_-_Theme_Of_Laura.mp3",
+    "filename": "Silent_Hill_2_OST_-_Theme_Of_Laura.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "ae1eadbe-c266-4b49-b786-1e01e00ecce1",
+    "title": "Return of the Obra Dinn",
+    "category": "Games",
+    "audio": "/audio/Return_of_the_Obra_Dinn_Soundtrack_-_Theme.mp3",
+    "filename": "Return_of_the_Obra_Dinn_Soundtrack_-_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "1db34acf-1dd3-4358-ba79-4b8de0039378",
+    "title": "Bastion",
+    "category": "Games",
+    "audio": "/audio/Bastion_Original_Soundtrack_-_A_Proper_Story.mp3",
+    "filename": "Bastion_Original_Soundtrack_-_A_Proper_Story.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2011",
+      "Genre": "Hack'n'Slay",
+      "Plattform": "PC, macOS, PS4, Xbox360, iOS",
+      "Entwickler": "Supergiant Games",
+      "Publisher": "Warner Bros. Interactive ",
+      "Nebenfigur": "Rucks"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "c8ac8afc-75d1-47cc-ab64-d2a5cfac95ff",
+    "title": "Celeste",
+    "category": "Games",
+    "audio": "/audio/Official_Celeste_Original_Soundtrack_-_01_-_Prologue.mp3",
+    "filename": "Official_Celeste_Original_Soundtrack_-_01_-_Prologue.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2018",
+      "Genre": "Jump ’n’ Run",
+      "Plattform": "PC, macOS, PS4, XboxOne, Switch",
+      "Entwickler": "Maddy Thorson",
+      "Publisher": "Extremely OK Games",
+      "Nebenfigur": "Theo"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "1c65e53d-c9a4-464b-aa3d-f2aedff99b34",
+    "title": "Dark Souls III",
+    "category": "Games",
+    "audio": "/audio/Dark_Souls_III_OST_1_-_Main_Theme.mp3",
+    "filename": "Dark_Souls_III_OST_1_-_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2016",
+      "Genre": "Action-Rollenspiel",
+      "Plattform": "PC, PS4, XboxOne",
+      "Entwickler": "FromSoftware",
+      "Publisher": "Bandai Namco Games",
+      "Nebenfigur": "Firekeeper"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8ac568c8-e4a5-4006-a804-c38a24501bef",
+    "title": "Gothic",
+    "category": "Games",
+    "audio": "/audio/Gothic_1_Soundtrack_-_01_Titel_Theme.mp3",
+    "filename": "Gothic_1_Soundtrack_-_01_Titel_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "741b4c8b-1a4f-46ce-b736-563d6bded54c",
+    "title": "Pillars of Eternity",
+    "category": "Games",
+    "audio": "/audio/Pillars_of_Eternity_Soundtrack_01_-_Title_Theme_Justin_Bell.mp3",
+    "filename": "Pillars_of_Eternity_Soundtrack_01_-_Title_Theme_Justin_Bell.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "800b19f8-0ded-41fd-bac6-ea850f91a040",
+    "title": "Payday 2",
+    "category": "Games",
+    "audio": "/audio/PAYDAY_2_Soundtrack_Beta_-_Main_Menu.mp3",
+    "filename": "PAYDAY_2_Soundtrack_Beta_-_Main_Menu.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a14caf37-4e2c-4ea4-959d-dc5d988c9c71",
+    "title": "Call of Duty 4: Modern Warfare",
+    "category": "Games",
+    "audio": "/audio/Call_of_Duty_4_Modern_Warfare_Soundtrack_-_1.Main_Theme.mp3",
+    "filename": "Call_of_Duty_4_Modern_Warfare_Soundtrack_-_1.Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2006",
+      "Genre": "Ego-Shooter",
+      "Plattform": "PC, Xbox360, PS3, Xbox360",
+      "Entwickler": "Infinity Ward",
+      "Publisher": "Activison",
+      "Nebenfigur": "Captain Price"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "b8763713-5771-4403-9e0f-5e208d1cdaa2",
+    "title": "Super Smash Bros. Ultimate",
+    "category": "Games",
+    "audio": "/audio/Super_Smash_Bros._Ultimate_Main_Theme_-_Lifelight.mp3",
+    "filename": "Super_Smash_Bros._Ultimate_Main_Theme_-_Lifelight.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "13e17048-29b3-4cde-97e4-b9500c6883cd",
+    "title": "Mega Man 2",
+    "category": "Games",
+    "audio": "/audio/Mega_Man_2_-_Dr._Wilys_Castle.mp3",
+    "filename": "Mega_Man_2_-_Dr._Wilys_Castle.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "b43b7c8e-480e-49d1-b675-85b87a36fa03",
+    "title": "Doom II",
+    "category": "Games",
+    "audio": "/audio/Doom_II_OST_-_Map_0115_-_Running_from_Evil.mp3",
+    "filename": "Doom_II_OST_-_Map_0115_-_Running_from_Evil.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1994",
+      "Genre": "Ego-Shooter",
+      "Plattform": "Everywhere",
+      "Entwickler": "id Software",
+      "Nebenfigur": "Imp",
+      "Publisher": "id Software"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "ef23ab5b-193b-473d-9359-7ac2fed42d0c",
+    "title": "Metal Gear Solid 4: Guns of the Patriots",
+    "category": "Games",
+    "audio": "/audio/Metal_Gear_Solid_4_OST_-_Old_Snake_Full.mp3",
+    "filename": "Metal_Gear_Solid_4_OST_-_Old_Snake_Full.mp3",
+    "startTime": 0,
+    "alternativeTitles": [
+      "MGS"
+    ],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "4945e2c6-b93a-4ac5-ad5d-9589e18cef40",
+    "title": "Dark Souls 2",
+    "category": "Games",
+    "audio": "/audio/Dark_Souls_2_OST_Main_Menu_Theme.mp3",
+    "filename": "Dark_Souls_2_OST_Main_Menu_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2014",
+      "Genre": "Action-Rollenspiel",
+      "Plattform": "PC, PS3, Xbox360",
+      "Entwickler": "FromSoftware",
+      "Nebenfigur": "Emerald Herald",
+      "Publisher": "Bandai Namco Games"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "6e0cd97a-926b-4912-8bb1-7dc053e76ba8",
+    "title": "Arma II",
+    "category": "Games",
+    "audio": "/audio/ARMA_II_DayZ_Main_Menu_Theme_MusicSong.mp3",
+    "filename": "ARMA_II_DayZ_Main_Menu_Theme_MusicSong.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Entwickler": "Bohemia Interactive",
+      "Erscheinungsjahr": "2009",
+      "Genre": "Taktik-Shooter",
+      "Plattform": "PC",
+      "Publisher": "505 Games",
+      "Nebenfigur": "Muhammad R. Aziz"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "188ad23d-a796-400a-9243-bc12e0cacb11",
+    "title": "Gothic 3",
+    "category": "Games",
+    "audio": "/audio/Soundtrack_Gothic_3-_Title_Theme.mp3",
+    "filename": "Soundtrack_Gothic_3-_Title_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "78fbef99-e4e8-4d73-b845-20efa71628e5",
+    "title": "Street Fighter II",
+    "category": "Games",
+    "audio": "/audio/Super_Street_Fighter_II_OST_Guile_Theme.mp3",
+    "filename": "Super_Street_Fighter_II_OST_Guile_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "e83f0e14-f7c3-4ddb-a7e3-3209c684e11f",
+    "title": "Hexen",
+    "category": "Games",
+    "audio": "/audio/Hexen_Music_PC_Winnowing_Hall.mp3",
+    "filename": "Hexen_Music_PC_Winnowing_Hall.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f25c8217-6384-481c-abaa-8271d5355e4b",
+    "title": "Tomb Raider IV: The Last Revelation",
+    "category": "Games",
+    "audio": "/audio/Tomb_Raider_IV_The_Last_Revelation_-_Main_Theme.mp3",
+    "filename": "Tomb_Raider_IV_The_Last_Revelation_-_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "64a74bd7-a279-4b56-86b0-d76b69678872",
+    "title": "Helldivers 2",
+    "category": "Games",
+    "audio": "/audio/Helldivers_2_Main_Theme_-_A_Cup_Of_Liber-Tea.mp3",
+    "filename": "Helldivers_2_Main_Theme_-_A_Cup_Of_Liber-Tea.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "52df884f-b240-45a6-ab51-1ba59530ea73",
+    "title": "Bioshock Infinite",
+    "category": "Games",
+    "audio": "/audio/Bioshock_Infinite_OST_-_Elizabeth.mp3",
+    "filename": "Bioshock_Infinite_OST_-_Elizabeth.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2013",
+      "Genre": "Ego-Shooter",
+      "Plattform": "PC, Xbox360, PS3, macOS",
+      "Entwickler": "Irrational Games",
+      "Publisher": "2K Games",
+      "Nebenfigur": "Elizabeth"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "7ee1a8bd-58d2-459c-a31d-67886c6237d4",
+    "title": "Left 4 Dead 2",
+    "category": "Games",
+    "audio": "/audio/Left_4_Dead_2_Full_Intro_Song.mp3",
+    "filename": "Left_4_Dead_2_Full_Intro_Song.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "e4a4f778-37f7-4ac2-a4ed-26ba723a4009",
+    "title": "Mario Kart 8",
+    "category": "Games",
+    "audio": "/audio/Mario_Kart_8_-_Main_Theme_HD_Without_SFX.mp3",
+    "filename": "Mario_Kart_8_-_Main_Theme_HD_Without_SFX.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "cc880933-0b0c-4b7b-b63b-106a321b9dec",
+    "title": "Stronghold: Crusader",
+    "category": "Games",
+    "audio": "/audio/Stronghold_Crusader_-_Main_Menu_Theme.mp3",
+    "filename": "Stronghold_Crusader_-_Main_Menu_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "2afdb2e4-5691-4c08-8397-ab7e2495e45f",
+    "title": "Command & Conquer: Generals",
+    "category": "Games",
+    "audio": "/audio/Command__Conquer_Generals_-_Main_Theme.mp3",
+    "filename": "Command__Conquer_Generals_-_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2003",
+      "Genre": "Echtzeit-Strategie",
+      "Plattform": "PC, macOS",
+      "Entwickler": "EA Pacific",
+      "Publisher": "Electronic Arts",
+      "Nebenfigur": "Malcolm Granger"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "ae0df691-8f41-40a6-a758-4b5d6b300dc6",
+    "title": "Battlefield: Bad Company 2",
+    "category": "Games",
+    "audio": "/audio/Battlefield_Bad_Company_2_-_Multiplayer_Loadup_Theme.mp3",
+    "filename": "Battlefield_Bad_Company_2_-_Multiplayer_Loadup_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2010",
+      "Genre": "Taktik-Shooter",
+      "Plattform": "PC, Xbox360, PS3",
+      "Entwickler": "DICE",
+      "Publisher": "Electronic Arts",
+      "Nebenfigur": "Arkady Kirilenko"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "1d3a05b4-1652-4905-902b-f87b334536d9",
+    "title": "Minecraft",
+    "category": "Games",
+    "audio": "/audio/C418_-_Haggstrom_-_Minecraft_Volume_Alpha.mp3",
+    "filename": "C418_-_Haggstrom_-_Minecraft_Volume_Alpha.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "669fc5d2-6d57-41a5-a50b-bd4eb4a7ad6e",
+    "title": "Call of Duty: Modern Warfare 2",
+    "category": "Games",
+    "audio": "/audio/Call_of_Duty_Modern_Warfare_2_-_Opening_Titles_Hans_Zimmer.mp3",
+    "filename": "Call_of_Duty_Modern_Warfare_2_-_Opening_Titles_Hans_Zimmer.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Nebenfigur": "„Soap“ MacTavish",
+      "Erscheinungsjahr": "2009",
+      "Genre": "Ego-Shooter",
+      "Plattform": "PC, macOS, PS3, Xbox360",
+      "Entwickler": "Infinity Ward",
+      "Publisher": "Activison"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "ecd47bad-a4a9-4b1f-922a-b954c67161d9",
+    "title": "Vampire: The Masquerade - Bloodlines",
+    "category": "Games",
+    "audio": "/audio/Bloodlines_Main_Theme.mp3",
+    "filename": "Bloodlines_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "31c2c627-bb06-4a9f-8320-99468e417f66",
+    "title": "Age of Empires II",
+    "category": "Games",
+    "audio": "/audio/Age_of_Empires_II_Main_Theme_Age_of_Empires_II_Definitive_Edition_Soundtrack.mp3",
+    "filename": "Age_of_Empires_II_Main_Theme_Age_of_Empires_II_Definitive_Edition_Soundtrack.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "1999",
+      "Genre": "Echtzeit-Strategie",
+      "Plattform": "PC, macOS, PS2",
+      "Entwickler": "Ensemble Studios",
+      "Nebenfigur": "Teutonen",
+      "Publisher": "Microsoft Game Studios"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8e641068-a178-4178-89a6-a555c6b37acf",
+    "title": "Bloodborne",
+    "category": "Games",
+    "audio": "/audio/Bloodborne_Soundtrack_OST_-_Bloodborne.mp3",
+    "filename": "Bloodborne_Soundtrack_OST_-_Bloodborne.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Genre": "Action-Rollenspiel",
+      "Plattform": "PS4",
+      "Erscheinungsjahr": "2015",
+      "Entwickler": "From Software",
+      "Nebenfigur": "Doll",
+      "Publisher": "Sony Computer Entertainment"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "5911e3a0-16ca-442f-a3fa-2da580b622d6",
+    "title": "Animal Crossing: New Horizons",
+    "category": "Games",
+    "audio": "/audio/Animal_Crossing_New_Horizons_-_Main_Theme_Song.mp3",
+    "filename": "Animal_Crossing_New_Horizons_-_Main_Theme_Song.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2020",
+      "Genre": "Lebenssimulation",
+      "Plattform": "Switch",
+      "Entwickler": "Nintendo EPD",
+      "Publisher": "Nintendo",
+      "Nebenfigur": "Tom Nook"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "0a9ca4c1-456d-4f9e-b774-1aba05f253c2",
+    "title": "Civilization V",
+    "category": "Games",
+    "audio": "/audio/Christopher_Tin_-_Baba_Yetu_Official_Video_feat._Soweto_Gospel_Choir.mp3",
+    "filename": "Christopher_Tin_-_Baba_Yetu_Official_Video_feat._Soweto_Gospel_Choir.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2010",
+      "Genre": "Runden-Strategie",
+      "Plattform": "PC, macOS",
+      "Entwickler": "Firaxis",
+      "Nebenfigur": "Gandhi",
+      "Publisher": "2K Games"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "666d9f0d-2de5-4576-9bc3-3b24174c4fe6",
+    "title": "Call of Duty: Modern Warfare (2019)",
+    "category": "Games",
+    "audio": "/audio/Call_of_Duty_Modern_Warfare_Soundtrack_Main_Theme.mp3",
+    "filename": "Call_of_Duty_Modern_Warfare_Soundtrack_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2019",
+      "Genre": "Ego-Shooter",
+      "Plattform": "PC, PS4, XboxOne",
+      "Entwickler": "Infinity Ward",
+      "Nebenfigur": "Captain Price",
+      "Publisher": "Activison"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "b101f597-907f-478a-bfca-ba7896ef83e2",
+    "title": "Stronghold",
+    "category": "Games",
+    "audio": "/audio/Castlejam__Stronghold_2001_Original_Sounndtrack.mp3",
+    "filename": "Castlejam__Stronghold_2001_Original_Sounndtrack.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "0"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "9c4e2ab6-acc9-4324-9adf-c2fc956f2e4c",
+    "title": "Baldur's Gate 3",
+    "category": "Games",
+    "audio": "/audio/01_Baldurs_Gate_3_Original_Soundtrack_-_Main_Theme_Part_I.mp3",
+    "filename": "01_Baldurs_Gate_3_Original_Soundtrack_-_Main_Theme_Part_I.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Entwickler": "Larian Studios",
+      "Publisher": "Larian Studios",
+      "Nebenfigur": "Shadowheart",
+      "Plattform": "PC, macOS, PS5, XBoxSeries",
+      "Genre": "Rollenspiel",
+      "Erscheinungsjahr": "2023"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "b51e7c04-1823-485e-8085-9862838c384c",
+    "title": "League of Legends",
+    "category": "Games",
+    "audio": "/audio/Classic_Summoners_Rift_Champion_Select_-_Draft_Pick_From_League_of_Legends_Season_1.mp3",
+    "filename": "Classic_Summoners_Rift_Champion_Select_-_Draft_Pick_From_League_of_Legends_Season_1.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "113fd876-fccf-4d08-998f-e1c4106c15e5",
+    "title": "Red Dead Redemption",
+    "category": "Games",
+    "audio": "/audio/Red_Dead_Redemption_Main_Theme_HD.mp3",
+    "filename": "Red_Dead_Redemption_Main_Theme_HD.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "cf79c9f7-512b-48bc-8417-73f27bedf01c",
+    "title": "NieR: Automata",
+    "category": "Games",
+    "audio": "/audio/City_Ruins_-_Rays_of_Light_NieRAutomata_Original_SoundtrackAudio.mp3",
+    "filename": "City_Ruins_-_Rays_of_Light_NieRAutomata_Original_SoundtrackAudio.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "75277ac4-dd2d-4d70-a020-69ca22c64243",
+    "title": "Among Us",
+    "category": "Games",
+    "audio": "/audio/AMONG_US_-_OST_-_MAIN_THEME_SONG_HQ.mp3",
+    "filename": "AMONG_US_-_OST_-_MAIN_THEME_SONG_HQ.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2018",
+      "Genre": "Party",
+      "Plattform": "Android, iOS, PC, Switch",
+      "Entwickler": "Innersloth",
+      "Publisher": "Innersloth",
+      "Nebenfigur": "Crewmate"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "3d233502-22f0-44ad-8269-b44ef6c63384",
+    "title": "Life is Strange",
+    "category": "Games",
+    "audio": "/audio/OST_Life_is_Strange_-_Main_Theme.mp3",
+    "filename": "OST_Life_is_Strange_-_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "41cee7f3-71f6-4667-9890-b62f149e9529",
+    "title": "Persona 5",
+    "category": "Games",
+    "audio": "/audio/Persona_5_-_Life_Will_Change_.mp3",
+    "filename": "Persona_5_-_Life_Will_Change_.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "1eb6f833-3f1c-4423-a8ee-259ef95af515",
+    "title": "Mass Effect 2",
+    "category": "Games",
+    "audio": "/audio/Mass_Effect_2-_main_theme.mp3",
+    "filename": "Mass_Effect_2-_main_theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "d3192d71-60a0-4026-ad46-7607d6e75660",
+    "title": "Dark Souls",
+    "category": "Games",
+    "audio": "/audio/Souls_of_Fire_-_Dark_Souls_Soundtrack_01.mp3",
+    "filename": "Souls_of_Fire_-_Dark_Souls_Soundtrack_01.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2011",
+      "Genre": "Action-Rollenspiel",
+      "Plattform": "PC, PS3, Xbox360",
+      "Entwickler": "FromSoftware",
+      "Publisher": "Bandai Namco Games",
+      "Nebenfigur": "Solaire of Astora"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "3ef28daa-a9d2-497d-a1d9-05aaffd1a062",
+    "title": "Far Cry",
+    "category": "Games",
+    "audio": "/audio/Far_Cry_Soundtrack_-_Menu_Music.mp3",
+    "filename": "Far_Cry_Soundtrack_-_Menu_Music.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "807f4d60-0b63-4087-9b7c-8b9422b8199d",
+    "title": "Okami",
+    "category": "Games",
+    "audio": "/audio/Okami_Soundtrack_-_The_Sun_Rises.mp3",
+    "filename": "Okami_Soundtrack_-_The_Sun_Rises.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "5fbdbb04-65e1-4be2-92f8-f3daa0448c80",
+    "title": "Hogwarts Legacy",
+    "category": "Games",
+    "audio": "/audio/Hogwarts_Legacy_Soundtrack__Overture_to_the_Unwritten__WaterTower.mp3",
+    "filename": "Hogwarts_Legacy_Soundtrack__Overture_to_the_Unwritten__WaterTower.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "57fa2f74-443e-4d4c-96b3-8a38654eb2db",
+    "title": "Far Cry 3",
+    "category": "Games",
+    "audio": "/audio/Far_Cry_3_-_Far_Cry_3_Track_01_-_Main_Theme.mp3",
+    "filename": "Far_Cry_3_-_Far_Cry_3_Track_01_-_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "6cf8dd2c-9bd6-4130-bb88-e24af60e8fc5",
+    "title": "Grand Theft Auto: San Andreas",
+    "category": "Games",
+    "audio": "/audio/GTA_San_Andreas_Theme_Song_Full__.mp3",
+    "filename": "GTA_San_Andreas_Theme_Song_Full__.mp3",
+    "startTime": 0,
+    "alternativeTitles": [
+      "GTA"
+    ],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "3b6fe7af-6d21-4ae2-9cbc-4eb615bee04c",
+    "title": "Titanfall 2",
+    "category": "Games",
+    "audio": "/audio/Titanfall_2_Soundtrack_-_Main_Theme_Song.mp3",
+    "filename": "Titanfall_2_Soundtrack_-_Main_Theme_Song.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f70d7f52-3857-42cf-a87b-c267f88eee1f",
+    "title": "Elden Ring",
+    "category": "Games",
+    "audio": "/audio/Elden_Ring_-_Main_Theme_OST_Official_Soundtrack_Music.mp3",
+    "filename": "Elden_Ring_-_Main_Theme_OST_Official_Soundtrack_Music.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2022",
+      "Genre": "Action-Rollenspiel",
+      "Plattform": "PC, PS4, PS5, XboxOne, XboxSeries",
+      "Entwickler": "FromSoftware",
+      "Publisher": "Bandai Namco Entertainment",
+      "Nebenfigur": "Torrent"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8e54e971-253a-48a6-95d7-e256bc7105ff",
+    "title": "Cyberpunk 2077",
+    "category": "Games",
+    "audio": "/audio/Cyberpunk_2077_music.mp3",
+    "filename": "Cyberpunk_2077_music.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2020",
+      "Genre": "Rollenspiel",
+      "Plattform": "PC, PS4, PS5, XboxOne, XboxSeries",
+      "Entwickler": "CD Project Red",
+      "Publisher": "CD Project",
+      "Nebenfigur": "Johnny Silverhand"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "df1944a0-b911-466e-b04f-a3796f9e38e5",
+    "title": "Divinity: Original Sin 2",
+    "category": "Games",
+    "audio": "/audio/Divinity_Original_Sin_2_OST_-_Main_Theme_Full.mp3",
+    "filename": "Divinity_Original_Sin_2_OST_-_Main_Theme_Full.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {
+      "Erscheinungsjahr": "2017",
+      "Genre": "Rollenspiel",
+      "Plattform": "PC, PS4, XboxOne",
+      "Entwickler": "Larian Studios",
+      "Publisher": "Larian Studios",
+      "Nebenfigur": "Fane"
+    },
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8b515853-3ee6-4500-9784-1bfe6f9b44fa",
+    "title": "StarCraft II",
+    "category": "Games",
+    "audio": "/audio/StarCraft_II_-_Wings_of_Liberty_Main_Theme.mp3",
+    "filename": "StarCraft_II_-_Wings_of_Liberty_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "e57df7a8-1f3b-48da-8e81-4ce6c6f920b0",
+    "title": "Ori and the Blind Forest",
+    "category": "Games",
+    "audio": "/audio/Ori_and_the_Blind_Forest__Main_Theme_Menu_Music.mp3",
+    "filename": "Ori_and_the_Blind_Forest__Main_Theme_Menu_Music.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "b043d45a-413b-49cb-af71-524246b9c60b",
+    "title": "Hades",
+    "category": "Games",
+    "audio": "/audio/Hades_-_God_of_the_Dead.mp3",
+    "filename": "Hades_-_God_of_the_Dead.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "1d3d5e58-0798-4897-ab54-75d136beb62a",
+    "title": "Twin Peaks",
+    "category": "Serien",
+    "audio": "/audio/Twin_Peaks_Intro.mp3",
+    "filename": "Twin_Peaks_Intro.mp3",
+    "startTime": "2",
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "954fa8b0-7bfd-458b-ad5e-079dcd445631",
+    "title": "Black Mirror",
+    "category": "Serien",
+    "audio": "/audio/Black_Mirror_--_Opening_title_sequence.mp3",
+    "filename": "Black_Mirror_--_Opening_title_sequence.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "7dab343f-f31d-4a7b-bf8d-690f3d0a4b8b",
+    "title": "Sabrina Total verhext",
+    "category": "Serien",
+    "audio": "/audio/Sabrina_Total_verhext_IntroTheme.mp3",
+    "filename": "Sabrina_Total_verhext_IntroTheme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "c8046d24-df94-48aa-aca4-c7f79781b274",
+    "title": "Rick and Morty",
+    "category": "Serien",
+    "audio": "/audio/Rick_and_Morty_Theme_Song_HD.mp3",
+    "filename": "Rick_and_Morty_Theme_Song_HD.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "e264c150-299d-4c54-b327-c8997df4729e",
+    "title": "Lost",
+    "category": "Serien",
+    "audio": "/audio/Main_Title.mp3",
+    "filename": "Main_Title.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "dac7c324-7d95-4e2f-883e-c664a190ed01",
+    "title": "Vikings",
+    "category": "Serien",
+    "audio": "/audio/Vikings_Intro_2013_HD.mp3",
+    "filename": "Vikings_Intro_2013_HD.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "1e674082-218d-473f-a15b-395f16c56578",
+    "title": "Family Guy",
+    "category": "Serien",
+    "audio": "/audio/NEW_Family_Guy_Intro_-_HD.mp3",
+    "filename": "NEW_Family_Guy_Intro_-_HD.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f2eb4263-bb47-4a33-a902-3d700892c002",
+    "title": "American Dad",
+    "category": "Serien",
+    "audio": "/audio/American_Dad_-_Theme_Song_High_Quality.mp3",
+    "filename": "American_Dad_-_Theme_Song_High_Quality.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "14036f56-cbf7-4c84-bf0e-8186bb0caed7",
+    "title": "The Umbrella Academy",
+    "category": "Serien",
+    "audio": "/audio/The_Umbrella_Academy_Opening_Titles.mp3",
+    "filename": "The_Umbrella_Academy_Opening_Titles.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "0339ec72-23c9-4175-811e-395174c61fbb",
+    "title": "Die Nanny",
+    "category": "Serien",
+    "audio": "/audio/Die_Nanny_-_Intro_deutsch.mp3",
+    "filename": "Die_Nanny_-_Intro_deutsch.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "968e5c01-c588-4fe0-a35e-0c3ff26757e5",
+    "title": "Seinfeld",
+    "category": "Serien",
+    "audio": "/audio/Seinfeld_Theme.mp3",
+    "filename": "Seinfeld_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "37309fda-4b16-422b-8b2b-4cd4a0fdadbf",
+    "title": "Herkules",
+    "category": "Serien",
+    "audio": "/audio/Herkules_1996_Staffel_2_Intro_deutsch.mp3",
+    "filename": "Herkules_1996_Staffel_2_Intro_deutsch.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "2b70bba1-74df-4184-bf94-a0ec371a03d7",
+    "title": "The 100",
+    "category": "Serien",
+    "audio": "/audio/The_100_-_Opening_Titles.mp3",
+    "filename": "The_100_-_Opening_Titles.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "079929d7-94ec-42d6-8978-f5c3af206a7d",
+    "title": "The Big Bang Theory",
+    "category": "Serien",
+    "audio": "/audio/The_Big_Bang_Theory_Intro_Full_Version.mp3",
+    "filename": "The_Big_Bang_Theory_Intro_Full_Version.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "aa62efc7-ab1f-490d-8d17-fa9cfdd12c30",
+    "title": "Die wilden 70er",
+    "category": "Serien",
+    "audio": "/audio/Die_wilden_70er_-_Intro__1998.mp3",
+    "filename": "Die_wilden_70er_-_Intro__1998.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "29a5d537-48f6-402b-9e49-74a6cc23d767",
+    "title": "Orange is the New Black",
+    "category": "Serien",
+    "audio": "/audio/Orange_is_the_New_Black__Opening_Credits__Netflix.mp3",
+    "filename": "Orange_is_the_New_Black__Opening_Credits__Netflix.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "d1bb1b7c-635d-4e5a-b7fa-c1a84959304d",
+    "title": "King of the Hill",
+    "category": "Serien",
+    "audio": "/audio/King_of_the_Hill_Theme.mp3",
+    "filename": "King_of_the_Hill_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "9d9eaeac-ba94-444a-b61e-e80979a80062",
+    "title": "BoJack Horseman",
+    "category": "Serien",
+    "audio": "/audio/BoJack_Horseman__Opening_Credits_Theme_Song_HD__Netflix.mp3",
+    "filename": "BoJack_Horseman__Opening_Credits_Theme_Song_HD__Netflix.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "bd2c8f0f-729d-4ac5-af64-8fca996f6f78",
+    "title": "Peaky Blinders",
+    "category": "Serien",
+    "audio": "/audio/Peaky_Blinders_Opening_Title_Sequence_-_Gold_Open.mp3",
+    "filename": "Peaky_Blinders_Opening_Title_Sequence_-_Gold_Open.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "38504cc2-f00a-4849-b140-1a1a5183fd56",
+    "title": "Dark",
+    "category": "Serien",
+    "audio": "/audio/Dark__Season_1_-_Opening_Credits__Intro_Netflix_Series.mp3",
+    "filename": "Dark__Season_1_-_Opening_Credits__Intro_Netflix_Series.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "74083a41-849d-4cf0-aa16-e916faa28b00",
+    "title": "Drake & Josh",
+    "category": "Serien",
+    "audio": "/audio/Drake__Josh_Intro__Nick__Deutsch.mp3",
+    "filename": "Drake__Josh_Intro__Nick__Deutsch.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a8d02f49-0cf4-453e-b36c-3b02eabbd8ec",
+    "title": "Avatar - Der Herr der Elemente",
+    "category": "Serien",
+    "audio": "/audio/Avatar__Der_Herr_der_Elemente_Intro_Deutsch__Avatar_Fanclub.mp3",
+    "filename": "Avatar__Der_Herr_der_Elemente_Intro_Deutsch__Avatar_Fanclub.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "eb195706-064b-46a4-b820-c7010317bf6f",
+    "title": "The Boys",
+    "category": "Serien",
+    "audio": "/audio/The_Boys.mp3",
+    "filename": "The_Boys.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "e4dd444f-79f8-49fd-a226-9ef02e03087a",
+    "title": "Arcane",
+    "category": "Serien",
+    "audio": "/audio/Arcane_Opening_Enemy_-_Imagine_Dragons.mp3",
+    "filename": "Arcane_Opening_Enemy_-_Imagine_Dragons.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "4cb131df-a476-4658-a028-f2b2a5e1df20",
+    "title": "Hey Arnold!",
+    "category": "Serien",
+    "audio": "/audio/Hey_Arnold_Titelsong__Paramount_Deutschland.mp3",
+    "filename": "Hey_Arnold_Titelsong__Paramount_Deutschland.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "88154189-7d55-40c4-b222-69b324b7a7e7",
+    "title": "Death Note",
+    "category": "Serien",
+    "audio": "/audio/Death_Note_-_Opening_4K.mp3",
+    "filename": "Death_Note_-_Opening_4K.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a950ac17-57c9-48aa-a2a5-1dc5eddd70cc",
+    "title": "True Detective",
+    "category": "Serien",
+    "audio": "/audio/True_Detective_-_Intro__Opening_Scene_HD.mp3",
+    "filename": "True_Detective_-_Intro__Opening_Scene_HD.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "3b483674-1201-42ca-bf93-10f0906e4851",
+    "title": "Die Bieber Brüder",
+    "category": "Serien",
+    "audio": "/audio/The_Angry_Beavers_Theme_Song_HQ__Episode_Opening_Credits__Nick_Animation.mp3",
+    "filename": "The_Angry_Beavers_Theme_Song_HQ__Episode_Opening_Credits__Nick_Animation.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "c3f1f10f-b724-4e55-9830-4615278a59af",
+    "title": "Xena - Die Kriegerprinzessin",
+    "category": "Serien",
+    "audio": "/audio/Xena__Die_Kriegerprinzessin_-_Intro.mp3",
+    "filename": "Xena__Die_Kriegerprinzessin_-_Intro.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "dcfb6b38-06c4-4598-bcf0-cff45cf016a9",
+    "title": "Wednesday",
+    "category": "Serien",
+    "audio": "/audio/Wednesday_Addams__Title_Sequence__Netflix.mp3",
+    "filename": "Wednesday_Addams__Title_Sequence__Netflix.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "64c29988-1f83-429f-afca-69332936ae5a",
+    "title": "Penny Dreadful",
+    "category": "Serien",
+    "audio": "/audio/Penny_Dreadful_Main_Title_Sequence.mp3",
+    "filename": "Penny_Dreadful_Main_Title_Sequence.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "ed82d367-656c-473a-9af3-479eb3475937",
+    "title": "Westworld",
+    "category": "Serien",
+    "audio": "/audio/Westworld_-_Intro__Opening_Credits__60_FPS_1080p.mp3",
+    "filename": "Westworld_-_Intro__Opening_Credits__60_FPS_1080p.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "71e053a1-b7ef-4268-aaf3-a44e9c1ab892",
+    "title": "The Last of Us",
+    "category": "Serien",
+    "audio": "/audio/The_Last_of_Us__Opening_Credits__Max.mp3",
+    "filename": "The_Last_of_Us__Opening_Credits__Max.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "79ac40e7-3837-4e7c-9e99-c8302cf0256f",
+    "title": "Andor",
+    "category": "Serien",
+    "audio": "/audio/Andor_Main_Title_Theme_-_Episode_1.mp3",
+    "filename": "Andor_Main_Title_Theme_-_Episode_1.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f3130bcc-6499-49e0-a5f4-97fdbb5926ce",
+    "title": "Star Trek Voyager",
+    "category": "Serien",
+    "audio": "/audio/Star_Trek_Voyager_-_4k__HD_Intro_-_NeonVisual.mp3",
+    "filename": "Star_Trek_Voyager_-_4k__HD_Intro_-_NeonVisual.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "4da12f24-36d4-41c2-8965-8eb7f0cb3ac3",
+    "title": "The Wire",
+    "category": "Serien",
+    "audio": "/audio/The_Wire_2002_Season_1_-_Opening_Theme.mp3",
+    "filename": "The_Wire_2002_Season_1_-_Opening_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "4c4e2b04-7c88-4d21-baa5-7ec8c8838b33",
+    "title": "Brooklyn Nine Nine",
+    "category": "Serien",
+    "audio": "/audio/Brooklyn_Nine_Nine_-_Main_Theme.mp3",
+    "filename": "Brooklyn_Nine_Nine_-_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "0bce4991-920b-48fa-91af-38a541bca252",
+    "title": "Severance",
+    "category": "Serien",
+    "audio": "/audio/Severance_-_Official_Intro_Title_Sequence_2022__Credits__Opening_4K__Apple_TV___extraweg.mp3",
+    "filename": "Severance_-_Official_Intro_Title_Sequence_2022__Credits__Opening_4K__Apple_TV___extraweg.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "3c81dbbe-cff5-4c4c-a2f7-fbc0a4274a83",
+    "title": "The Sopranos",
+    "category": "Serien",
+    "audio": "/audio/The_Sopranos_Opening_Credits_Theme_Song__The_Sopranos__HBO.mp3",
+    "filename": "The_Sopranos_Opening_Credits_Theme_Song__The_Sopranos__HBO.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8c7673a9-367a-48c8-90c8-81f1ded841f5",
+    "title": "The Walking Dead",
+    "category": "Serien",
+    "audio": "/audio/The_Walking_Dead_Original_Soundtrack_-_Theme_Song.mp3",
+    "filename": "The_Walking_Dead_Original_Soundtrack_-_Theme_Song.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f2d26909-e659-46b6-b97a-373a93c86263",
+    "title": "Heroes",
+    "category": "Serien",
+    "audio": "/audio/Heroes_-_Original_Theme.mp3",
+    "filename": "Heroes_-_Original_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f1ea2aee-db7e-45e1-adad-0f2d4af8ba8f",
+    "title": "Attack on Titan",
+    "category": "Serien",
+    "audio": "/audio/Attack_on_Titan_Opening_1__Feuerroter_Pfeil_und_Bogen.mp3",
+    "filename": "Attack_on_Titan_Opening_1__Feuerroter_Pfeil_und_Bogen.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "8580ab0f-b502-4650-ad20-6d807b2706e6",
+    "title": "Das Damengambit",
+    "category": "Serien",
+    "audio": "/audio/Main_Title_The_Queens_Gambit.mp3",
+    "filename": "Main_Title_The_Queens_Gambit.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "e0c00627-ef3e-4729-8d13-195edbfd518a",
+    "title": "Squid Game",
+    "category": "Serien",
+    "audio": "/audio/Squid_Game_OST_-_Pink_Soldiers_Extended_Ver..mp3",
+    "filename": "Squid_Game_OST_-_Pink_Soldiers_Extended_Ver..mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "cf961621-afaf-464b-8e53-ec71fa5a88a8",
+    "title": "Star Trek: Deep Space Nine",
+    "category": "Serien",
+    "audio": "/audio/Star_Trek_Deep_Space_Nine_-_4K__HD_Intro_-_NeonVisual.mp3",
+    "filename": "Star_Trek_Deep_Space_Nine_-_4K__HD_Intro_-_NeonVisual.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "951bf8ba-38ea-4800-b7ec-c97ab0651d36",
+    "title": "Game of Thrones",
+    "category": "Serien",
+    "audio": "/audio/Game_of_Thrones_-_Staffel_01_-_Intro_GermanDeutsch_HD.mp3",
+    "filename": "Game_of_Thrones_-_Staffel_01_-_Intro_GermanDeutsch_HD.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "ac545bd8-bcb6-4af1-b750-eec32e638f12",
+    "title": "The Mandalorian",
+    "category": "Serien",
+    "audio": "/audio/The_Mandalorian__Opening_Credits.mp3",
+    "filename": "The_Mandalorian__Opening_Credits.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "170f67c5-dbc3-4ef9-ae00-338eb45cfbdb",
+    "title": "The Office",
+    "category": "Serien",
+    "audio": "/audio/The_Office_Main_Theme.mp3",
+    "filename": "The_Office_Main_Theme.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "0c67c1ca-6bf4-4534-ae8a-7914a7c4e332",
+    "title": "Prison Break",
+    "category": "Serien",
+    "audio": "/audio/Prison_Break_OST_01_Main_Titles.mp3",
+    "filename": "Prison_Break_OST_01_Main_Titles.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "bd783113-74d0-4ab4-95e0-adfb1a1e32a0",
+    "title": "The Witcher",
+    "category": "Serien",
+    "audio": "/audio/Netflixs_THE_WITCHER_OST_-_Geralt_Of_Rivia__Main_Theme_Song_-_FINAL_TRAILER_Music.mp3",
+    "filename": "Netflixs_THE_WITCHER_OST_-_Geralt_Of_Rivia__Main_Theme_Song_-_FINAL_TRAILER_Music.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "135a664c-cea0-48fd-9930-bde752981851",
+    "title": "Loki",
+    "category": "Serien",
+    "audio": "/audio/Natalie_Holt_-_TVA_From_Loki.mp3",
+    "filename": "Natalie_Holt_-_TVA_From_Loki.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "93abf56b-5a25-4df7-bb00-bb3f309bbfbe",
+    "title": "My Name is Earl",
+    "category": "Serien",
+    "audio": "/audio/My_Name_is_Earl_theme_tune_What_Goes_Around_Comes_Around.mp3",
+    "filename": "My_Name_is_Earl_theme_tune_What_Goes_Around_Comes_Around.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [
+      {
+        "type": "other",
+        "timestamp": "2025-05-14T16:29:54.425Z",
+        "comment": "Neuer song mit gelaber"
+      }
+    ],
+    "isNew": false
+  },
+  {
+    "_id": "746f4c73-01e7-4d17-8b3f-fb56dfddf684",
+    "title": "Sex Education",
+    "category": "Serien",
+    "audio": "/audio/Ezra_Furman_-_Every_Feeling_Official_Audio.mp3",
+    "filename": "Ezra_Furman_-_Every_Feeling_Official_Audio.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "f6a2dcbf-179e-40da-948b-d6a5ac99e3a0",
+    "title": "The Rookie",
+    "category": "Serien",
+    "audio": "/audio/The_Rookie_Intro_Song.mp3",
+    "filename": "The_Rookie_Intro_Song.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "10bc2914-f09b-4cd1-8dfb-86ccaf3e6485",
+    "title": "Gravity Falls",
+    "category": "Serien",
+    "audio": "/audio/Gravity_Falls_opening_theme_FULL.mp3",
+    "filename": "Gravity_Falls_opening_theme_FULL.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "a2b36fb4-7472-4b38-a9da-37bc5fc73a89",
+    "title": "Better Call Saul",
+    "category": "Serien",
+    "audio": "/audio/Better_Call_Saul_Main_Title_Theme_Extended.mp3",
+    "filename": "Better_Call_Saul_Main_Title_Theme_Extended.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "86089667-eb15-47f4-939b-ee1f95d20253",
+    "title": "The Bear",
+    "category": "Serien",
+    "audio": "/audio/Eddie_Vedders_Save_It_For_Later__Opening_Credits__The_Bear__FX.mp3",
+    "filename": "Eddie_Vedders_Save_It_For_Later__Opening_Credits__The_Bear__FX.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  },
+  {
+    "_id": "64d4a55a-ca38-45e0-b796-3a78a0f29b61",
+    "title": "Sherlock",
+    "category": "Serien",
+    "audio": "/audio/BBC_Sherlock_Theme_Song.mp3",
+    "filename": "BBC_Sherlock_Theme_Song.mp3",
+    "startTime": 0,
+    "alternativeTitles": [],
+    "metadata": {},
+    "reportedIssues": [],
+    "isNew": false
+  }
+]

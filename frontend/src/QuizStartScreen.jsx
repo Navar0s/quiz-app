@@ -25,11 +25,11 @@ export default function QuizStartScreen() {
     <hr style={styles.separator} />
 
     <div style={styles.block}>
+    <Link to="/highscore">
+    <Button variant="secondary" className="w-full">🏆 Highscores</Button> {/* className="w-full" hinzugefügt */}
+    </Link>
     <Link to="/editor">
     <Button variant="secondary" className="w-full">✏️ Quizdaten-Editor</Button> {/* className="w-full" hinzugefügt */}
-    </Link>
-    <Link to="/highscore">
-    <Button variant="secondary" className="w-full" disabled={true}>🏆 Highscores (WIP)</Button> {/* className="w-full" hinzugefügt */}
     </Link>
     </div>
     </Card>
