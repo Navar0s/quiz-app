@@ -20,4 +20,22 @@ Thumbs.db
 nginx_debug.log # Deine Nginx-Logdatei
 # IDE-spezifische Ordner (Beispiele)
 .vscode/
+
 .idea/
+# Log-Dateien
+*.log
+logs/
+!logs/.gitkeep # Beispiel, falls du das leere Verzeichnis behalten willst
+
+# Lokale Konfigurationen / Umgebungsvariablen
+.env
+.env.*
+!.env.example
+
+# Docker-spezifisch für lokale Entwicklung
+docker-compose.override.yml
+nginx/Dockerfile.dev
+nginx/quiz.dev.conf
+
+# Entwicklungsdaten
+backend/data_dev/
