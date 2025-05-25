@@ -1,7 +1,7 @@
 // frontend/src/HighscoreView.jsx
 import { useState, useEffect, useMemo } from 'react';
 import { API } from './api';
-import QuizLayout from './QuizLayout';
+//import QuizLayout from './QuizLayout';
 import Card from './components/Card';
 import Button from './components/Button';
 //import { CATEGORIES as APP_CATEGORIES, HIGHSCORE_QUESTION_COUNTS as TT_HS_QUESTION_COUNTS } from './config/quizConfig'; // Importieren
@@ -270,30 +270,30 @@ export default function HighscoreView() {
   // --- Lade- und Fehlerzustände ---
   if (isLoading) {
     return (
-      <QuizLayout>
+      //<QuizLayout>
       <Card className="text-center p-8">
       <p className="text-xl text-gray-400">Lade Highscores...</p>
       </Card>
-      </QuizLayout>
+      //</QuizLayout>
     );
   }
 
   if (error) {
     return (
-      <QuizLayout>
+      //<QuizLayout>
       <Card className="text-center p-8">
       <p className="text-xl text-red-400 font-semibold">Fehler beim Laden der Highscores:</p>
       <p className="text-gray-300 mt-2">{error}</p>
       {/* Optional: Button zum erneuten Versuch, fetchHighscores erneut aufzurufen */}
       {/* <Button onClick={fetchHighscores} className="mt-4">Erneut versuchen</Button> */}
       </Card>
-      </QuizLayout>
+      //</QuizLayout>
     );
   }
 
   // --- Haupt-JSX der Komponente ---
   return (
-    <QuizLayout>
+    //<QuizLayout>
     <Card className="max-w-4xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
     <h1 className="text-3xl sm:text-4xl font-bold text-center text-blue-400 mb-8">
     🏆 Highscores 🏆
@@ -384,6 +384,6 @@ export default function HighscoreView() {
         )}
         </div>
         </Card>
-        </QuizLayout>
+        //</QuizLayout>
   );
 } // Ende der HighscoreView Komponente

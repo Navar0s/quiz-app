@@ -8,8 +8,8 @@ package-lock.json
 # Vite / Frontend Build-Artefakte
 frontend/dist/
 # Backend Daten (falls du sie nicht versionieren willst - für den Start vielleicht besser doch, als Backup)
-backend/data/songs.json
-backend/data/highscores.json
+# backend/data/songs.json
+# backend/data/highscores.json
 # Docker
 .dockerignore
 # OS generated files

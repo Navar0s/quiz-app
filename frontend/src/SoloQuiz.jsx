@@ -295,9 +295,23 @@ export default function SoloQuiz() {
       setSuggestions([]);
       return;
     }
+
+    // 1. Bestimme die aktuell relevanten Songs für die Vorschläge
+    let relevantSongs = db; // Standard: Alle Songs aus der DB
+    const quizIsCategorySpecific = categoriesFromParams.length > 0 && !categoriesFromParams.includes('Alle');
+
+    if (quizIsCategorySpecific) {
+      relevantSongs = db.filter(song => categoriesFromParams.includes(song.category));
+      console.log(`[SoloQuiz Suggestions] Filtered for categories: ${categoriesFromParams.join(', ')}, ${relevantSongs.length} relevant songs.`);
+    } else {
+      console.log(`[SoloQuiz Suggestions] Using all ${db.length} songs for suggestions.`);
+    }
+
+    // 2. Suche nur in den relevantSongs nach Übereinstimmungen
     const normalizedGuess = normalizeText(guess);
     const newSuggestions = new Set();
-    db.forEach(song => {
+
+    relevantSongs.forEach(song => { // Verwende relevantSongs statt db
       if (song.title && normalizeText(song.title).includes(normalizedGuess)) {
         newSuggestions.add(song.title);
       }
@@ -309,9 +323,10 @@ export default function SoloQuiz() {
         });
       }
     });
+
     const list = Array.from(newSuggestions).slice(0, 5);
     setSuggestions(guess && list.length > 0 && !list.some(item => normalizeText(item) === normalizedGuess) ? list : []);
-  }, [guess, db]);
+  }, [guess, db, categoriesFromParams]);
 
   // Effekt für TimeTrial Song-Zeitmessung (Start/Pause des Segments)
   useEffect(() => {
@@ -1087,12 +1102,12 @@ export default function SoloQuiz() {
       onKeyDown={e => { if (e.key === 'Enter' && guess.trim()) { e.preventDefault(); handleSubmitAttempt(false); } }}
       onFocus={handleInputFocus}
       placeholder="Songtitel eingeben"
-      className="text-sm sm:text-base"
+      className="text-base"
       disabled={isQuestionOver || (effectiveMode === 'TimeTrial' && isSongGuessed && !isPracticeMode)} // Im Übungsmodus auch nach Richtig noch aktiv (falls man was nachschauen will, aber Raten-Button ist dann weg)
     />
     {suggestions.length > 0 && (
-      <ul className="absolute w-full bg-gray-800 border border-gray-700 rounded-b max-h-32 sm:max-h-40 overflow-y-auto z-10 mt-1 text-xs sm:text-sm">
-      {suggestions.map(t => ( <li key={t} className="px-3 py-1 hover:bg-blue-600 cursor-pointer" onClick={() => { setGuess(t); setSuggestions([]); }}>{t}</li> ))}
+      <ul className="absolute w-full bg-gray-800 border border-gray-700 rounded-b max-h-40 sm:max-h-48 overflow-y-auto z-10 mt-1 text-sm sm:text-base">
+      {suggestions.map(t => ( <li key={t} className="px-3 py-2 hover:bg-blue-600 cursor-pointer" onClick={() => { setGuess(t); setSuggestions([]); }}>{t}</li> ))}
       </ul>
     )}
     </div>
