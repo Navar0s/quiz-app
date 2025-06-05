@@ -32,11 +32,17 @@ export default function SoloQuizConfig() {
     const nav = useNavigate();
     const [mode, setMode] = useState(MODES[0].id);
     const [count, setCount] = useState(MODES.find(m => m.id === MODES[0].id).countOptions?.[0] || 10);
-    const [cats, setCats] = useState(new Set()); // Bleibt
+    const [cats, setCats] = useState(new Set());
     const [showModeInfoModal, setShowModeInfoModal] = useState(false);
     const [modalModeInfo, setModalModeInfo] = useState({ title: '', description: '' });
 
-    // NEU: Logik, um den aktuellen Auswahlmodus für Kategorien zu bestimmen
+    const [availableMinYear, setAvailableMinYear] = useState(null);
+    const [availableMaxYear, setAvailableMaxYear] = useState(null);
+    const [selectedMinYear, setSelectedMinYear] = useState('');
+    const [selectedMaxYear, setSelectedMaxYear] = useState('');
+    const [fetchError, setFetchError] = useState(null);
+
+    // Logik, um den aktuellen Auswahlmodus für Kategorien zu bestimmen
     const categorySelectionMode = useMemo(() => {
         if (mode === 'survival' || mode === 'timetrial_hs') {
             return 'singleOrAll';
@@ -45,7 +51,75 @@ export default function SoloQuizConfig() {
     }, [mode]);
 
     useEffect(() => {
-        // Bestehender Teil für 'count'
+        // Fetch years for date range filter
+        const fetchYears = async () => {
+            try {
+                setFetchError(null);
+                const response = await fetch('/api/songs');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const songs = await response.json();
+
+                if (songs.length === 0) {
+                    setFetchError("Keine Songs gefunden, um den Jahresbereich zu bestimmen.");
+                    const currentYear = new Date().getFullYear();
+                    setAvailableMinYear(currentYear - 10); // Fallback
+                    setAvailableMaxYear(currentYear);      // Fallback
+                    setSelectedMinYear((currentYear - 10).toString());
+                    setSelectedMaxYear(currentYear.toString());
+                    return;
+                }
+
+                let minYear = Infinity;
+                let maxYear = -Infinity;
+
+                songs.forEach(song => {
+                    const metadata = song.metadata || {};
+                    let yearsToConsider = [];
+
+                    if (song.category === 'Filme' || song.category === 'Games') {
+                        const year = parseInt(metadata.Erscheinungsjahr, 10);
+                        if (!isNaN(year)) yearsToConsider.push(year);
+                    } else if (song.category === 'Serien') {
+                        const start = parseInt(metadata.Startjahr, 10);
+                        const end = parseInt(metadata.Endjahr, 10);
+                        if (!isNaN(start)) yearsToConsider.push(start);
+                        if (!isNaN(end)) yearsToConsider.push(end);
+                    }
+
+                    yearsToConsider.forEach(y => {
+                        if (y < minYear) minYear = y;
+                        if (y > maxYear) maxYear = y;
+                    });
+                });
+
+                if (minYear === Infinity || maxYear === -Infinity) {
+                    const currentYear = new Date().getFullYear();
+                    minYear = currentYear - 10;
+                    maxYear = currentYear;
+                    console.warn("Keine gültigen Jahreszahlen in Song-Metadaten gefunden. Fallback wird verwendet.");
+                }
+
+                setAvailableMinYear(minYear);
+                setAvailableMaxYear(maxYear);
+                setSelectedMinYear(minYear.toString());
+                setSelectedMaxYear(maxYear.toString());
+
+            } catch (error) {
+                console.error("Fehler beim Abrufen der Songs für Jahresbereich:", error);
+                setFetchError(`Fehler beim Laden der Song-Jahre: ${error.message}.`);
+                const currentYear = new Date().getFullYear();
+                setAvailableMinYear(currentYear - 20); // Robust fallback
+                setAvailableMaxYear(currentYear);
+                setSelectedMinYear((currentYear - 20).toString());
+                setSelectedMaxYear(currentYear.toString());
+            }
+        };
+
+        fetchYears();
+
+        // Bestehender Teil für 'count' und Kategorie-Logik
         const currentModeConfig = MODES.find(m => m.id === mode);
         if (currentModeConfig && currentModeConfig.requiresCount && currentModeConfig.countOptions) {
             if (!currentModeConfig.countOptions.includes(count) || count === undefined) {
@@ -55,13 +129,34 @@ export default function SoloQuizConfig() {
             // Optional: setCount(0) oder einen speziellen Wert
         }
 
-        // NEU: Logik, um sicherzustellen, dass 'cats' mit categorySelectionMode konsistent ist
+        // Logik, um sicherzustellen, dass 'cats' mit categorySelectionMode konsistent ist
         if (categorySelectionMode === 'singleOrAll' && cats.size > 1) {
-            setCats(new Set()); // Bei Wechsel zu singleOrAll und >1 Kat. ausgewählt, auf "Alle" (leeres Set) zurücksetzen
+            setCats(new Set());
         }
-    }, [mode, count, cats, categorySelectionMode]); // cats und categorySelectionMode als Abhängigkeiten hinzugefügt
+    }, [mode, count, cats, categorySelectionMode]); // Dependencies: mode, count, cats, categorySelectionMode
 
-    // NEUE handleCategoryClick Funktion
+    const handleMinYearChange = (e) => {
+        const newMinYear = e.target.value;
+        setSelectedMinYear(newMinYear);
+        if (selectedMaxYear && parseInt(newMinYear, 10) > parseInt(selectedMaxYear, 10)) {
+            setSelectedMaxYear(newMinYear);
+        }
+    };
+
+    const handleMaxYearChange = (e) => {
+        const newMaxYear = e.target.value;
+        setSelectedMaxYear(newMaxYear);
+        if (selectedMinYear && parseInt(newMaxYear, 10) < parseInt(selectedMinYear, 10)) {
+            setSelectedMinYear(newMaxYear);
+        }
+    };
+
+    const resetDateFilter = () => {
+        if (availableMinYear !== null) setSelectedMinYear(availableMinYear.toString());
+        if (availableMaxYear !== null) setSelectedMaxYear(availableMaxYear.toString());
+    };
+
+    // handleCategoryClick Funktion
     const handleCategoryClick = (categoryName) => {
         if (categorySelectionMode === 'singleOrAll') {
             if (categoryName === 'Alle') {
@@ -93,11 +188,22 @@ export default function SoloQuizConfig() {
             q.set('count', count.toString());
         }
 
-        if (cats.size === 0) { // Wenn keine spezifische Kategorie ausgewählt ist
+        if (cats.size === 0) {
             q.append('categories', 'Alle');
         } else {
             cats.forEach(c => q.append('categories', c));
         }
+
+        const sMinY = parseInt(selectedMinYear, 10);
+        const sMaxY = parseInt(selectedMaxYear, 10);
+
+        if (!isNaN(sMinY) && !isNaN(sMaxY) &&
+            availableMinYear !== null && availableMaxYear !== null &&
+            (sMinY !== availableMinYear || sMaxY !== availableMaxYear)) {
+            q.set('startDate', sMinY.toString());
+            q.set('endDate', sMaxY.toString());
+        }
+
         nav(`/solo?${q.toString()}`);
     };
 
@@ -119,6 +225,8 @@ export default function SoloQuizConfig() {
         <h2 className="text-2xl font-bold text-center text-blue-400">
         🧩 Solo-Quiz Einstellungen
         </h2>
+
+        {fetchError && <p className="text-sm text-red-500 text-center py-2">{fetchError}</p>}
 
         {/* --- Modusauswahl als Button-Grid --- */}
         <div className="grid grid-cols-2 gap-x-4 gap-y-2">
@@ -208,10 +316,54 @@ export default function SoloQuizConfig() {
         <p className="text-xs text-gray-400 mt-2">
         {categorySelectionMode === 'singleOrAll'
             ? (cats.size === 0 ? "Gewählt: Alle Kategorien" : `Gewählt: Nur ${[...cats][0]}`)
-            : (cats.size === 0 ? "Gewählt: Alle Kategorien" : `Gewählt: ${[...cats].join(', ')}`)
+            : (cats.size === 0 ? "Gewählt: Alle Kategorien (oder keine gewählt)" : `Gewählt: ${[...cats].join(', ')}`)
         }
         </p>
         </div>
+
+        {/* --- Jahresbereich Filter --- */}
+        <div className="pt-2">
+            <label className="block mb-1 font-medium text-gray-300">Jahresbereich (optional):</label>
+            <div className="flex items-center space-x-2">
+                <Input
+                    type="number"
+                    id="minYear"
+                    name="minYear"
+                    value={selectedMinYear}
+                    min={availableMinYear || ''}
+                    max={availableMaxYear || ''}
+                    onChange={handleMinYearChange}
+                    disabled={availableMinYear === null || availableMaxYear === null}
+                    className="w-full p-2"
+                    placeholder="Min Jahr"
+                />
+                <span className="text-gray-400">-</span>
+                <Input
+                    type="number"
+                    id="maxYear"
+                    name="maxYear"
+                    value={selectedMaxYear}
+                    min={availableMinYear || ''}
+                    max={availableMaxYear || ''}
+                    onChange={handleMaxYearChange}
+                    disabled={availableMinYear === null || availableMaxYear === null}
+                    className="w-full p-2"
+                    placeholder="Max Jahr"
+                />
+                <Button
+                    onClick={resetDateFilter}
+                    disabled={availableMinYear === null || availableMaxYear === null}
+                    variant="secondary"
+                    className="py-2 px-3 text-sm"
+                >
+                    Reset
+                </Button>
+            </div>
+            {(availableMinYear === null || availableMaxYear === null) && !fetchError && (
+                 <p className="text-xs text-yellow-400 mt-1">Lade Jahresbereich...</p>
+            )}
+        </div>
+
 
         <Button className="w-full py-3 font-semibold" onClick={startQuiz}>🎬 Quiz Starten</Button>
 
