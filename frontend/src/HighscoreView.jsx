@@ -14,6 +14,20 @@ const msToString = ms => {
   return `${mm}:${ss}`;
 };
 
+const formatDate = (isoTimestamp) => {
+  if (!isoTimestamp) return 'N/A';
+  try {
+    const date = new Date(isoTimestamp);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+    const year = date.getFullYear();
+    return `${day}.${month}.${year}`;
+  } catch (e) {
+    console.error("Error formatting date:", e);
+    return 'Invalid Date';
+  }
+};
+
 // Konstanten für Filteroptionen
 const TT_HS_QUESTION_COUNTS = [10, 25, 50]; // Entspricht HIGHSCORE_QUESTION_COUNTS aus quizConfig
 const APP_CATEGORIES = ['Filme', 'Serien', 'Games']; // Entspricht CATEGORIES aus quizConfig
@@ -21,7 +35,7 @@ const CATEGORIES_WITH_MIXED = [...APP_CATEGORIES, "mixed"];
 
 // Hilfsfunktion für die Standard-Sortierkonfiguration pro Tab
 const getDefaultSortConfig = (tab) => {
-  if (tab === 'timetrial_hs') {
+  if (tab.startsWith('timetrial_')) {
     return { key: 'score', direction: 'descending' };
   } else if (tab === 'survival') {
     return { key: 'songsCleared', direction: 'descending' };
@@ -34,10 +48,9 @@ export default function HighscoreView() {
   const [highscores, setHighscores] = useState({ timetrial_hs: [], survival: [] });
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [activeTab, setActiveTab] = useState('timetrial_hs');
+  const [activeTab, setActiveTab] = useState(`timetrial_${TT_HS_QUESTION_COUNTS[0]}`);
 
   // Filter States
-  const [questionCountFilter, setQuestionCountFilter] = useState('alle');
   const [categoryFilterTT, setCategoryFilterTT] = useState('alle');
   const [categoryFilterSurvival, setCategoryFilterSurvival] = useState('alle');
 
@@ -82,12 +95,15 @@ export default function HighscoreView() {
 
   // Gefilterte TimeTrial Scores
   const filteredTimeTrialScores = useMemo(() => {
+    // Ermittle die ausgewählte Fragenanzahl aus dem activeTab
+    const currentQuestionCount = parseInt(activeTab.split('_')[1]);
+
     return highscores.timetrial_hs.filter(score => {
-      const passesQuestionCount = questionCountFilter === 'alle' || score.questionCount === parseInt(questionCountFilter);
+      const passesQuestionCount = score.questionCount === currentQuestionCount;
       const passesCategory = categoryFilterTT === 'alle' || score.category === categoryFilterTT;
       return passesQuestionCount && passesCategory;
     });
-  }, [highscores.timetrial_hs, questionCountFilter, categoryFilterTT]);
+  }, [highscores.timetrial_hs, activeTab, categoryFilterTT]);
 
   // Gefilterte Survival Scores
   const filteredSurvivalScores = useMemo(() => {
@@ -100,7 +116,7 @@ export default function HighscoreView() {
   // Sortierte TimeTrial Scores
   const sortedTimeTrialScores = useMemo(() => {
     let sortableItems = [...filteredTimeTrialScores];
-    if (sortConfig.key && activeTab === 'timetrial_hs') {
+    if (sortConfig.key && activeTab.startsWith('timetrial_')) {
       sortableItems.sort((a, b) => {
         let valA, valB;
 
@@ -190,15 +206,15 @@ export default function HighscoreView() {
     if (list.length > 0) console.log("First entry example:", list[0]); // Logge den ersten Eintrag
 
     let columns = [];
-    if (mode === 'timetrial_hs') {
+    if (mode.startsWith('timetrial_')) {
       columns = [
         { header: '#', key: null, sortable: false, accessor: (entry, index) => index + 1, className: "w-12 text-center py-3 px-2" },
         { header: 'Name', key: 'playerName', sortable: true, accessor: 'playerName', className: "py-3 px-3 min-w-[150px]" },
         { header: 'Score', key: 'score', sortable: true, accessor: 'score', className: "py-3 px-3 text-right" },
         { header: 'Gesamtzeit', key: 'totalTimeMs', sortable: true, accessor: 'totalTimeMs', accessorFormat: msToString, className: "py-3 px-3 text-right" },
         { header: 'Ø Zeit/Song', key: 'avgTime', sortable: true, accessor: (entry) => entry.correctlyGuessed > 0 ? (entry.totalTimeMs / entry.correctlyGuessed) : Infinity, accessorFormat: msToString, className: "py-3 px-3 text-right" },
-        { header: 'Fragen', key: 'questionCount', sortable: true, accessor: 'questionCount', className: "py-3 px-3 text-center" },
         { header: 'Kategorie', key: 'category', sortable: true, accessor: 'category', accessorFormat: (val) => val === 'mixed' ? 'Gemischt' : val, className: "py-3 px-3 text-center" },
+        { header: 'Datum', key: 'timestamp', sortable: true, accessor: 'timestamp', accessorFormat: formatDate, className: "py-3 px-3 text-center" }
       ];
     } else if (mode === 'survival') {
       columns = [
@@ -207,6 +223,7 @@ export default function HighscoreView() {
         { header: 'Songs', key: 'songsCleared', sortable: true, accessor: 'songsCleared', className: "py-3 px-3 text-right" },
         { header: 'Score', key: 'score', sortable: true, accessor: 'score', className: "py-3 px-3 text-right" },
         { header: 'Kategorie', key: 'category', sortable: true, accessor: 'category', accessorFormat: (val) => val === 'mixed' ? 'Gemischt' : val, className: "py-3 px-3 text-center" },
+        { header: 'Datum', key: 'timestamp', sortable: true, accessor: 'timestamp', accessorFormat: formatDate, className: "py-3 px-3 text-center" }
       ];
     }
 
@@ -301,89 +318,80 @@ export default function HighscoreView() {
 
     {/* Tab-Navigation */}
     <div className="flex justify-center border-b border-gray-700 mb-6">
-    <Button
-    variant={activeTab === 'timetrial_hs' ? 'primary' : 'ghost'}
-    onClick={() => setActiveTab('timetrial_hs')}
-    className={`py-2.5 px-5 text-sm sm:text-base font-medium rounded-t-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50
-      ${activeTab !== 'timetrial_hs' ? 'text-gray-400 hover:text-white hover:bg-gray-700' : 'bg-blue-600 text-white'}`}
-      >
-      TimeTrial HS
-      </Button>
+    {TT_HS_QUESTION_COUNTS.map(count => (
       <Button
-      variant={activeTab === 'survival' ? 'primary' : 'ghost'}
-      onClick={() => setActiveTab('survival')}
+      key={`timetrial_${count}`}
+      variant={activeTab === `timetrial_${count}` ? 'primary' : 'ghost'}
+      onClick={() => setActiveTab(`timetrial_${count}`)}
       className={`py-2.5 px-5 text-sm sm:text-base font-medium rounded-t-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50
-        ${activeTab !== 'survival' ? 'text-gray-400 hover:text-white hover:bg-gray-700' : 'bg-blue-600 text-white'}`}
+        ${activeTab !== `timetrial_${count}` ? 'text-gray-400 hover:text-white hover:bg-gray-700' : 'bg-blue-600 text-white'}`}
         >
-        Survival
+        TimeTrial {count}
         </Button>
-        </div>
+    ))}
+    <Button
+    variant={activeTab === 'survival' ? 'primary' : 'ghost'}
+    onClick={() => setActiveTab('survival')}
+    className={`py-2.5 px-5 text-sm sm:text-base font-medium rounded-t-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50
+      ${activeTab !== 'survival' ? 'text-gray-400 hover:text-white hover:bg-gray-700' : 'bg-blue-600 text-white'}`}
+      >
+      Survival
+      </Button>
+      </div>
 
-        {/* Angezeigter Inhalt basierend auf dem aktiven Tab */}
-        <div className="mt-4">
-        {activeTab === 'timetrial_hs' && (
-          <div>
-          <h2 className="text-2xl font-semibold text-center text-gray-100 mb-4">TimeTrial Highscores</h2>
-          {/* Filter für TimeTrial HS */}
-          <div className="flex flex-col sm:flex-row sm:justify-center sm:items-end gap-4 mb-6 p-4 bg-gray-800 rounded-lg shadow">
-          <div>
-          <label htmlFor="ttCountFilter" className="block text-xs font-medium text-gray-400 mb-1">Fragen:</label>
-          <select
-          id="ttCountFilter"
-          value={questionCountFilter}
-          onChange={(e) => setQuestionCountFilter(e.target.value)}
-          className="bg-gray-700 border-gray-600 text-white text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full sm:w-auto p-2.5 shadow-sm"
-          >
-          <option value="alle">Alle Anzahlen</option>
-          {TT_HS_QUESTION_COUNTS.map(count => (
-            <option key={count} value={count}>{count}</option>
-          ))}
-          </select>
-          </div>
-          <div>
-          <label htmlFor="ttCategoryFilter" className="block text-xs font-medium text-gray-400 mb-1">Kategorie:</label>
-          <select
-          id="ttCategoryFilter"
-          value={categoryFilterTT}
-          onChange={(e) => setCategoryFilterTT(e.target.value)}
-          className="bg-gray-700 border-gray-600 text-white text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full sm:w-auto p-2.5 shadow-sm"
-          >
-          <option value="alle">Alle Kategorien</option>
-          {CATEGORIES_WITH_MIXED.map(cat => (
-            <option key={cat} value={cat}>{cat === 'mixed' ? 'Gemischt' : cat}</option>
-          ))}
-          </select>
-          </div>
-          </div>
-          {renderHighscoreTable(sortedTimeTrialScores, 'timetrial_hs')}
-          </div>
-        )}
-
-        {activeTab === 'survival' && (
-          <div>
-          <h2 className="text-2xl font-semibold text-center text-gray-100 mb-4">Survival Highscores</h2>
-          {/* Filter für Survival */}
-          <div className="flex flex-col sm:flex-row sm:justify-center sm:items-end gap-4 mb-6 p-4 bg-gray-800 rounded-lg shadow">
-          <div>
-          <label htmlFor="survivalCategoryFilter" className="block text-xs font-medium text-gray-400 mb-1">Kategorie:</label>
-          <select
-          id="survivalCategoryFilter"
-          value={categoryFilterSurvival}
-          onChange={(e) => setCategoryFilterSurvival(e.target.value)}
-          className="bg-gray-700 border-gray-600 text-white text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full sm:w-auto p-2.5 shadow-sm"
-          >
-          <option value="alle">Alle Kategorien</option>
-          {CATEGORIES_WITH_MIXED.map(cat => (
-            <option key={cat} value={cat}>{cat === 'mixed' ? 'Gemischt' : cat}</option>
-          ))}
-          </select>
-          </div>
-          </div>
-          {renderHighscoreTable(sortedSurvivalScores, 'survival')}
-          </div>
-        )}
+      {/* Angezeigter Inhalt basierend auf dem aktiven Tab */}
+      <div className="mt-4">
+      {activeTab.startsWith('timetrial_') && (
+        <div>
+        <h2 className="text-2xl font-semibold text-center text-gray-100 mb-4">
+        TimeTrial {activeTab.split('_')[1]} Highscores
+        </h2>
+        {/* Filter für TimeTrial HS */}
+        <div className="flex flex-col sm:flex-row sm:justify-center sm:items-end gap-4 mb-6 p-4 bg-gray-800 rounded-lg shadow">
+        <div>
+        <label htmlFor="ttCategoryFilter" className="block text-xs font-medium text-gray-400 mb-1">Kategorie:</label>
+        <select
+        id="ttCategoryFilter"
+        value={categoryFilterTT}
+        onChange={(e) => setCategoryFilterTT(e.target.value)}
+        className="bg-gray-700 border-gray-600 text-white text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full sm:w-auto p-2.5 shadow-sm"
+        >
+        <option value="alle">Alle Kategorien</option>
+        {CATEGORIES_WITH_MIXED.map(cat => (
+          <option key={cat} value={cat}>{cat === 'mixed' ? 'Gemischt' : cat}</option>
+        ))}
+        </select>
         </div>
-        </Card>
-        //</QuizLayout>
+        </div>
+        {renderHighscoreTable(sortedTimeTrialScores, activeTab)}
+        </div>
+      )}
+
+      {activeTab === 'survival' && (
+        <div>
+        <h2 className="text-2xl font-semibold text-center text-gray-100 mb-4">Survival Highscores</h2>
+        {/* Filter für Survival */}
+        <div className="flex flex-col sm:flex-row sm:justify-center sm:items-end gap-4 mb-6 p-4 bg-gray-800 rounded-lg shadow">
+        <div>
+        <label htmlFor="survivalCategoryFilter" className="block text-xs font-medium text-gray-400 mb-1">Kategorie:</label>
+        <select
+        id="survivalCategoryFilter"
+        value={categoryFilterSurvival}
+        onChange={(e) => setCategoryFilterSurvival(e.target.value)}
+        className="bg-gray-700 border-gray-600 text-white text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full sm:w-auto p-2.5 shadow-sm"
+        >
+        <option value="alle">Alle Kategorien</option>
+        {CATEGORIES_WITH_MIXED.map(cat => (
+          <option key={cat} value={cat}>{cat === 'mixed' ? 'Gemischt' : cat}</option>
+        ))}
+        </select>
+        </div>
+        </div>
+        {renderHighscoreTable(sortedSurvivalScores, 'survival')}
+        </div>
+      )}
+      </div>
+      </Card>
+      //</QuizLayout>
   );
 } // Ende der HighscoreView Komponente

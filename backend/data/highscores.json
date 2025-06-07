@@ -100,6 +100,17 @@
       "id": "b4a10e4f-5b34-4e36-ba68-1e984dc90be9"
     },
     {
+      "playerName": "Die Shoeman's",
+      "score": 1236,
+      "timestamp": "2025-05-25T20:52:06.586Z",
+      "category": "mixed",
+      "totalTimeMs": 120962,
+      "totalTimeFormatted": "02:01.0",
+      "questionCount": 10,
+      "correctlyGuessed": 7,
+      "id": "07fb5dad-04da-4929-af31-3510afbd191a"
+    },
+    {
       "playerName": "Fränzi",
       "score": 1175,
       "timestamp": "2025-05-18T15:17:16.969Z",
