@@ -41,6 +41,8 @@ export default function SoloQuizConfig() {
     const [selectedMinYear, setSelectedMinYear] = useState('');
     const [selectedMaxYear, setSelectedMaxYear] = useState('');
     const [fetchError, setFetchError] = useState(null);
+    const [allFetchedSongs, setAllFetchedSongs] = useState([]); // State for all songs
+    const [displayedSongCount, setDisplayedSongCount] = useState(0); // For accurate count
 
     // Logik, um den aktuellen Auswahlmodus für Kategorien zu bestimmen
     const categorySelectionMode = useMemo(() => {
@@ -60,6 +62,7 @@ export default function SoloQuizConfig() {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const songs = await response.json();
+                setAllFetchedSongs(songs); // Store all fetched songs
 
                 if (songs.length === 0) {
                     setFetchError("Keine Songs gefunden, um den Jahresbereich zu bestimmen.");
@@ -68,6 +71,7 @@ export default function SoloQuizConfig() {
                     setAvailableMaxYear(currentYear);      // Fallback
                     setSelectedMinYear((currentYear - 10).toString());
                     setSelectedMaxYear(currentYear.toString());
+                    // allFetchedSongs is already set to []
                     return;
                 }
 
@@ -134,6 +138,43 @@ export default function SoloQuizConfig() {
             setCats(new Set());
         }
     }, [mode, count, cats, categorySelectionMode]); // Dependencies: mode, count, cats, categorySelectionMode
+
+    // Effect for calculating and setting the displayed song count
+    useEffect(() => {
+        const minYearNum = parseInt(selectedMinYear, 10);
+        const maxYearNum = parseInt(selectedMaxYear, 10);
+
+        if (allFetchedSongs.length === 0 || isNaN(minYearNum) || isNaN(maxYearNum)) {
+            setDisplayedSongCount(0);
+            return;
+        }
+
+        const selectedCatsArray = Array.from(cats);
+        const filterBySpecificCategories = selectedCatsArray.length > 0;
+
+        const count = allFetchedSongs.filter(song => {
+            if (filterBySpecificCategories && !selectedCatsArray.includes(song.category)) {
+                return false;
+            }
+
+            const metadata = song.metadata || {};
+            if (song.category === 'Filme' || song.category === 'Games') {
+                const erscheinungsjahr = parseInt(metadata.Erscheinungsjahr, 10);
+                if (isNaN(erscheinungsjahr)) return false;
+                return erscheinungsjahr >= minYearNum && erscheinungsjahr <= maxYearNum;
+            } else if (song.category === 'Serien') {
+                const startjahr = parseInt(metadata.Startjahr, 10);
+                let endjahr = parseInt(metadata.Endjahr, 10);
+                if (isNaN(endjahr) || metadata.Endjahr === null || String(metadata.Endjahr).trim() === '') {
+                    endjahr = new Date().getFullYear() + 100;
+                }
+                if (isNaN(startjahr)) return false;
+                return startjahr <= maxYearNum && endjahr >= minYearNum;
+            }
+            return false;
+        }).length;
+        setDisplayedSongCount(count);
+    }, [allFetchedSongs, cats, selectedMinYear, selectedMaxYear]);
 
     const handleMinYearChange = (e) => {
         const newMinYear = e.target.value;
@@ -364,6 +405,10 @@ export default function SoloQuizConfig() {
             )}
         </div>
 
+        {/* Filtered song count display */}
+        <p className="text-sm text-gray-400 mt-4 text-center">
+            Verfügbare Songs für aktuelle Auswahl: {displayedSongCount}
+        </p>
 
         <Button className="w-full py-3 font-semibold" onClick={startQuiz}>🎬 Quiz Starten</Button>
 

@@ -4,7 +4,7 @@ import { API } from './api';
 //import QuizLayout from './QuizLayout';
 import Card from './components/Card';
 import Button from './components/Button';
-//import { CATEGORIES as APP_CATEGORIES, HIGHSCORE_QUESTION_COUNTS as TT_HS_QUESTION_COUNTS } from './config/quizConfig'; // Importieren
+import { HIGHSCORE_QUESTION_COUNTS } from './config/quizConfig'; // Import HIGHSCORE_QUESTION_COUNTS
 
 const msToString = ms => {
   if (typeof ms !== 'number' || isNaN(ms) || ms < 0) return '00:00.0';
@@ -14,8 +14,27 @@ const msToString = ms => {
   return `${mm}:${ss}`;
 };
 
+const formatIsoTimestamp = (isoString) => {
+  if (!isoString) return 'N/A';
+  try {
+    const date = new Date(isoString);
+    // Check if date is valid
+    if (isNaN(date.getTime())) {
+        // console.error("Invalid timestamp provided to formatIsoTimestamp:", isoString);
+        return 'N/A';
+    }
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+    const year = date.getFullYear();
+    return `${day}.${month}.${year}`;
+  } catch (e) {
+    console.error("Error formatting timestamp:", isoString, e);
+    return 'N/A';
+  }
+};
+
 // Konstanten für Filteroptionen
-const TT_HS_QUESTION_COUNTS = [10, 25, 50]; // Entspricht HIGHSCORE_QUESTION_COUNTS aus quizConfig
+// const TT_HS_QUESTION_COUNTS = [10, 25, 50]; // Will use imported HIGHSCORE_QUESTION_COUNTS
 const APP_CATEGORIES = ['Filme', 'Serien', 'Games']; // Entspricht CATEGORIES aus quizConfig
 const CATEGORIES_WITH_MIXED = [...APP_CATEGORIES, "mixed"];
 
@@ -35,9 +54,10 @@ export default function HighscoreView() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [activeTab, setActiveTab] = useState('timetrial_hs');
+  const [activeSubTabQuestionCount, setActiveSubTabQuestionCount] = useState(HIGHSCORE_QUESTION_COUNTS[0]); // Default to first entry
 
   // Filter States
-  const [questionCountFilter, setQuestionCountFilter] = useState('alle');
+  // const [questionCountFilter, setQuestionCountFilter] = useState('alle'); // Replaced by activeSubTabQuestionCount for TT_HS
   const [categoryFilterTT, setCategoryFilterTT] = useState('alle');
   const [categoryFilterSurvival, setCategoryFilterSurvival] = useState('alle');
 
@@ -73,9 +93,15 @@ export default function HighscoreView() {
     fetchHighscores();
   }, []); // Nur beim Mounten ausführen
 
-  // Sortierung zurücksetzen, wenn der Tab wechselt
+  // Sortierung und Sub-Tab zurücksetzen, wenn der Haupt-Tab wechselt
   useEffect(() => {
     setSortConfig(getDefaultSortConfig(activeTab));
+    if (activeTab === 'timetrial_hs') {
+      setActiveSubTabQuestionCount(HIGHSCORE_QUESTION_COUNTS[0]); // Default to 10 when TT_HS tab is selected
+    }
+    // Reset category filters when main tab changes for a cleaner experience
+    setCategoryFilterTT('alle');
+    setCategoryFilterSurvival('alle');
   }, [activeTab]);
 
   // --- useMemo Hooks für Datenverarbeitung ---
@@ -83,11 +109,12 @@ export default function HighscoreView() {
   // Gefilterte TimeTrial Scores
   const filteredTimeTrialScores = useMemo(() => {
     return highscores.timetrial_hs.filter(score => {
-      const passesQuestionCount = questionCountFilter === 'alle' || score.questionCount === parseInt(questionCountFilter);
+      // No "alle" option for question count when using sub-tabs; direct comparison.
+      const passesQuestionCount = score.questionCount === activeSubTabQuestionCount;
       const passesCategory = categoryFilterTT === 'alle' || score.category === categoryFilterTT;
       return passesQuestionCount && passesCategory;
     });
-  }, [highscores.timetrial_hs, questionCountFilter, categoryFilterTT]);
+  }, [highscores.timetrial_hs, activeSubTabQuestionCount, categoryFilterTT]);
 
   // Gefilterte Survival Scores
   const filteredSurvivalScores = useMemo(() => {
@@ -199,6 +226,7 @@ export default function HighscoreView() {
         { header: 'Ø Zeit/Song', key: 'avgTime', sortable: true, accessor: (entry) => entry.correctlyGuessed > 0 ? (entry.totalTimeMs / entry.correctlyGuessed) : Infinity, accessorFormat: msToString, className: "py-3 px-3 text-right" },
         { header: 'Fragen', key: 'questionCount', sortable: true, accessor: 'questionCount', className: "py-3 px-3 text-center" },
         { header: 'Kategorie', key: 'category', sortable: true, accessor: 'category', accessorFormat: (val) => val === 'mixed' ? 'Gemischt' : val, className: "py-3 px-3 text-center" },
+        { header: 'Datum', key: 'timestamp', sortable: true, accessor: 'timestamp', accessorFormat: formatIsoTimestamp, className: "py-3 px-3 text-center" },
       ];
     } else if (mode === 'survival') {
       columns = [
@@ -207,6 +235,7 @@ export default function HighscoreView() {
         { header: 'Songs', key: 'songsCleared', sortable: true, accessor: 'songsCleared', className: "py-3 px-3 text-right" },
         { header: 'Score', key: 'score', sortable: true, accessor: 'score', className: "py-3 px-3 text-right" },
         { header: 'Kategorie', key: 'category', sortable: true, accessor: 'category', accessorFormat: (val) => val === 'mixed' ? 'Gemischt' : val, className: "py-3 px-3 text-center" },
+        { header: 'Datum', key: 'timestamp', sortable: true, accessor: 'timestamp', accessorFormat: formatIsoTimestamp, className: "py-3 px-3 text-center" },
       ];
     }
 
@@ -324,24 +353,25 @@ export default function HighscoreView() {
         {activeTab === 'timetrial_hs' && (
           <div>
           <h2 className="text-2xl font-semibold text-center text-gray-100 mb-4">TimeTrial Highscores</h2>
-          {/* Filter für TimeTrial HS */}
-          <div className="flex flex-col sm:flex-row sm:justify-center sm:items-end gap-4 mb-6 p-4 bg-gray-800 rounded-lg shadow">
-          <div>
-          <label htmlFor="ttCountFilter" className="block text-xs font-medium text-gray-400 mb-1">Fragen:</label>
-          <select
-          id="ttCountFilter"
-          value={questionCountFilter}
-          onChange={(e) => setQuestionCountFilter(e.target.value)}
-          className="bg-gray-700 border-gray-600 text-white text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full sm:w-auto p-2.5 shadow-sm"
-          >
-          <option value="alle">Alle Anzahlen</option>
-          {TT_HS_QUESTION_COUNTS.map(count => (
-            <option key={count} value={count}>{count}</option>
-          ))}
-          </select>
+
+          {/* Sub-Tabs für Fragenanzahl */}
+          <div className="flex justify-center gap-2 mb-4 border-b border-gray-600 pb-2">
+            {HIGHSCORE_QUESTION_COUNTS.map(count => (
+              <Button
+                key={`tt_hs_tab_${count}`}
+                variant={activeSubTabQuestionCount === count ? 'primary' : 'secondary'}
+                onClick={() => setActiveSubTabQuestionCount(count)}
+                className="py-2 px-4 text-sm rounded-md" // Basisklassen
+              >
+                {count} Fragen
+              </Button>
+            ))}
           </div>
-          <div>
-          <label htmlFor="ttCategoryFilter" className="block text-xs font-medium text-gray-400 mb-1">Kategorie:</label>
+
+          {/* Filter für Kategorie (bleibt als Dropdown) */}
+          <div className="flex flex-col sm:flex-row sm:justify-center sm:items-end gap-4 mb-6 p-4 bg-gray-800 rounded-lg shadow">
+            <div>
+              <label htmlFor="ttCategoryFilter" className="block text-xs font-medium text-gray-400 mb-1">Kategorie:</label>
           <select
           id="ttCategoryFilter"
           value={categoryFilterTT}

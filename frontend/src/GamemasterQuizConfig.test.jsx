@@ -20,16 +20,23 @@ jest.mock('./theme-context', () => ({
 // Mock fetch
 global.fetch = jest.fn();
 
+// Using the same diverse mock data as in SoloQuizConfig.test.jsx for consistency
 const mockSongsData = [
-  { _id: '1', title: 'Song 1', category: 'Filme', metadata: { Erscheinungsjahr: '2000' } },
-  { _id: '2', title: 'Song 2', category: 'Serien', metadata: { Startjahr: '2005', Endjahr: '2008' } },
-  { _id: '3', title: 'Song 3', category: 'Games', metadata: { Erscheinungsjahr: '2010' } },
-  { _id: '4', title: 'Song 4', category: 'Filme', metadata: { Erscheinungsjahr: '1995' } },
-  { _id: '5', title: 'Song 5', category: 'Serien', metadata: { Startjahr: '2003', Endjahr: '2006' } },
-  { _id: '6', title: 'Song 6', category: 'Games', metadata: { Erscheinungsjahr: '2012' } },
-  { _id: '7', title: 'Song 7', category: 'Filme', metadata: {} }, // No year
-  { _id: '8', title: 'Song 8', category: 'Serien', metadata: {Startjahr: 'NaN', Endjahr: 'NaN'} }, // Malformed
+  { _id: 'f1', title: 'Film A', category: 'Filme', metadata: { Erscheinungsjahr: '2002' } },
+  { _id: 's1', title: 'Serie A', category: 'Serien', metadata: { Startjahr: '2005', Endjahr: '2007' } },
+  { _id: 'g1', title: 'Game A', category: 'Games', metadata: { Erscheinungsjahr: '2009' } },
+  { _id: 'f2', title: 'Film B', category: 'Filme', metadata: { Erscheinungsjahr: '1998' } },
+  { _id: 's2', title: 'Serie B', category: 'Serien', metadata: { Startjahr: '2001', Endjahr: '2004' } },
+  { _id: 'g2', title: 'Game B', category: 'Games', metadata: { Erscheinungsjahr: '2011' } },
+  { _id: 'f3', title: 'Film C', category: 'Filme', metadata: { Erscheinungsjahr: '2005' } },
+  { _id: 's3', title: 'Serie C', category: 'Serien', metadata: { Startjahr: '2008', Endjahr: '2010' } },
+  { _id: 'g3', title: 'Game C', category: 'Games', metadata: {} }, // No year
+  { _id: 'f4', title: 'Film D', category: 'Filme', metadata: { Erscheinungsjahr: 'invalid' } }, // Invalid year
+  { _id: 's4', title: 'Serie D', category: 'Serien', metadata: { Startjahr: '2000', Endjahr: '' } }, // Ongoing series
+  { _id: 'o1', title: 'Sonstiges A', category: 'Sonstiges', metadata: { Erscheinungsjahr: '2003' } },
+  { _id: 's5', title: 'Serie E', category: 'Serien', metadata: { Startjahr: '1995', Endjahr: '1999' } },
 ];
+// Initial available range from valid items: 1995 (s5) to 2011 (g2).
 
 
 describe('GamemasterQuizConfig', () => {
@@ -211,16 +218,16 @@ describe('GamemasterQuizConfig', () => {
     });
 
     // Check if inputs fall back to a default or are disabled correctly
-    // Based on current implementation, it falls back to currentYear - 20 to currentYear
     const currentYear = new Date().getFullYear();
     const minYearInput = screen.getByLabelText('Von:');
     const maxYearInput = screen.getByLabelText('Bis:');
 
     expect(minYearInput).toHaveValue(currentYear - 20);
     expect(maxYearInput).toHaveValue(currentYear);
+    expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 0/i)).toBeInTheDocument();
   });
 
-  test('handles empty song list from API for year determination', async () => {
+  test('handles empty song list from API for year determination and count', async () => {
     fetch.mockResolvedValueOnce({
       ok: true,
       json: async () => [], // Empty array of songs
@@ -231,12 +238,133 @@ describe('GamemasterQuizConfig', () => {
       expect(screen.getByText(/Keine Songs gefunden, um den Jahresbereich zu bestimmen./i)).toBeInTheDocument();
     });
 
-    // Check if inputs fall back to current year or are handled
     const currentYear = new Date().getFullYear();
     const minYearInput = screen.getByLabelText('Von:');
     const maxYearInput = screen.getByLabelText('Bis:');
     expect(minYearInput).toHaveValue(currentYear);
     expect(maxYearInput).toHaveValue(currentYear);
+    expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 0/i)).toBeInTheDocument();
+  });
+
+  // --- Tests for Filtered Song Count ---
+  test('displays initial song count correctly (all songs matching default filters)', async () => {
+    fetch.mockResolvedValueOnce({ ok: true, json: async () => mockSongsData });
+    renderComponent();
+    // availableMinYear from mock: 1995, availableMaxYear: 2011
+    await waitFor(() => {
+        expect(screen.getByLabelText('Von:')).toHaveValue(1995);
+        expect(screen.getByLabelText('Bis:')).toHaveValue(2011);
+    });
+    // Default: No categories selected, full date range of available songs.
+    // Count logic: if categories.length === 0, it means all categories.
+    // Filter logic excludes songs not in Filme, Serien, Games for date filtering.
+    // So, o1 is out. g3 and f4 are out due to invalid/missing year.
+    // Expected: f1,s1,g1,f2,s2,g2,f3,s3,s4,s5. Total = 10.
+    expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 10/i)).toBeInTheDocument();
+  });
+
+  test('updates count when category filter changes', async () => {
+    fetch.mockResolvedValueOnce({ ok: true, json: async () => mockSongsData });
+    renderComponent();
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 10/i)).toBeInTheDocument());
+
+    // Select "Filme"
+    // Filme in mock: f1(2002), f2(1998), f3(2005). (f4 invalid is ignored). Total 3.
+    fireEvent.click(screen.getByLabelText('Filme'));
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 3/i)).toBeInTheDocument());
+
+    // Add "Serien"
+    // Serien: s1(05-07), s2(01-04), s3(08-10), s4(00-ongoing), s5(95-99). Total 5.
+    // Total Filme + Serien = 3 + 5 = 8
+    fireEvent.click(screen.getByLabelText('Serien'));
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 8/i)).toBeInTheDocument());
+
+    // Deselect "Filme"
+    // Only Serien selected. Total 5.
+    fireEvent.click(screen.getByLabelText('Filme'));
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 5/i)).toBeInTheDocument());
+  });
+
+  test('updates count when date filter changes', async () => {
+    fetch.mockResolvedValueOnce({ ok: true, json: async () => mockSongsData });
+    renderComponent();
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 10/i)).toBeInTheDocument());
+
+    const minYearInput = screen.getByLabelText('Von:');
+    const maxYearInput = screen.getByLabelText('Bis:');
+
+    // Range 2000-2003. No categories selected, so all are considered.
+    // f1(2002 YES), f2(1998 NO)
+    // s2(01-04 YES), s4(00-ongoing YES)
+    // Expected: f1, s2, s4. Total 3.
+    fireEvent.change(minYearInput, { target: { value: '2000' } });
+    fireEvent.change(maxYearInput, { target: { value: '2003' } });
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 3/i)).toBeInTheDocument());
+  });
+
+  test('updates count with combined category and date filters', async () => {
+    fetch.mockResolvedValueOnce({ ok: true, json: async () => mockSongsData });
+    renderComponent();
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 10/i)).toBeInTheDocument());
+
+    // Select "Games"
+    // Games: g1(2009), g2(2011). (g3 no year). Total 2.
+    fireEvent.click(screen.getByLabelText('Games'));
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 2/i)).toBeInTheDocument());
+
+    const minYearInput = screen.getByLabelText('Von:');
+    const maxYearInput = screen.getByLabelText('Bis:');
+
+    // Date range 2010-2012 for Games
+    // g1(2009 NO), g2(2011 YES)
+    // Expected: g2. Total 1.
+    fireEvent.change(minYearInput, { target: { value: '2010' } });
+    fireEvent.change(maxYearInput, { target: { value: '2012' } });
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 1/i)).toBeInTheDocument());
+  });
+
+  test('updates count correctly after date filter reset', async () => {
+    fetch.mockResolvedValueOnce({ ok: true, json: async () => mockSongsData });
+    renderComponent();
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 10/i)).toBeInTheDocument());
+
+    // Select "Serien"
+    // Serien: s1, s2, s3, s4, s5. Total 5.
+    fireEvent.click(screen.getByLabelText('Serien'));
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 5/i)).toBeInTheDocument());
+
+    const minYearInput = screen.getByLabelText('Von:');
+    const maxYearInput = screen.getByLabelText('Bis:');
+    // Date range 2005-2008 for Serien
+    // s1(05-07 YES), s2(01-04 NO), s3(08-10 YES), s4(00-ongoing YES)
+    // Expected: s1, s3, s4. Total 3.
+    fireEvent.change(minYearInput, { target: { value: '2005' } });
+    fireEvent.change(maxYearInput, { target: { value: '2008' } });
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 3/i)).toBeInTheDocument());
+
+    fireEvent.click(screen.getByRole('button', { name: 'Zurücksetzen' }));
+    // Resets date to full available range (1995-2011). "Serien" category still selected.
+    // Expected: 5 (all series).
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 5/i)).toBeInTheDocument());
+  });
+
+  test('handles songs with invalid or missing year metadata gracefully in count', async () => {
+    fetch.mockResolvedValueOnce({ ok: true, json: async () => mockSongsData });
+    renderComponent();
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 10/i)).toBeInTheDocument());
+    // This count of 10 (for all categories, full date range) already means g3, f4, o1 were excluded by date filter logic.
+
+    // Select "Games"
+    fireEvent.click(screen.getByLabelText('Games'));
+    // Games in mock: g1(2009), g2(2011), g3(no year).
+    // With full date range (1995-2011), g1 and g2 should count. g3 should not. Total 2.
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 2/i)).toBeInTheDocument());
+
+    // Select "Filme" (deselect "Games")
+    fireEvent.click(screen.getByLabelText('Games')); // deselect
+    fireEvent.click(screen.getByLabelText('Filme'));
+    // Filme: f1(2002), f2(1998), f3(2005). f4(invalid year) is ignored. Total 3.
+    await waitFor(() => expect(screen.getByText(/Verfügbare Songs für aktuelle Auswahl: 3/i)).toBeInTheDocument());
   });
 
 });

@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import { API } from './api'; // Import API
 import Card from './components/Card';
 import Button from './components/Button';
 import { useTheme } from './theme-context';
@@ -20,13 +21,47 @@ export default function GamemasterQuiz() {
   const questionCount = Number(params.get('count')) || 10;
 
   useEffect(() => {
-    fetch('http://localhost:3001/songs')
+    const queryParams = new URLSearchParams(location.search);
+    const categories = queryParams.get('categories'); // Already available as selectedCategories
+    const count = queryParams.get('count');         // Already available as questionCount
+    const startDate = queryParams.get('startDate');
+    const endDate = queryParams.get('endDate');
+
+    let fetchUrl = `${API}/songs`;
+    const searchParamsForFetch = new URLSearchParams();
+
+    // Add existing parameters like categories and count if they are intended to be sent
+    // For now, only adding date params as per task, categories are client-filtered.
+    // If categories were to be sent, it would be:
+    // if (categories) searchParamsForFetch.append('categories', categories);
+    // if (count) searchParamsForFetch.append('count', count);
+
+    if (startDate) searchParamsForFetch.append('startDate', startDate);
+    if (endDate) searchParamsForFetch.append('endDate', endDate);
+
+    const queryString = searchParamsForFetch.toString();
+    if (queryString) {
+      fetchUrl += `?${queryString}`;
+    }
+    console.log(`[GamemasterQuiz] Fetching songs from: ${fetchUrl}`);
+
+    fetch(fetchUrl)
     .then(res => res.json())
     .then(data => {
-      const filtered = data.filter(song => selectedCategories.includes(song.category));
-      setSongs(filtered.slice(0, questionCount));
+      // Client-side category filtering remains for now
+      const categoryFiltered = selectedCategories.length > 0
+        ? data.filter(song => selectedCategories.includes(song.category))
+        : data; // If no categories selected (e.g. "Alle"), use all data from backend
+
+      // Apply question count limit
+      setSongs(categoryFiltered.slice(0, questionCount));
+    })
+    .catch(err => {
+      console.error("Error fetching songs for GamemasterQuiz:", err);
+      setError("Fehler beim Laden der Songs.");
+      setSongs([]);
     });
-  }, []);
+  }, [location.search, questionCount, selectedCategories, API]); // Use location.search for dependency
 
   const currentSong = songs[current];
 
@@ -99,7 +134,7 @@ export default function GamemasterQuiz() {
 
       {currentSong ? (
         <>
-        <audio ref={audioRef} src={`http://localhost:3001${currentSong.file}`} controls autoPlay />
+        <audio ref={audioRef} src={`${API}${currentSong.file}`} controls autoPlay />
         <p style={{ marginTop: '1rem', fontStyle: 'italic' }}>
         Titel: <strong>{currentSong.title}</strong>
         </p>
