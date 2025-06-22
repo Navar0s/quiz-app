@@ -139,8 +139,37 @@ api.head('/health', (_req, res) => res.sendStatus(200));
 
 api.get('/songs', (_req, res) => {
   console.log('GET /api/songs - Bearbeitung beginnt');
-  const songs = loadJson(SONGS_FILE); // loadJson stellt nun sicher, dass reportedIssues existiert
-  console.log(`GET /api/songs - ${songs.length} Songs geladen. Sende Antwort.`);
+  let songs = loadJson(SONGS_FILE); // loadJson stellt nun sicher, dass reportedIssues existiert
+  const { startDate, endDate } = _req.query;
+
+  if (startDate && endDate && !isNaN(parseInt(startDate)) && !isNaN(parseInt(endDate))) {
+    const startYear = parseInt(startDate);
+    const endYear = parseInt(endDate);
+    console.log(`GET /api/songs - Filter aktiv: startDate=${startYear}, endDate=${endYear}`);
+
+    songs = songs.filter(song => {
+      const category = song.category;
+      const metadata = song.metadata || {}; // Fallback für fehlende Metadaten
+
+      if (category === 'Filme' || category === 'Games') {
+        const erscheinungsjahr = parseInt(metadata.Erscheinungsjahr);
+        return !isNaN(erscheinungsjahr) && erscheinungsjahr >= startYear && erscheinungsjahr <= endYear;
+      } else if (category === 'Serien') {
+        const startjahr = parseInt(metadata.Startjahr);
+        const endjahr = parseInt(metadata.Endjahr);
+        // Sicherstellen, dass beide Jahre gültig sind
+        if (isNaN(startjahr) || isNaN(endjahr)) {
+            return false;
+        }
+        // Überlappungslogik: Serie startet vor/im Endjahr UND Serie endet nach/im Startjahr
+        return startjahr <= endYear && endjahr >= startYear;
+      }
+      return false; // Andere Kategorien werden nicht gefiltert, oder wenn Metadaten fehlen
+    });
+    console.log(`GET /api/songs - ${songs.length} Songs nach Filterung geladen. Sende Antwort.`);
+  } else {
+    console.log(`GET /api/songs - Kein gültiger Datumsfilter angewendet. ${songs.length} Songs geladen. Sende Antwort.`);
+  }
   res.json(songs);
 });
 
