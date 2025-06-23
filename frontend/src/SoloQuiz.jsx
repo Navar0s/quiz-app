@@ -223,7 +223,20 @@ export default function SoloQuiz() {
     setHighscoreStatusMessage('');
     setPlayerName('');
 
-    fetch(`${API}/songs`)
+    const startDateParam = params.get('startDate');
+    const endDateParam = params.get('endDate');
+    let fetchUrl = `${API}/songs`;
+    const urlQuery = new URLSearchParams();
+    if (startDateParam) urlQuery.append('startDate', startDateParam);
+    if (endDateParam) urlQuery.append('endDate', endDateParam);
+
+    const queryString = urlQuery.toString();
+    if (queryString) {
+      fetchUrl += `?${queryString}`;
+    }
+    console.log(`[SoloQuiz] Fetching songs from: ${fetchUrl}`);
+
+    fetch(fetchUrl)
     .then(r => {
       if (!isMounted) throw new Error("Component unmounted before fetch completed");
       if (!r.ok) return r.text().then(text => { throw new Error(`HTTP ${r.status}: ${text}`); });

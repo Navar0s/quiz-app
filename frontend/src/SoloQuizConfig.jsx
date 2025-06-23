@@ -28,13 +28,14 @@ const MODE_DESCRIPTIONS = {
     practice: { title: 'Übungsmodus', description: 'Lerne die Songs ohne Zeitdruck oder Punkte. Tipps sind kostenlos (oder nicht verfügbar). Ideal zum Entdecken!' },
 };
 
+/* -------------------- Komponente -------------------- */
 export default function SoloQuizConfig() {
-    const nav = useNavigate();
+    const navigate = useNavigate();
+
+    /* ---------- State ---------- */
     const [mode, setMode] = useState(MODES[0].id);
-    const [count, setCount] = useState(MODES.find(m => m.id === MODES[0].id).countOptions?.[0] || 10);
+    const [count, setCount] = useState(MODES[0].countOptions[0]);
     const [cats, setCats] = useState(new Set());
-    const [showModeInfoModal, setShowModeInfoModal] = useState(false);
-    const [modalModeInfo, setModalModeInfo] = useState({ title: '', description: '' });
 
     const [availableMinYear, setAvailableMinYear] = useState(null);
     const [availableMaxYear, setAvailableMaxYear] = useState(null);
@@ -42,182 +43,127 @@ export default function SoloQuizConfig() {
     const [selectedMaxYear, setSelectedMaxYear] = useState('');
     const [fetchError, setFetchError] = useState(null);
 
-    // Logik, um den aktuellen Auswahlmodus für Kategorien zu bestimmen
-    const categorySelectionMode = useMemo(() => {
-        if (mode === 'survival' || mode === 'timetrial_hs') {
-            return 'singleOrAll';
-        }
-        return 'multi';
-    }, [mode]);
+    const [allFetchedSongs, setAllFetchedSongs] = useState([]);
+    const [displayedSongCount, setDisplayedSongCount] = useState(0);
 
+    /* ---------- Modal ---------- */
+    const [showModeInfoModal, setShowModeInfoModal] = useState(false);
+    const [modalModeInfo, setModalModeInfo] = useState({ title: '', description: '' });
+
+    /* ---------- Memo ---------- */
+    const categorySelectionMode = useMemo(() => (
+        mode === 'survival' || mode === 'timetrial_hs' ? 'singleOrAll' : 'multi'
+    ), [mode]);
+
+    /* ---------- Effects ---------- */
+    // 1. Song‑Daten laden, Jahresbereich bestimmen, Fallbacks setzen
     useEffect(() => {
-        // Fetch years for date range filter
         const fetchYears = async () => {
             try {
                 setFetchError(null);
-                const response = await fetch('/api/songs');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const songs = await response.json();
+                const res = await fetch('/api/songs');
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const songs = await res.json();
+                setAllFetchedSongs(songs);
 
-                if (songs.length === 0) {
-                    setFetchError("Keine Songs gefunden, um den Jahresbereich zu bestimmen.");
-                    const currentYear = new Date().getFullYear();
-                    setAvailableMinYear(currentYear - 10); // Fallback
-                    setAvailableMaxYear(currentYear);      // Fallback
-                    setSelectedMinYear((currentYear - 10).toString());
-                    setSelectedMaxYear(currentYear.toString());
+                if (!songs.length) {
+                    const y = new Date().getFullYear();
+                    setFetchError('Keine Songs gefunden, um den Jahresbereich zu bestimmen.');
+                    setAvailableMinYear(y - 10);
+                    setAvailableMaxYear(y);
+                    setSelectedMinYear(String(y - 10));
+                    setSelectedMaxYear(String(y));
                     return;
                 }
 
                 let minYear = Infinity;
                 let maxYear = -Infinity;
-
                 songs.forEach(song => {
-                    const metadata = song.metadata || {};
-                    let yearsToConsider = [];
-
-                    if (song.category === 'Filme' || song.category === 'Games') {
-                        const year = parseInt(metadata.Erscheinungsjahr, 10);
-                        if (!isNaN(year)) yearsToConsider.push(year);
-                    } else if (song.category === 'Serien') {
-                        const start = parseInt(metadata.Startjahr, 10);
-                        const end = parseInt(metadata.Endjahr, 10);
-                        if (!isNaN(start)) yearsToConsider.push(start);
-                        if (!isNaN(end)) yearsToConsider.push(end);
-                    }
-
-                    yearsToConsider.forEach(y => {
-                        if (y < minYear) minYear = y;
-                        if (y > maxYear) maxYear = y;
-                    });
+                    const md = song.metadata || {};
+                    const push = y => { if (!isNaN(y)) { minYear = Math.min(minYear, y); maxYear = Math.max(maxYear, y); } };
+                    if (song.category === 'Filme' || song.category === 'Games') push(parseInt(md.Erscheinungsjahr, 10));
+                    else if (song.category === 'Serien') { push(parseInt(md.Startjahr, 10)); push(parseInt(md.Endjahr, 10)); }
                 });
-
-                if (minYear === Infinity || maxYear === -Infinity) {
-                    const currentYear = new Date().getFullYear();
-                    minYear = currentYear - 10;
-                    maxYear = currentYear;
-                    console.warn("Keine gültigen Jahreszahlen in Song-Metadaten gefunden. Fallback wird verwendet.");
+                if (!isFinite(minYear) || !isFinite(maxYear)) {
+                    const y = new Date().getFullYear();
+                    minYear = y - 10;
+                    maxYear = y;
                 }
-
                 setAvailableMinYear(minYear);
                 setAvailableMaxYear(maxYear);
-                setSelectedMinYear(minYear.toString());
-                setSelectedMaxYear(maxYear.toString());
-
-            } catch (error) {
-                console.error("Fehler beim Abrufen der Songs für Jahresbereich:", error);
-                setFetchError(`Fehler beim Laden der Song-Jahre: ${error.message}.`);
-                const currentYear = new Date().getFullYear();
-                setAvailableMinYear(currentYear - 20); // Robust fallback
-                setAvailableMaxYear(currentYear);
-                setSelectedMinYear((currentYear - 20).toString());
-                setSelectedMaxYear(currentYear.toString());
+                setSelectedMinYear(String(minYear));
+                setSelectedMaxYear(String(maxYear));
+            } catch (err) {
+                console.error(err);
+                setFetchError(`Fehler beim Laden der Song‑Jahre: ${err.message}`);
+                const y = new Date().getFullYear();
+                setAvailableMinYear(y - 20);
+                setAvailableMaxYear(y);
+                setSelectedMinYear(String(y - 20));
+                setSelectedMaxYear(String(y));
             }
         };
-
         fetchYears();
+    }, []);
 
-        // Bestehender Teil für 'count' und Kategorie-Logik
-        const currentModeConfig = MODES.find(m => m.id === mode);
-        if (currentModeConfig && currentModeConfig.requiresCount && currentModeConfig.countOptions) {
-            if (!currentModeConfig.countOptions.includes(count) || count === undefined) {
-                setCount(currentModeConfig.countOptions[0]);
-            }
-        } else if (currentModeConfig && !currentModeConfig.requiresCount) {
-            // Optional: setCount(0) oder einen speziellen Wert
-        }
+    // 2. Konsistenz zwischen mode ↔ count ↔ cats gewährleisten
+    useEffect(() => {
+        const cfg = MODES.find(m => m.id === mode);
+        if (cfg?.requiresCount && !cfg.countOptions.includes(count)) setCount(cfg.countOptions[0]);
+        if (categorySelectionMode === 'singleOrAll' && cats.size > 1) setCats(new Set());
+    }, [mode, count, cats, categorySelectionMode]);
 
-        // Logik, um sicherzustellen, dass 'cats' mit categorySelectionMode konsistent ist
-        if (categorySelectionMode === 'singleOrAll' && cats.size > 1) {
-            setCats(new Set());
-        }
-    }, [mode, count, cats, categorySelectionMode]); // Dependencies: mode, count, cats, categorySelectionMode
+        // 3. Anzahl verfügbarer Songs berechnen
+        useEffect(() => {
+            const minY = parseInt(selectedMinYear, 10);
+            const maxY = parseInt(selectedMaxYear, 10);
+            if (!allFetchedSongs.length || isNaN(minY) || isNaN(maxY)) { setDisplayedSongCount(0); return; }
 
-    const handleMinYearChange = (e) => {
-        const newMinYear = e.target.value;
-        setSelectedMinYear(newMinYear);
-        if (selectedMaxYear && parseInt(newMinYear, 10) > parseInt(selectedMaxYear, 10)) {
-            setSelectedMaxYear(newMinYear);
-        }
-    };
-
-    const handleMaxYearChange = (e) => {
-        const newMaxYear = e.target.value;
-        setSelectedMaxYear(newMaxYear);
-        if (selectedMinYear && parseInt(newMaxYear, 10) < parseInt(selectedMinYear, 10)) {
-            setSelectedMinYear(newMaxYear);
-        }
-    };
-
-    const resetDateFilter = () => {
-        if (availableMinYear !== null) setSelectedMinYear(availableMinYear.toString());
-        if (availableMaxYear !== null) setSelectedMaxYear(availableMaxYear.toString());
-    };
-
-    // handleCategoryClick Funktion
-    const handleCategoryClick = (categoryName) => {
-        if (categorySelectionMode === 'singleOrAll') {
-            if (categoryName === 'Alle') {
-                setCats(new Set()); // "Alle" ausgewählt
-            } else {
-                // Spezifische Kategorie ausgewählt
-                setCats(new Set([categoryName]));
-            }
-        } else { // categorySelectionMode === 'multi'
-            // Toggle-Logik für Multi-Auswahl
-            setCats(prevCats => {
-                const nextCats = new Set(prevCats);
-                if (nextCats.has(categoryName)) {
-                    nextCats.delete(categoryName);
-                } else {
-                    nextCats.add(categoryName);
+            const wantedCats = cats.size ? Array.from(cats) : CATEGORIES;
+            const inRange = song => {
+                const md = song.metadata || {};
+                if (song.category === 'Filme' || song.category === 'Games') {
+                    const y = parseInt(md.Erscheinungsjahr, 10); return !isNaN(y) && y >= minY && y <= maxY;
                 }
-                return nextCats;
-            });
-        }
-    };
+                if (song.category === 'Serien') {
+                    const s = parseInt(md.Startjahr, 10);
+                    let e = parseInt(md.Endjahr, 10);
+                    if (isNaN(e)) e = new Date().getFullYear() + 100;
+                    return !isNaN(s) && s <= maxY && e >= minY;
+                }
+                return false;
+            };
+            const cnt = allFetchedSongs.filter(s => wantedCats.includes(s.category) && inRange(s)).length;
+            setDisplayedSongCount(cnt);
+        }, [allFetchedSongs, cats, selectedMinYear, selectedMaxYear]);
 
-    const startQuiz = () => {
-        const q = new URLSearchParams();
-        q.set('mode', mode);
+        /* ---------- Handler ---------- */
+        const handleYearChange = (setter, other, cmp) => e => {
+            const v = e.target.value;
+            setter(v);
+            if (other && cmp(parseInt(v, 10), parseInt(other, 10))) other === selectedMinYear ? setSelectedMinYear(v) : setSelectedMaxYear(v);
+        };
 
-        const currentModeConfig = MODES.find(m => m.id === mode);
-        if (currentModeConfig && currentModeConfig.requiresCount) {
-            q.set('count', count.toString());
-        }
+            const handleCategoryClick = cat => {
+                if (categorySelectionMode === 'singleOrAll') setCats(cat === 'Alle' ? new Set() : new Set([cat]));
+                else setCats(prev => { const n = new Set(prev); n.has(cat) ? n.delete(cat) : n.add(cat); return n; });
+            };
 
-        if (cats.size === 0) {
-            q.append('categories', 'Alle');
-        } else {
-            cats.forEach(c => q.append('categories', c));
-        }
+            const startQuiz = () => {
+                const p = new URLSearchParams({ mode });
+                if (MODES.find(m => m.id === mode)?.requiresCount) p.set('count', String(count));
+                (cats.size ? cats : new Set(['Alle'])).forEach(c => p.append('categories', c));
+                if (selectedMinYear && selectedMaxYear && (selectedMinYear !== String(availableMinYear) || selectedMaxYear !== String(availableMaxYear))) {
+                    p.set('startDate', selectedMinYear);
+                    p.set('endDate', selectedMaxYear);
+                }
+                navigate(`/solo?${p.toString()}`);
+            };
 
-        const sMinY = parseInt(selectedMinYear, 10);
-        const sMaxY = parseInt(selectedMaxYear, 10);
-
-        if (!isNaN(sMinY) && !isNaN(sMaxY) &&
-            availableMinYear !== null && availableMaxYear !== null &&
-            (sMinY !== availableMinYear || sMaxY !== availableMaxYear)) {
-            q.set('startDate', sMinY.toString());
-            q.set('endDate', sMaxY.toString());
-        }
-
-        nav(`/solo?${q.toString()}`);
-    };
-
-
-
-    const openModeInfo = (modeIdOrInfoKey) => { // Nennen wir den Parameter modeIdOrInfoKey für Klarheit
-        const info = MODE_DESCRIPTIONS[modeIdOrInfoKey]; // Greift auf MODE_DESCRIPTIONS zu
-        if (info) {
-            setModalModeInfo(info);
-            setShowModeInfoModal(true); // Wichtig: Dieser State muss das Modal triggern
-        } else {
-            console.warn(`Keine Beschreibung für modeKey ${modeIdOrInfoKey} gefunden.`); // Hilfreich für Debugging
-        }
-    };
+            const openModeInfo = key => {
+                const info = MODE_DESCRIPTIONS[key];
+                if (info) { setModalModeInfo(info); setShowModeInfoModal(true); }
+            };
 
     /* ---------- UI ---------- */
     return (
@@ -364,6 +310,10 @@ export default function SoloQuizConfig() {
             )}
         </div>
 
+        {/* Filtered song count display */}
+        <p className="text-sm text-gray-400 mt-4 text-center">
+            Verfügbare Songs für aktuelle Auswahl: {displayedSongCount}
+        </p>
 
         <Button className="w-full py-3 font-semibold" onClick={startQuiz}>🎬 Quiz Starten</Button>
 

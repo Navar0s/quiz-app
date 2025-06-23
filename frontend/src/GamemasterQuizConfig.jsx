@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from './components/Card';
 import Select from './components/Select';
@@ -17,6 +17,10 @@ export default function GamemasterQuizConfig() {
     const [selectedMaxYear, setSelectedMaxYear] = useState('');
     const [fetchError, setFetchError] = useState(null);
 
+    const [allFetchedSongs, setAllFetchedSongs] = useState([]); // State for all songs
+    const [displayedSongCount, setDisplayedSongCount] = useState(0); // For accurate count
+
+
     useEffect(() => {
         const fetchYears = async () => {
             try {
@@ -26,6 +30,10 @@ export default function GamemasterQuizConfig() {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const songs = await response.json();
+<<<<<<< HEAD
+=======
+                setAllFetchedSongs(songs); // Store all fetched songs
+>>>>>>> feat/quiz-date-filter-fix
 
                 if (songs.length === 0) {
                     setFetchError("Keine Songs gefunden, um den Jahresbereich zu bestimmen.");
@@ -34,6 +42,10 @@ export default function GamemasterQuizConfig() {
                     setAvailableMaxYear(currentYear); // Fallback
                     setSelectedMinYear(currentYear.toString()); // Set selected years too
                     setSelectedMaxYear(currentYear.toString()); // Set selected years too
+<<<<<<< HEAD
+=======
+                    // allFetchedSongs is already set to [] by the above setAllFetchedSongs(songs) if songs is []
+>>>>>>> feat/quiz-date-filter-fix
                     return;
                 }
 
@@ -82,12 +94,56 @@ export default function GamemasterQuizConfig() {
                 setAvailableMaxYear(currentYear);
                 setSelectedMinYear((currentYear - 20).toString());
                 setSelectedMaxYear(currentYear.toString());
+<<<<<<< HEAD
+=======
+                setAllFetchedSongs([]); // Explicitly set to empty on error
+>>>>>>> feat/quiz-date-filter-fix
             }
         };
 
         fetchYears();
     }, []);
 
+<<<<<<< HEAD
+=======
+    // Effect for calculating and setting the displayed song count
+    useEffect(() => {
+        const minYearNum = parseInt(selectedMinYear, 10);
+        const maxYearNum = parseInt(selectedMaxYear, 10);
+
+        if (allFetchedSongs.length === 0 || isNaN(minYearNum) || isNaN(maxYearNum)) {
+            setDisplayedSongCount(0);
+            return;
+        }
+
+        const filterBySpecificCategories = categories.length > 0;
+
+        const count = allFetchedSongs.filter(song => {
+            if (filterBySpecificCategories && !categories.includes(song.category)) {
+                return false;
+            }
+
+            const metadata = song.metadata || {};
+            if (song.category === 'Filme' || song.category === 'Games') {
+                const erscheinungsjahr = parseInt(metadata.Erscheinungsjahr, 10);
+                if (isNaN(erscheinungsjahr)) return false;
+                return erscheinungsjahr >= minYearNum && erscheinungsjahr <= maxYearNum;
+            } else if (song.category === 'Serien') {
+                const startjahr = parseInt(metadata.Startjahr, 10);
+                let endjahr = parseInt(metadata.Endjahr, 10);
+                if (isNaN(endjahr) || metadata.Endjahr === null || String(metadata.Endjahr).trim() === '') {
+                    endjahr = new Date().getFullYear() + 100;
+                }
+                if (isNaN(startjahr)) return false;
+                return startjahr <= maxYearNum && endjahr >= minYearNum;
+            }
+            return false;
+        }).length;
+        setDisplayedSongCount(count);
+    }, [allFetchedSongs, categories, selectedMinYear, selectedMaxYear]);
+
+
+>>>>>>> feat/quiz-date-filter-fix
     const handleMinYearChange = (e) => {
         const newMinYear = e.target.value;
         setSelectedMinYear(newMinYear);
@@ -199,9 +255,14 @@ export default function GamemasterQuizConfig() {
         />
         </div>
 
+        <p style={{ textAlign: 'center', marginTop: '1.5rem', color: theme?.textColorMuted || 'grey' }}>
+            Verfügbare Songs für aktuelle Auswahl: {displayedSongCount}
+        </p>
+
         <Button
         onClick={startGame}
-        style={{ marginTop: '2rem' }}
+        style={{ marginTop: '1rem' }} // Reduced margin a bit to accommodate the count text
+
         // Spiel starten immer erlaubt, auch ohne Kategorie (dann alle Songs)
         // disabled={categories.length === 0}
         >
